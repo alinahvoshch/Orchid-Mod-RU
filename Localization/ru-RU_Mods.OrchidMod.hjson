@@ -3891,12 +3891,12 @@ Misc: {
 }
 
 DamageClasses: {
-	Alchemist: - Алхимик -
-	Dancer: - Танцор -
-	Gambler: - Картёжник -
-	Guardian: - Стражник -
-	Shaman: - Шаман -
-	Shapeshifter: - Оборотень -
+	Alchemist: -Алхимик-
+	Dancer: -Танцор-
+	Gambler: -Картёжник-
+	Guardian: -Стражник-
+	Shaman: -Шаман-
+	Shapeshifter: -Оборотень-
 	AlchemistDamageClass.DisplayName: ед. алхимического урона
 	DancerDamageClass.DisplayName: ед. равновесящего урона
 	GamblerChipDamageClass.DisplayName: ед. картёжного урона
