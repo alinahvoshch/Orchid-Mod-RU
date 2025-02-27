@@ -339,18 +339,18 @@ Items: {
 	}
 
 	MeteorToolbelt: {
-		DisplayName: Meteor Toolbelt
-		Tooltip: Using 3 or more elements in a single attack gives knockback immunity and movement speed
+		DisplayName: Метеорный пояс с инструментами
+		Tooltip: Использование атаки, состоящей как минимум из 3 элементов даёт невосприимчевость к отбрасыванию и увеличивает скорость передвижения
 	}
 
 	PreservedCorruption: {
-		DisplayName: Preserved Corruption
-		Tooltip: Maximum potency increased by 2
+		DisplayName: Законсервированное искажение
+		Tooltip: Увеличивает максимальный размер колбы на 2 ед.
 	}
 
 	PreservedCrimson: {
-		DisplayName: Preserved Crimson
-		Tooltip: Maximum potency increased by 2
+		DisplayName: Законсервированныый багрянец
+		Tooltip: Увеличивает максимальный размер колбы на 2 ед.
 	}
 
 	ReactiveVials: {
