@@ -345,109 +345,109 @@ Items: {
 
 	PreservedCorruption: {
 		DisplayName: Законсервированное искажение
-		Tooltip: Увеличивает максимальный размер колбы на 2 ед.
+		Tooltip: Увеличивает максимальную концентрацию веществ на 2 ед.
 	}
 
 	PreservedCrimson: {
 		DisplayName: Законсервированныый багрянец
-		Tooltip: Увеличивает максимальный размер колбы на 2 ед.
+		Tooltip: Увеличивает максимальную концентрацию веществ на 2 ед.
 	}
 
 	ReactiveVials: {
-		DisplayName: Reactive Vials
-		Tooltip: Your first chemical mixture after using a hidden reaction deals 10% more damage
+		DisplayName: Флаконы с реактивами
+		Tooltip: Слудующая химическая смесь после выполнения скрытной реакции наносит на 10% больше урона
 	}
 
 	WeightedBottles: {
-		DisplayName: Weighted Bottles
-		Tooltip: Increases alchemic main projectile velocity by 25%
+		DisplayName: Взвешивающая колба
+		Tooltip: Увеличивает скорость основного алхимического снаряда на 25%
 	}
 
 	WeightedCorruption: {
-		DisplayName: Weighted Corruption
+		DisplayName: Взвешенное искажение
 		Tooltip:
 			'''
-			Increases alchemic main projectile velocity by 25%
-			Maximum potency increased by 2
+			Увеличивает скорость основного алхимического снаряда на 25%
+			Увеличивает максимальную концентрацию веществ на 2 ед.
 			'''
 	}
 
 	WeightedCrimson: {
-		DisplayName: Weighted Crimson
+		DisplayName: Взвешенный багрянец
 		Tooltip:
 			'''
-			Increases alchemic main projectile velocity by 25%
-			Maximum potency increased by 2
+			Увеличивает скорость основного алхимического снаряда на 25%
+			Увеличивает максимальную концентрацию веществ на 2 ед.
 			'''
 	}
 
 	AlchemistJungleChest: {
-		DisplayName: Lily Tunic
+		DisplayName: Туника лилии
 		Tooltip:
 			'''
-			Maximum potency increased by 3
-			Increases alchemic main projectile velocity by 20%
+			Увеличивает максимальную концентрацию веществ на 3 ед.
+			Увеличивает скорость основного алхимического снаряда на 20%
 			'''
 	}
 
 	AlchemistJungleHead: {
-		DisplayName: Lily Hood
+		DisplayName: Капюшон лилии
 		Tooltip:
 			'''
-			20% increased potency regeneration
-			Maximum number of simultaneous alchemical elements increased by 1
+			Увеличивает скорость восполнения концентрации веществ на 20%
+			Увеличивает максимальное количество используемых алхимических элементов на 1
 			'''
 	}
 
 	AlchemistJungleLegs: {
-		DisplayName: Lily Leggings
-		Tooltip: 10% increased chemical damage
+		DisplayName: Штаны лилии
+		Tooltip: Увеличивает химический урон на 10%
 	}
 
 	MushroomBandana: {
-		DisplayName: Phosphorescent Bandana
-		Tooltip: 5% increased potency regeneration
+		DisplayName: Фосфоресцирующая бандана
+		Tooltip: Увеличивает скорость восполнения концентрации веществ на 5%
 	}
 
 	MushroomLeggings: {
-		DisplayName: Phosphorescent Leggings
-		Tooltip: 5% increased potency regeneration
+		DisplayName: Фосфоресцирующие штаны
+		Tooltip: Увеличивает скорость восполнения концентрации веществ на 5%
 	}
 
 	MushroomTunic: {
-		DisplayName: Phosphorescent Tunic
+		DisplayName: Фосфоресцирующая туника
 		Tooltip:
 			'''
-			5% increased potency regeneration
-			Maximum potency increased by 2
+			Увеличивает скорость восполнения концентрации веществ на 5%
+			Увеличивает максимальную концентрацию веществ на 2 ед.
 			'''
 	}
 
 	PotionBag: {
-		DisplayName: Potion Bag
+		DisplayName: Сумка с настойками
 		Tooltip:
 			'''
-			Can carry up to 8 alchemical potions
-			Items in the bag will appear in alchemist mixing interfaces
-			'A prototype by the chemist, meant to be upgraded later'
+			Может содержать до 8 алхимических настоек
+			Предметы из сумки появяться в интерфейсе алхимического смешивания
+			«Протитип сумки, созданный алхимиком для дальнейшей модернизации в будущем»
 			'''
 	}
 
 	AlchemicStabilizer: {
-		DisplayName: Alchemical Stabilizer
+		DisplayName: Алхимический стабилизатор
 		Tooltip:
 			'''
-			Used to make various alchemist weapons
-			'Smells like bee wax'
+			Используется для создания различных алхимический оружий
+			«Пахнет как пчелиный воск»
 			'''
 	}
 
 	EmptyFlask: {
-		DisplayName: Empty Flask
+		DisplayName: Пустая колба
 		Tooltip:
 			'''
-			Sold by the mineshaft chemist
-			Used to make various alchemist weapons
+			Продаётся Химиком, которую можно найти в шахте
+			Используется для создания различных алхимический оружий
 			'''
 	}
 
@@ -466,11 +466,11 @@ Items: {
 	}
 
 	MushroomThread: {
-		DisplayName: Mushroom Thread
+		DisplayName: Грибные нитки
 		Tooltip:
 			'''
-			Result of the hidden reaction between blinkroot and glowing mushroom extracts
-			'Quite an unexpected outcome'
+			Результат скрытой реакции между экстрактами мерцающего корня и светящихся грибов
+			«Довольно неожиданный результат»
 			'''
 	}
 
@@ -3890,6 +3890,23 @@ Misc: {
 	ShapeshifterWarden: Warden wildshape
 }
 
+UI: {
+	PotionBag: {
+		ChangeState: Изменить состояние   – клавишой «Взаимодействовать» ({0}) без предмета по сумке
+		PutInInventory: Положить в инвентарь – клавишой «Взаимодействовать» ({0}) с предметом по сумке
+		PullOutPotion: Забрать настойку     – клавишой «Предметы 1-8» ({0}-{1})
+		PullOutPotions: Забрать настойки     – клавишой «Предмет 9» ({0})
+		PullOutDye: Забрать краситель    – клавишой «Предмет 10» ({0})
+		Dye: "{0} применён"
+		MoreInformation: Удерживайте клавишу «Автовыбор» ({0}) для большей информации
+		State: "Состояние: "
+		Active: активна
+		ActiveTip: (будет отображаться в меню смешивания)
+		NotActive: неактивна
+		NotActiveTip: (не будет отображаться в меню смешивания)
+	}
+}
+
 DamageClasses: {
 	Alchemist: -Алхимик-
 	Dancer: -Танцор-
@@ -3897,7 +3914,7 @@ DamageClasses: {
 	Guardian: -Стражник-
 	Shaman: -Шаман-
 	Shapeshifter: -Оборотень-
-	AlchemistDamageClass.DisplayName: ед. алхимического урона
+	AlchemistDamageClass.DisplayName: ед. химического урона
 	DancerDamageClass.DisplayName: ед. равновесящего урона
 	GamblerChipDamageClass.DisplayName: ед. картёжного урона
 	GamblerDamageClass.DisplayName: ед. картёжного урона
