@@ -1004,7 +1004,7 @@ Items: {
 		Tooltip:
 			'''
 			Кости картёжника замедляются, если выпадает 4 или больше
-			«Бог любит четвёрку!» 
+			«Бог любит четверицу!» 
 			'''
 	}
 
@@ -1018,20 +1018,20 @@ Items: {
 	}
 
 	ConquerorsPennant: {
-		DisplayName: Знамя Завоевателя
+		DisplayName: Знамя завоевателя
 		Tooltip: Вы впадаете в ярость, когда вытягиваете карту «босса» 
 	}
 
 	DemonicPocketMirror: {
-		DisplayName: Демоническое Карманное Зеркало
+		DisplayName: Демоническое карманное зеркало
 		Tooltip: Позволяет увидеть следующую карту, которую вы вытянете
 	}
 
 	ElementalLens: {
-		DisplayName: Элементальная Линза
+		DisplayName: Элементальная линза
 		Tooltip:
 			'''
-			Атаки карт «элементов»  накладывают на врагов соответствующие дебаффы
+			Атаки карт «элементов» накладывают на врагов соответствующие дебаффы
 			Дебаффы от карт, которые уже накладывают их, длятся дольше
 			'''
 	}
@@ -1050,135 +1050,136 @@ Items: {
 	}
 
 	ImpDiceCup: {
-		DisplayName: Imp Dice Cup
-		Tooltip: Gambler dice cannot roll a 1 or a 2
+		DisplayName: Стакан для костей беса
+		Tooltip: На кости не могут выпасть на 1 или 2.
+
 	}
 
 	LuckySprout: {
-		DisplayName: Lucky Sprout
-		Tooltip: Bushes from the 'biome' set will linger intead of disappearing
+		DisplayName: Счастливый росток
+		Tooltip: Кусты карт из набора «биом»  остаются на месте вместо исчезновения
 	}
 
 	PileOfChips: {
-		DisplayName: Pile Of Chips
+		DisplayName: Стопка фишек
 		Tooltip:
 			'''
-			50% increased gambling chip weapon cycle speed
-			15% increased chip weapon damage
+			Скорость цикла оружия с фишками увеличена на 50% 
+			Урон оружия с фишками увеличен на 15%
 			'''
 	}
 
 	SlimyLollipop: {
-		DisplayName: Slimy Lollipop
-		Tooltip: Periodically releases friendly slimes when a gambler 'slime' card is active
+		DisplayName: Слизневый леденец
+		Tooltip: Периодически выпускает дружелюбных слизней, когда активна карта «слизня»
 	}
 
 	VultureCharm: {
-		DisplayName: Vulture Charm
-		Tooltip: Drawing a card releases a burst of vulture feathers
+		DisplayName: Амулет стервятника
+		Tooltip: Вытягивание карты выпускает перья стервятника
 	}
 
 	GamblerDungeonBody: {
-		DisplayName: Tyche Chestplate
+		DisplayName: Нагрудник Тюхе
 		Tooltip:
 			'''
-			10% increased gambling critical strike chance
-			Maximum redraws increased by 1
+			Шанс азартного критического удара увеличен на 10%
+			Максимальное количество повторных вытягиваний увеличено на 1
 			'''
 	}
 
 	GamblerDungeonHead: {
-		DisplayName: Tyche Headgear
-		Tooltip: Maximum chips increased by 5
+		DisplayName: Головной убор Тюхе
+		Tooltip: Максимальное количество фишек увеличено на 5
 	}
 
 	GamblerDungeonLegs: {
-		DisplayName: Tyche Leggings
-		Tooltip: 10% increased gambling damage
+		DisplayName: Поножи Тюхе
+		Tooltip: Азартный урон увеличен на 10%
 	}
 
 	OutlawHat: {
-		DisplayName: Outlaw Hat
-		Tooltip: Maximum chips increased by 3
+		DisplayName: Шляпа изгоя
+		Tooltip: Максимальное количество фишек увеличено на 3
 	}
 
 	OutlawPants: {
-		DisplayName: Outlaw Pants
-		Tooltip: 4% increased gambling damage
+		DisplayName: Штаны изгоя
+		Tooltip: Азартный урон увеличен на 4%
 	}
 
 	OutlawVest: {
-		DisplayName: Outlaw Vest
-		Tooltip: 4% increased gambling damage
+		DisplayName: Жилет изгоя
+		Tooltip: Азартный урон увеличен на 4%
 	}
 
 	DeckBone: {
-		DisplayName: Bone Gambler Deck
+		DisplayName: Костяная колода карт
 		Tooltip:
 			'''
-			Allows the use of gambler abilities
-			'+206 bones'
+			Позволяет использовать способности картёжника
+			«Содержит мелкие косточки, держать подальше от детей младше 3 лет» 
 			'''
 	}
 
 	DeckDog: {
-		DisplayName: Dog Gambler Deck
+		DisplayName: Собачья колода карт
 		Tooltip:
 			'''
-			Allows the use of gambler abilities
-			'+1 bork'
+			Позволяет использовать способности картёжника
+			«Содержит мелкий собачий корм, держать подальше от детей младше 3 лет»
 			'''
 	}
 
 	DeckEnchanted: {
-		DisplayName: Enchanted Gambler Deck
+		DisplayName: Зачарованная колода карт
 		Tooltip:
 			'''
-			Allows the use of gambler abilities
-			'+15 enchantment'
+			Позволяет использовать способности картёжника
+			«Содержит мелкие зачарования, держать подальше от детей младше 3 лет»
 			'''
 	}
 
 	DeckJungle: {
-		DisplayName: Jungle Gambler Deck
+		DisplayName: Колода карт из джунглей
 		Tooltip:
 			'''
-			Allows the use of gambler abilities
-			'+15 leafiness '
+			Позволяет использовать способности картёжника
+			«Содержит мелкие жала, держать подальше от детей младше 3 лет» 
 			'''
 	}
 
 	DeckPirate: {
-		DisplayName: Pirate Gambler Deck
+		DisplayName: Пиратская колода карт
 		Tooltip:
 			'''
-			Allows the use of gambler abilities
-			'+1 parrot affinity'
+			Позволяет использовать способности картёжника
+			«Содержит мелких попугаев, держать подальше от детей младше 3 лет» 
 			'''
 	}
 
 	DeckRainbow: {
-		DisplayName: Rainbow Gambler Deck
+		DisplayName: Радужная колода карт
 		Tooltip:
 			'''
-			Allows the use of gambler abilities
-			'+7 colorfulness'
+			Позволяет использовать способности картёжника
+			«Содержит мелкие цвета, держать подальше от детей младше 3 лет» 
 			'''
 	}
 
 	GamblerAttack: {
-		DisplayName: Gambler Deck
-		Tooltip: Allows the use of gambler abilities
+		DisplayName: Стандартная колода карт
+		Tooltip: Позволяет использовать способности картёжника
 	}
 
 	GamblerDummy: {
-		DisplayName: Gambler Dummy Card
+		DisplayName: Карта-Манекен
 		Tooltip:
 			'''
-			Allows the use of specific gambler cards
-			Right click to cycle through your deck
-			Can only deal damage to dummies
-			Utility cards may have no effect
+			Позволяет использовать определённые игральные карты 
+			Правый клик для перебора карт в вашей колоде
+			Может наносить урон только манекенам
+			У карт, не наносящих урон, эффект отсутсвует
 			'''
 	}
 
@@ -1202,104 +1203,104 @@ Items: {
 	}
 
 	Chip: {
-		DisplayName: Chip
+		DisplayName: Фишка
 		Tooltip: ""
 	}
 
 	TiamatRelic: {
-		DisplayName: Tyche Relic
+		DisplayName: Реликвия Тюхе
 		Tooltip: ""
 	}
 
 	VulturePotion: {
-		DisplayName: Scavenger Potion
-		Tooltip: 20% increased gambler chip generation
+		DisplayName: Зелье стервятника
+		Tooltip: Увеливает генерацию фишек на 20%
 	}
 
 	VultureTalon: {
-		DisplayName: Vulture Talon
+		DisplayName: Коготь стервятника
 		Tooltip: ""
 	}
 
 	BrainCard: {
-		DisplayName: Playing Card : The Hivemind
+		DisplayName: Игральная карта: Коллективный разум
 		Tooltip:
 			'''
-			Summons 3 brains around you, one of them following your cursor
-			Only one of them is real, and deals contact damage
-			Hitting randomly changes the true brain, and increases damage a lot
-			Brains cannot deal damage if they are too close to you
+			Призывает 3 мозга вокруг вас, один из которых следует за курсором
+			Только один из них настоящий и наносит контактный урон
+			Попадание случайным образом меняет настоящий мозг и значительно увеличивает урон
+			Мозги не могут наносить урон, если находятся слишком близко к вам
 			'''
 	}
 
 	BubbleCard: {
-		DisplayName: Playing Card : Bubbles
+		DisplayName: Игральная карта: Пузырьки
 		Tooltip:
 			'''
-			Summons bubbles, floating upwards
-			Releasing your left click causes existing bubbles to dash
-			Bubbles gain in damage over time
+			Призывает пузыри, которые взлетают вверх.
+			Если отпустить левую кнопку мыши, все пузыри совершат рывок
+			Урон пузырей увеличивается со временем
 			'''
 	}
 
 	DesertCard: {
-		DisplayName: Playing Card : Desert
+		DisplayName: Игральная карта: Пустыня
 		Tooltip:
 			'''
-			Summons a desert bush above your head
-			Drag and release a fruit to launch it
+			Призывает пустынный кактус над вашей головой
+			Перетащите и отпустите фрукт, чтобы запустить его
 			'''
 	}
 
 	DetonatorCard: {
-		DisplayName: Playing Card : Detonator
+		DisplayName: Игральная карта: Детонатор
 		Tooltip:
 			'''
-			Throws explosives, detonating upon releasing left click
-			Has a small delay before being able to detonate
+			Бросает взрывчатку, которая взорвётся когда вы отпустите левую кнопку мыши
+			Перед взрывом есть небольшая задержка
 			'''
 	}
 
 	DungeonCard: {
-		DisplayName: Playing Card : Spirit Tear
+		DisplayName: Игральная карта: Слеза духа
 		Tooltip:
 			'''
-			Fires a burst of spirit bolts
-			Hitting the same target with all projectiles will rip a part of their soul
-			Picking it up will deal a large amount of damage
+			Выпускает залп духовных снарядов
+			Попадание всеми снарядами в одну цель вырывает частичку её души
+			Поднятие этой души наносит большой урон ближайшим врагам
 			'''
 	}
 
 	EaterCard: {
-		DisplayName: Playing Card : Corrupted Nightmare
+		DisplayName: Игральная карта: Кошмар искажения
 		Tooltip:
 			'''
-			Summon a corrupted worm, following your cursor
-			Randomly releases rotten meat chunks
-			Collecting them increases the worm damage and length
+			Призывает искажённого червя, следующего за курсором
+			Периодически выпускает куски гнили
+			При подании этой гнили, червь увеличивает свою длину и урон
 			'''
 	}
 
 	EmbersCard: {
-		DisplayName: Playing Card : Embers
-		Tooltip: Releases homing embers
+		DisplayName: Игральная карта: Угольки
+		Tooltip: Выпускает самонаводящиеся угольки
 	}
 
 	EyeCard: {
-		DisplayName: Playing Card : Guardian of the Night
+		DisplayName: Игральная карта: Страж ночи
 		Tooltip:
 			'''
-			Summons a servant of cthulhu, dashing at your cursor
-			The servant will only attack if your cursor is far enough from its location
+			Призывает Прислужника Ктулху, который совершает рывок к курсору
+			Прислужник атакует только если курсор находится достаточно далеко от его местоположения
 			'''
 	}
 
 	ForestCard: {
-		DisplayName: Playing Card : Forest
+		DisplayName: Игральная карта: Лес
 		Tooltip:
 			'''
-			Summons a forest bush above your head
-			Drag and release a fruit to launch it
+			Призывает лесной куст над вашей головой
+			Перетащите и отпустите фрукт, чтобы запустить его
 			'''
 	}
 
