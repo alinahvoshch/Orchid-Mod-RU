@@ -1000,39 +1000,39 @@ Items: {
 	}
 
 	BundleOfClovers: {
-		DisplayName: Bundle Of Clovers
+		DisplayName: Связка клевера
 		Tooltip:
 			'''
-			Gambler dice will slow down when rolling 4 or more
-			'4 leaves, all of them!'
+			Кости картёжника замедляются, если выпадает 4 или больше
+			«Бог любит четвёрку!» 
 			'''
 	}
 
 	BurningClovers: {
-		DisplayName: Burning Clovers
+		DisplayName: Горящие Клеверы
 		Tooltip:
 			'''
-			Gambler dice will slow down when rolling 5 or more
-			Gambler dice cannot roll a 1 or a 2
+			Кости картёжника замедляются, если выпадает 5 или больше
+			1 или 2 выпасть не могут
 			'''
 	}
 
 	ConquerorsPennant: {
-		DisplayName: Conqueror's Pennant
-		Tooltip: You enrage when drawing a gambler 'boss' card
+		DisplayName: Знамя Завоевателя
+		Tooltip: Вы впадаете в ярость, когда вытягиваете карту «босса» 
 	}
 
 	DemonicPocketMirror: {
-		DisplayName: Demonic Pocket Mirror
-		Tooltip: Allows you to see the next card you will draw
+		DisplayName: Демоническое Карманное Зеркало
+		Tooltip: Позволяет увидеть следующую карту, которую вы вытянете
 	}
 
 	ElementalLens: {
-		DisplayName: Elemental Lens
+		DisplayName: Элементальная Линза
 		Tooltip:
 			'''
-			Gambler 'elemental' cards attacks will affect enemy with related debuffs
-			Cards already inflicting debuffs will have them last longer
+			Атаки карт «элементов»  накладывают на врагов соответствующие дебаффы
+			Дебаффы от карт, которые уже накладывают их, длятся дольше
 			'''
 	}
 
