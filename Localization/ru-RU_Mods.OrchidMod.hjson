@@ -1,11 +1,11 @@
 Keybinds: {
-	"Alchemist Hidden Reaction.DisplayName": Alchemist  Hidden  Reaction
+	"Alchemist Hidden Reaction.DisplayName": Секретная алхимическая реакция
 	"Alchemist Catalyst Tool Shortcut.DisplayName": Alchemist  Catalyst  Tool  Shortcut
 }
 
 Tiles: {
-	JungleLilyTile.MapEntry: Jungle Lily
-	ShamanBiomeChestTile.MapEntry: Mushroom Chest
+	JungleLilyTile.MapEntry: Лилия джунглей
+	ShamanBiomeChestTile.MapEntry: С сундук
 	GuardianBuffStationTile.MapEntry: Spinning Dummy
 	VerveineQuarterstaffTile.MapEntry: Farting Plant
 }
@@ -127,8 +127,8 @@ Buffs: {
 	}
 
 	ReactionCooldown: {
-		Description: You cannot use alchemist hidden reactions
-		DisplayName: Experimental Drawback
+		DisplayName: Помехи в эксперементе
+		Description: Вы не можете использовать секретные реакции
 	}
 
 	FlashFreeze: {
@@ -310,17 +310,17 @@ Buffs: {
 Items: {
 	AlchemistEmblem: {
 		DisplayName: Эмблема алхимика
-		Tooltip: Увеличивает алхимический урон на 15%
+		Tooltip: Увеличивает химический урон на 15%
 	}
 
 	AlchemistTest: {
-		DisplayName: Alchemist Test Accessory
+		DisplayName: Тестовый аксессуар алхимика
 		Tooltip:
 			'''
-			Maximum number of simultaneous alchemical elements increased by 4
-			Maximum potency increased by 20
-			50% increased potency regeneration
-			[c/FF0000:Test Item]
+			Увеличивает максимальное количество используемых алхимических элементов на 4
+			Увеличивает максимальную концентрацию веществ на 20 ед.
+			Увеличивает скорость восполнения концентрации веществ на 50%
+			[c/FF0000:Предмет тестировки]
 			'''
 	}
 
@@ -334,7 +334,7 @@ Items: {
 		Tooltip:
 			'''
 			Усиливает атаки, которые состоят как минимум из 3 невоздушных элементов
-			Hit target will be dealt damage for all nearby air coatings, consuming them
+			Примые попадания по врагам, покрытых воздушным элементом, получат дополнительй урон, который проглотит элемент
 			'''
 	}
 
@@ -355,7 +355,7 @@ Items: {
 
 	ReactiveVials: {
 		DisplayName: Флаконы с реактивами
-		Tooltip: Слудующая химическая смесь после выполнения скрытной реакции наносит на 10% больше урона
+		Tooltip: Слудующая химическая смесь после выполнения секретной реакции наносит на 10% больше урона
 	}
 
 	WeightedBottles: {
@@ -397,6 +397,7 @@ Items: {
 			Увеличивает скорость восполнения концентрации веществ на 20%
 			Увеличивает максимальное количество используемых алхимических элементов на 1
 			'''
+		SetBonus: Активация достаточно количества каталистических реакций создаёт бутон цветка-катализатор
 	}
 
 	AlchemistJungleLegs: {
@@ -407,6 +408,7 @@ Items: {
 	MushroomBandana: {
 		DisplayName: Фосфоресцирующая бандана
 		Tooltip: Увеличивает скорость восполнения концентрации веществ на 5%
+		SetBonus: Увеличивает максимальное количество используемых алхимических элементов на 1
 	}
 
 	MushroomLeggings: {
@@ -424,11 +426,11 @@ Items: {
 	}
 
 	PotionBag: {
-		DisplayName: Сумка с настойками
+		DisplayName: Сумка с отварами
 		Tooltip:
 			'''
-			Может содержать до 8 алхимических настоек
-			Предметы из сумки появяться в интерфейсе алхимического смешивания
+			Может содержать до 8 алхимических отваров
+			Предметы из сумки появятся в интерфейсе алхимического смешивания
 			«Протитип сумки, созданный алхимиком для дальнейшей модернизации в будущем»
 			'''
 	}
@@ -452,16 +454,16 @@ Items: {
 	}
 
 	JungleLily: {
-		DisplayName: Jungle Lily
+		DisplayName: Лилия джунглей
 		Tooltip:
 			'''
-			It closed when you picked it up
-			Maybe the chemist could help you?
+			Она закрылась, как только вы её сорвали
+			Может быть, химик сможет вам с ней помочь?
 			'''
 	}
 
 	JungleLilyBloomed: {
-		DisplayName: Jungle Lily Bloomed
+		DisplayName: Раскрывшаяся лилия джунглей
 		Tooltip: ""
 	}
 
@@ -469,533 +471,540 @@ Items: {
 		DisplayName: Грибные нитки
 		Tooltip:
 			'''
-			Результат скрытой реакции между экстрактами мерцающего корня и светящихся грибов
-			«Довольно неожиданный результат»
+			Результат секретной реакции между экстрактами мерцающего корня и светящихся грибов
+			«Довольно необычный результат»
 			'''
 	}
 
 	Potency: {
-		DisplayName: Potency
+		DisplayName: Концентрация
 		Tooltip: ""
 	}
 
 	ReactionItem: {
-		DisplayName: Hidden Reactions Codex
+		DisplayName: Рукопись о секретных реакциях
 		Tooltip:
 			'''
-			Left click to trigger alchemist hidden reactions
-			The 'Hidden Reaction' key can be used instead of this item
-			Right click to open the hidden reactions codex
+			Нажмите ЛКМ, чтобы активировать секретные алхимические реакции
+			Вы можете использовать клавишу «Секретная реакция» ({0}) вместо этого предмета
+			Нажмите ПКМ, чтобы прочитать рукопись
 			'''
 	}
 
 	ScrollTier1: {
-		DisplayName: Alchemist Recipe Scroll
-		Tooltip: Contains the recipe for an unknown alchemist hidden reaction
+		DisplayName: Свиток алхимического рецепта 1 ур.
+		Tooltip: Содержит рецепт неизвестной алхимиической реакции
 	}
 
 	ScrollTier2: {
-		DisplayName: Alchemist Recipe Scroll
-		Tooltip: Contains the recipe for an unknown alchemist hidden reaction
+		DisplayName: Свиток алхимического рецепта 2 ур.
+		Tooltip: Содержит рецепт неизвестной алхимиической реакции
 	}
 
 	ScrollTier3: {
-		DisplayName: Alchemist Recipe Scroll
-		Tooltip: Contains the recipe for an unknown alchemist hidden reaction
+		DisplayName: Свиток алхимического рецепта 3 ур.
+		Tooltip: Содержит рецепт неизвестной алхимиической реакции
 	}
 
 	ScrollTier4: {
-		DisplayName: Alchemist Recipe Scroll
-		Tooltip: Contains the recipe for an unknown alchemist hidden reaction
+		DisplayName: Свиток алхимического рецепта 4 ур.
+		Tooltip: Содержит рецепт неизвестной алхимиической реакции
 	}
 
 	ScrollTier5: {
-		DisplayName: Alchemist Recipe Scroll
-		Tooltip: Contains the recipe for an unknown alchemist hidden reaction
+		DisplayName: Свиток алхимического рецепта 5 ур.
+		Tooltip: Содержит рецепт неизвестной алхимиической реакции
 	}
 
 	ScrollTier6: {
-		DisplayName: Alchemist Recipe Scroll
-		Tooltip: Contains the recipe for an unknown alchemist hidden reaction
+		DisplayName: Свиток алхимического рецепта 6 кр.
+		Tooltip: Содержит рецепт неизвестной алхимиической реакции
 	}
 
 	UIItem: {
-		DisplayName: The Alchemist's Cookbook
+		DisplayName: Алхимическая книга рецептов
 		Tooltip:
 			'''
-			Allows mixing alchemical weapons by clicking
-			Right click on an item icon to mix it
-			Left click to launch the attack
-			Up to 18 items can be displayed at once
+			Нажмите ЛКМ, чтобы открыть интерфейс смешивания отвары
+			Нажмите ПКМ по иконке отвара, чтобы добавить его в смесь
+			Затем снова нажмите ЛКМ, чтобы совершить атаку
+			Одновременно может отображать до 18 отваров
 			'''
 	}
 
 	UIItemKeys: {
-		DisplayName: Brewing for Dummies
+		DisplayName: Искусство варки для чайников
 		Tooltip:
 			'''
-			Allows mixing alchemical weapons with the hotbar keys
-			Press the corresponding key to mix a specific item
-			Use the mouse wheel to change the displayed element
-			Up to 10 items can be displayed at once
+			Позволяет смешивать алхимические отвары с помощью клавиш быстрого доступа
+			Нажмите на соответствующую числу над отваром клавишу, чтобы добавить его в смесь
+			Используйте колёсико мыши для прокрутки отображаемх зелий
+			Одновременно может отображать до 10 отваров
 			'''
 	}
 
 	UIItemNew: {
-		DisplayName: The Alchemist's Cookbook [S-Pladison's Edition]
+		DisplayName: Алхимическая книга рецептов: S-Pladison's Edition
 		Tooltip:
 			'''
-			Allows mixing alchemical weapons by clicking
-			Right click on an item icon to mix it
-			Left click to launch the attack
-			Up to 17 items can be displayed at once
+			Нажмите ЛКМ, чтобы открыть интерфейс смешивания отвары
+			Нажмите ПКМ по иконке отвара, чтобы добавить его в смесь
+			Затем снова нажмите ЛКМ, чтобы совершить атаку
+			Одновременно может отображать до 17 отваров
 			'''
 	}
 
 	AirVial: {
-		DisplayName: Air Vial
-		Tooltip: "[c/FF0000:Test Item]"
+		DisplayName: Колба воздуха
+		Tooltip: "[c/FF0000:Предмет тестировки]"
 	}
 
 	BlizzardInAVial: {
-		DisplayName: Blizzard In A Flask
+		DisplayName: Снежная буря в флаконе
 		Tooltip:
 			'''
-			Launches hit enemy in the air
-			Increases the likelihood of spawning catalytic bubbles
+			Подрасывает в воздух поражённых врагов
+			Увеличивает шанс появления пузырьков-катализаторов
 			'''
 	}
 
 	CloudInAVial: {
-		DisplayName: Cloud In A Flask
+		DisplayName: Облако в флаконе
 		Tooltip:
 			'''
-			Launches hit enemy in the air
-			Increases the likelihood of spawning catalytic bubbles
+			Подрасывает в воздух поражённых врагов
+			Увеличивает шанс появления пузырьков-катализаторов
 			'''
 	}
 
 	CorruptionFlask: {
-		DisplayName: Vitriol Mycelium
+		DisplayName: Густой мицелий
 		Tooltip:
 			'''
-			Grows a mushroom, exploding after a while or when being catalyzed
-			The more ingredients used, the more delayed the explosion
-			The mushroom will absorb the properties of nearby spores, creating more of them
-			Only one mushroom can exist at once
+			Выращивает гриб, взрывающийся через некоторое время или при катализе
+			Чем больше ингридиентов используется, тем дольше происходит взрыв
+			Гриб погрощает свойства ближайших спор, выпуская их в ещё большем количестве
+			Одновременно может существовать только 1 гриб
 			'''
 	}
 
 	CrimsonFlask: {
-		DisplayName: Visceral Mycelium
+		DisplayName: Густый мицелий
 		Tooltip:
 			'''
-			Releases floating mushrooms, exploding after a while or when being catalyzed
-			The mushrooms will absorb the properties of nearby spores, creating more of them
-			Only one set of mushrooms can exist at once
+			Выращивает гриб, взрывающийся через некоторое время или при катализе
+			Гриб погрощает свойства ближайших спор, выпуская их в ещё большем количестве
+			Одновременно может существовать только 1 гриб
 			'''
 	}
 
 	DeathweedFlask: {
-		DisplayName: Deathweed Extract
+		DisplayName: Экстракт смертоцвета
 		Tooltip:
 			'''
-			Releases air spores, the less other extracts used, the more
-			Only one set of spores can exist at once
-			Spores deals 10% increased damage against fire-coated enemies
+			Выпускает воздушные споры
+			Чем больше других экстрактов используется, тем больше выпскается спор
+			Одновременно может существовать только одна группа спор
+			Сопры наносят на 10% больше урона врагам, покрытым огненным элементом
 			'''
 	}
 
 	FartInAVial: {
-		DisplayName: Fart In A Flask
+		DisplayName: Пердёж в флаконе
 		Tooltip:
 			'''
-			Launches hit enemy in the air
-			Increases the likelihood of spawning catalytic bubbles
+			Подрасывает в воздух поражённых врагов
+			Увеличивает шанс появления пузырьков-катализаторов
 			'''
 	}
 
 	QueenBeeFlask: {
-		DisplayName: Royal Jelly
+		DisplayName: Королевский джем
 		Tooltip:
 			'''
-			If no fire element is used, summons bees on impact
-			Has a chance to release a catalytic beehive
+			Призывает пчёл при sударе
+			Пчёлы не могут быть призваны, если отвар используется с огненным ингридиентом
+			Имеет шанс выпустить улей-катализатор
 			'''
 	}
 
 	ShadowChestFlask: {
-		DisplayName: Demon Breath
+		DisplayName: Дыхание демона
 		Tooltip:
 			'''
-			Releases returning demon flames
-			Coats hit enemies in alchemical air
+			Выпускает демонические огни, возращающиеся к месту столкновения отвара
+			Покрывает поражённых врагов ветрянным элементом
 			'''
 	}
 
 	ShiverthornFlask: {
-		DisplayName: Shiverthorn Extract
+		DisplayName: Экстракт ледошипа
 		Tooltip:
 			'''
-			Releases air spores, the less other extracts used, the more
-			Only one set of spores can exist at once
-			Spores deals 10% increased damage against fire-coated enemies
+			Выпускает воздушные споры
+			Чем больше других экстрактов используется, тем больше выпскается спор
+			Одновременно может существовать только одна группа спор
+			Сопры наносят на 10% больше урона врагам, покрытым огненным элементом
 			'''
 	}
 
 	SunplateFlask: {
-		DisplayName: Stellar Talc
+		DisplayName: Звёздный тальк
 		Tooltip:
 			'''
-			Creates orbiting stars on impact
-			The stars are considered as lingering particles
+			Создаёт звёзды, вращающиеся по оси вокруг места столкновения отвара
+			Эти звёзды считаются за задерживающиеся в воздухе частицы
 			'''
 	}
 
 	TsunamiInAVial: {
-		DisplayName: Tsunami In A Flask
+		DisplayName: Цунами в флаконе
 		Tooltip:
 			'''
-			Launches hit enemy in the air
-			Increases the likelihood of spawning catalytic bubbles
+			Подрасывает в воздух поражённых врагов
+			Увеличивает шанс появления пузырьков-катализаторов
 			'''
 	}
 
 	CrimtaneCatalyst: {
-		DisplayName: Crimson Catalyst
+		DisplayName: Багряный катализатор
 		Tooltip:
 			'''
-			Used to interact with alchemist catalytic elements
-			Upon successful catalysis, confuses nearby enemies
-			Hit an enemy to apply catalyzed
-			Catalyzed replaces most alchemical debuffs
+			Используется для взаимодействия с катализирующимися алхимическими элементами
+			При успешном катализе, накладывает дебафф «{$BuffName.Confused}» на ближайших врагов
+			Попадите по врагу для выполнения катализации
+			«Катализация» заменяет большенство алхимических дебаффов
 			'''
 	}
 
 	DemoniteCatalyst: {
-		DisplayName: Corrupt Catalyst
+		DisplayName: Искажённый катализатор
 		Tooltip:
 			'''
-			Used to interact with alchemist catalytic elements
-			Upon successful catalysis, burns nearby enemies in shadowflames
-			Hit an enemy to apply catalyzed
-			Catalyzed replaces most alchemical debuffs
+			Используется для взаимодействия с катализирующимися алхимическими элементами
+			При успешном катализе, накладывает дебафф «{$BuffName.ShadowFlame}» на ближайших врагов
+			Попадите по врагу для выполнения катализации
+			«Катализация» заменяет большенство алхимических дебаффов
 			'''
 	}
 
 	DungeonCatalyst: {
-		DisplayName: Ripple
+		DisplayName: Резонанс
 		Tooltip:
 			'''
-			Used to interact with alchemist catalytic elements
-			Upon successful catalysis, releases a burst of homing water bolts
-			Hit an enemy to apply catalyzed
-			Catalyzed replaces most alchemical debuffs
+			Используется для взаимодействия с катализирующимися алхимическими элементами
+			При успешном катализе, вопускает залп из самонаводящихся водяных снарядов
+			Попадите по врагу для выполнения катализации
+			«Катализация» заменяет большенство алхимических дебаффов
 			'''
 	}
 
 	IronCatalyst: {
-		DisplayName: Catalytic Syringe
+		DisplayName: Каталический шприц
 		Tooltip:
 			'''
-			Used to interact with alchemist catalytic elements
-			Hit an enemy to apply catalyzed
-			Catalyzed replaces most alchemical debuffs
+			Используется для взаимодействия с катализирующимися алхимическими элементами
+			Попадите по врагу для выполнения катализации
+			«Катализация» заменяет большенство алхимических дебаффов
 			'''
 	}
 
 	DarkVial: {
-		DisplayName: Dark Vial
-		Tooltip: "[c/FF0000:Test Item]"
+		DisplayName: Колба тьмы
+		Tooltip: "[c/FF0000:Предмет тестировки]"
 	}
 
 	BlinkrootFlask: {
-		DisplayName: Blinkroot Extract
+		DisplayName: Экстракт мерцающего коря
 		Tooltip:
 			'''
-			Releases fire spores, the less other extracts used, the more
-			Only one set of spores can exist at once
-			Spores deals 10% increased damage against fire-coated enemies
+			Выпускает воздушные споры
+			Чем больше других экстрактов используется, тем больше выпскается спор
+			Одновременно может существовать только одна группа спор
+			Сопры наносят на 10% больше урона врагам, покрытым огненным элементом
 			'''
 	}
 
 	EmberVial: {
-		DisplayName: Ember Flask
+		DisplayName: Флакон тлеющих огней
 		Tooltip:
 			'''
-			Burns your target briefly
-			Releases lingering embers
+			поджигает поражённого врага на короткое время
+			Выпускает тлеющие огоньки
 			'''
 	}
 
 	FireblossomFlask: {
-		DisplayName: Fireblossom Extract
+		DisplayName: Экстракт огнецвета
 		Tooltip:
 			'''
-			Releases fire spores, the less other extracts used, the more
-			Only one set of spores can exist at once
-			Spores deals 10% increased damage against fire-coated enemies
+			Выпускает воздушные споры
+			Чем больше других экстрактов используется, тем больше выпскается спор
+			Одновременно может существовать только одна группа спор
+			Сопры наносят на 10% больше урона врагам, покрытым огненным элементом
 			'''
 	}
 
 	FireVial: {
-		DisplayName: Fire Vial
-		Tooltip: "[c/FF0000:Test Item]"
+		DisplayName: Колба огня
+		Tooltip: "[c/FF0000:Предмет тестировки]"
 	}
 
 	GunpowderFlask: {
-		DisplayName: Gunpowder Flask
+		DisplayName: Флакон пороха
 		Tooltip:
 			'''
-			Creates a small explosion
-			Can be used to trigger catalytic elements, but prevents them from spawning
+			Создаёт маленькие взрывы
+			Может использоваться для активации катализирующих элементов, но не позволяет им появляться
 			'''
 	}
 
 	HellSlimeFlask: {
-		DisplayName: Fiery Slime Flask
+		DisplayName: Флакон с слизью-светлячок
 		Tooltip:
 			'''
-			Makes hit enemies bouncy and susceptible to fall damage
-			Has a chance to release a catalytic lava slime bubble
-			Hitting a fire-coated enemy will spread lava droplets
+			Делает поражённых врагов желейными и воспримчевыми к урону от падения
+			Имеет шанс выпустить лавовый пузырь слизи-катализатор
+			Попадания по врагам, покрытым огненным элементом, будут разбрасывать капли лавы
 			'''
 	}
 
 	StardustSamples: {
-		DisplayName: Stardust Samples
+		DisplayName: Флакон звёздной пыли
 		Tooltip:
 			'''
-			Mixing with a nature element confuses hit enemies
-			'Handcrafted jars are unfit for precise alchemy'
+			Атаки по врагам при смешивании с природным элементом накладывают дебафф «{$BuffName.Confused}»
+			«Чувак, думал что-то здесь будет? О-о-о, нет.» 
 			'''
 	}
 
 	LightVial: {
-		DisplayName: Light Vial
-		Tooltip: "[c/FF0000:Test Item]"
+		DisplayName: Колба света
+		Tooltip: "[c/FF0000:Предмет тестировки]"
 	}
 
 	AttractiteShuriken: {
-		DisplayName: Attractite Shuriken
-		Tooltip: Inflicts attractite to hit enemies
+		DisplayName: Сюрикен аттаракции
+		Tooltip: Применяет аттаракцию к поражённым врагам
 	}
 
 	AttractiteFlask: {
-		DisplayName: Attractite Flask
+		DisplayName: Флакон аттаракции
 		Tooltip:
 			'''
-			Hit target will attract alchemic spores and lingering particles
-			The attractivity buff will jump to the nearest target on miss
-			Counts as an extract when spawning spores
+			Попадания по врагам призывает аттарактируюзие споры и задерживающиеся в воздухе частицы
+			Эффект аттаракции перебрасывается на ближайшую цель при промахе
+			Считается за экстракт при призыве спор
 			'''
 	}
 
 	DaybloomFlask: {
-		DisplayName: Daybloom Extract
+		DisplayName: Экстракт днецвета
 		Tooltip:
 			'''
-			Releases nature spores, the less other extracts used, the more
-			Only one set of spores can exist at once
-			Spores deals 10% increased damage against fire-coated enemies
+			Выпускает воздушные споры
+			Чем больше других экстрактов используется, тем больше выпскается спор
+			Одновременно может существовать только одна группа спор
+			Сопры наносят на 10% больше урона врагам, покрытым огненным элементом
 			'''
 	}
 
 	GlowingAttractiteFlask: {
-		DisplayName: Glowing Attractite Flask
+		DisplayName: Светящийся флакон аттаракции
 		Tooltip:
 			'''
-			Hit target will attract alchemic spores and lingering particles
-			The attractivity buff will jump to the nearest target on miss
-			Releases nature spores, the less other extracts used, the more
-			Spores deals 10% increased damage against fire-coated enemies
+			Выпускает воздушные споры
+			Попадания по врагам призывает аттарактируюзие споры и задерживающиеся в воздухе частицы
+			Эффект аттаракции перебрасывается на ближайшую цель при промахе
+			Чем больше других экстрактов используется, тем больше выпскается спор
+			Сопры наносят на 10% больше урона врагам, покрытым огненным элементом
 			'''
 	}
 
 	GlowingMushroomVial: {
-		DisplayName: Glowing Mushroom Extract
+		DisplayName: Экстракт светящихся грибов
 		Tooltip:
 			'''
-			Grows a mushroom, which aura increases the number of spores released by other alchemic extracts
-			The mushroom will absorb the properties of nearby spores, creating more of them
-			Only one mushroom can exist at once
+			Выращивает гриб, испускающий ауру, увеличивающую количество спор, выделяемых другими экстрактами
+			Гриб погрощает свойства ближайших спор, выпуская их в ещё большем количестве
+			Одновременно может существовать только 1 гриб
 			'''
 	}
 
 	JungleLilyFlask: {
-		DisplayName: Jungle Lily Extract
+		DisplayName: Экстракт лилии джунглей
 		Tooltip:
 			'''
-			Enemies and spores within impact radius will bloom
-			Bloomed spores will duplicate a maximum of once
-			Bloomed enemies will spawn spores for each of their coatings
-			Direct hits will apply a nature coating
+			Враги и споры в радиусе действия начнут цвести
+			Цветущие споры дублируются один раз
+			Цветущие враги выпустят по одной споре для каждого элемента, которым они покрыты
+			Покрывает врагов природным элементом при прямом попадании
 			'''
 	}
 
 	LivingSapVial: {
-		DisplayName: Living Sap Flask
+		DisplayName: Флакон живительного сока
 		Tooltip:
 			'''
-			Creates a healing living sap bubble if used with other ingredients
-			If an air element is used, healing is doubled
-			Has a chance to release a bigger, catalytic sap bubble
-			On reaction, heals players and coats enemies in alchemical nature
+			Создаёт пузырь лечебного сока при использовании с другими ингридиентами
+			IПри использовании с воздушным элементом, лечебный эффект удваивается
+			Имеет шанс выпустить большой пузырь сока-катализатора
+			При реакции, лечит союзников по команде и покрывает ближайших врагов природным элементом
 			'''
 	}
 
 	MoonglowFlask: {
-		DisplayName: Moonglow Extract
+		DisplayName: Экстракт луноцвета
 		Tooltip:
 			'''
-			Releases nature spores, the less other extracts used, the more
-			Only one set of spores can exist at once
-			Spores deals 10% increased damage against fire-coated enemies
+			Выпускает воздушные споры
+			Чем больше других экстрактов используется, тем больше выпскается спор
+			Одновременно может существовать только одна группа спор
+			Сопры наносят на 10% больше урона врагам, покрытым огненным элементом
 			'''
 	}
 
 	MushroomFlask: {
-		DisplayName: Mushroom Spores Flask
-		Tooltip: When mixed with an extract, increases its spore damage by 5
+		DisplayName: Флакон светящихся грибов
+		Tooltip: При смешивании с любым экстрактом, увеличивает его урон спор на 5 ед.
 	}
 
 	NatureVial: {
-		DisplayName: Nature Vial
-		Tooltip: "[c/FF0000:Test Item]"
+		DisplayName: Колба природы
+		Tooltip: "[c/FF0000:Предмет тестировки]"
 	}
 
 	PoisonVial: {
-		DisplayName: Poison Flask
+		DisplayName: Отравляющий флакон
 		Tooltip:
 			'''
-			Releases lingering poison bubbles
-			Has a chance to release a catalytic poison bubble
-			Can contaminate other bubbly weapons effects
+			Выпускает отравляющие пузырьки, задерживающиеся в воздухе
+			Имеет шанс выпустить ядовитый пузырь-катализатор
+			Может влиять на эффекты других пузырьковых алхимических оружий
 			'''
 	}
 
 	SunflowerFlask: {
-		DisplayName: Forest Samples
+		DisplayName: Проба леса
 		Tooltip:
 			'''
-			Using a water element increases damage and spawns a damaging sunflower
-			'Handcrafted jars are unfit for precise alchemy'
+			При использовании с водяным элементом, увеличивает урон и призывает наносящие урон подсолнухи
+			«Рукодельные банки не подходят для точной алхимии»
 			'''
 	}
 
 	BloodMoonFlask: {
-		DisplayName: Blood Mist Flask
+		DisplayName: Флакон кровавого тумана
 		Tooltip:
 			'''
-			Creates a lingering cloud of damaging mist
-			The mist knockback heavily scales with the number of elements used
-			Using a fire element increases damage dealt, air increases spread
-			Using both negates both effects
+			Создаёт наносящее урон облака тумана, задерживающиеся в воздухе
+			Сила отбрасывания облака зависит от количества используемых ингридиентов
+			При использовании с огненным элементом, увеличивает урон облака, а с воздушным — дальность его распространения
+			Ни один из этих эффектов не будет применён, если используются сразу два этих элемента
 			'''
 	}
 
 	DungeonFlask: {
-		DisplayName: Spirited Water
+		DisplayName: Одухотворенная вода
 		Tooltip:
 			'''
-			Releases lingering water flames
-			The flames are considered as lingering particles
-			Has a chance to release a catalytic spirited bubble
+			Выпускает водяные огни, задерживающиеся в воздухе
+			Эти огни считаются за частицы, задерживающиеся в воздухе
+			Имеет шанс выпустить одухотворённый пузырь-катализатор
 			'''
 	}
 
 	GoblinArmyFlask: {
-		DisplayName: Goblin Oil
+		DisplayName: Гоблинское масло
 		Tooltip:
 			'''
-			Using a fire element in the same attack will drastically increase damage
-			This will also damage and spread alchemical fire to all nearby water coated enemies
-			Has a chance to release a catalytic oil bubble, coating nearby enemies in water on reaction
+			При использовании огненного элемента в той же атаке сильно увеличивает урон
+			Это также нанечёт дополнительный урон и распространит алхимический урон на ближайших врагов, покрытых водяным элементом
+			Имеет шанс выпустить пузырь масла-катализатор, при реакции покрывающий ближайших врагов водой
 			'''
 	}
 
 	HellOil: {
-		DisplayName: Hellfire Oil
+		DisplayName: Адское масло
 		Tooltip:
 			'''
-			Using a fire element in the same attack will drastically increase damage
-			This will also damage and spread alchemical fire to all nearby water coated enemies
-			Has a chance to release a catalytic oil bubble, coating nearby enemies in water on reaction
+			При использовании огненного элемента в той же атаке сильно увеличивает урон
+			Это также нанечёт дополнительный урон и распространит алхимический урон на ближайших врагов, покрытых водяным элементом
+			Имеет шанс выпустить пузырь масла-катализатор, при реакции покрывающий ближайших врагов водой
 			'''
 	}
 
 	IceChestFlask: {
-		DisplayName: Flash Freeze
+		DisplayName: Мгновенная заморозка
 		Tooltip:
 			'''
-			Freezes all spores, catalytic elements and lingering particles in an area
-			Frozen projectiles will fall to the ground and shatter
-			Enemies hit by the area will be slowed, duration is increased against water-coated ones
-			Using a fire ingredient cancels all these effects, and coats hit enemy with alchemical water
+			Замораживает все споры, катализирующие элементы и частицы, задерживающиеся в воздухе, находящиеся в области действия
+			Замороженные снаряды упадут об землю и разобьются
+			Враги в области действия будут замедлены, а враги, покрытые водяным элементом, будут заморожены на ешё более длительное время
+			Использование огненного ингридиента отменяет все эти эффекты, покрывая врага водяным элементом
 			'''
 	}
 
 	KingSlimeFlask: {
-		DisplayName: Slimy Flask
+		DisplayName: Слизневой флакон
 		Tooltip:
 			'''
-			Makes hit enemies bouncy and susceptible to fall damage
-			Has a chance to release a catalytic slime bubble
+			Делает поражённых врагов желейными и воспримчевыми к урону от падения
+			Имеет шанс выпустить пузырь слизи-катализатор
 			'''
 	}
 
 	SeafoamVial: {
-		DisplayName: Seafoam Flask
+		DisplayName: Флакон морской пены
 		Tooltip:
 			'''
-			Creates a lingering, damaging water bubble
-			Has a chance to release a catalytic seafoam bubble
+			Создаёт наносящие урон водяные пузыри, задерживающиеся в воздухе
+			Имеет шанс выпустить пузырь морской пены-катализатор
 			'''
 	}
 
 	SlimeFlask: {
-		DisplayName: Gelatinous Samples
+		DisplayName: Проба геля
 		Tooltip:
 			'''
-			Ignites if mixed with a fire element, causing a deflagration
-			'Handcrafted jars are unfit for precise alchemy'
+			При использовании с огненным элементом, вызывает горение
+			«Рукодельные банки не подходят для точной алхимии»
 			'''
 	}
 
 	WaterleafFlask: {
-		DisplayName: Waterleaf Extract
+		DisplayName: Экстракт водонолиста
 		Tooltip:
 			'''
-			Releases water spores, the less other extracts used, the more
-			Only one set of spores can exist at once
-			Spores deals 10% increased damage against fire-coated enemies
+			Выпускает водяные споры
+			Чем больше других экстрактов используется, тем больше выпскается спор
+			Одновременно может существовать только одна группа спор
+			Сопры наносят на 10% больше урона врагам, покрытым огненным элементом
 			'''
 	}
 
 	WaterVial: {
-		DisplayName: Water Vial
-		Tooltip: "[c/FF0000:Test Item]"
+		DisplayName: Колба воды
+		Tooltip: "[c/FF0000:Предмет тестировки]"
 	}
 
 	GoldFan: {
-		DisplayName: Gold Fan
+		DisplayName: Золотой веер
 		Tooltip:
 			'''
-			Horizontally dashes at your foes
-			[c/FF0000:Test Item]
-			The Dancer class is a proof of concept
-			Do not expect it to be released soon, if at all
+			Совершает горизонтальные рывки на ваших врагов
+			[c/FF0000:Предмет тестировки]
+			Класс танцора является подтвержённым концептом, но не ждите его появление в ближайшее время, а лучше и вообще
 			'''
 	}
 
 	WoodenTekko: {
-		DisplayName: Wooden Tekko
+		DisplayName: Деревянный тэкко
 		Tooltip:
 			'''
-			Horizontally dashes at your foes
-			[c/FF0000:Test Item]
-			The Dancer class is a proof of concept
-			Do not expect it to be released soon, if at all
+			Совершает горизонтальные рывки на ваших врагов
+			[c/FF0000:Предмет тестировки]
+			Класс танцора является подтвержённым концептом, но не ждите его появление в ближайшее время, а лучше и вообще
 			'''
 	}
 
@@ -1009,17 +1018,17 @@ Items: {
 	}
 
 	BurningClovers: {
-		DisplayName: Горящие Клеверы
+		DisplayName: Горящие клеверы
 		Tooltip:
 			'''
-			Кости картёжника замедляются, если выпадает 5 или больше
-			1 или 2 выпасть не могут
+			Кости картёжника замедляются, если выпадает 5 оч. или больше
+			Вам не могут выпасть 1 и 2 оч.
 			'''
 	}
 
 	ConquerorsPennant: {
 		DisplayName: Знамя завоевателя
-		Tooltip: Вы впадаете в ярость, когда вытягиваете карту «босса» 
+		Tooltip: Вы впадаете в ярость, когда вытягиваете «боссовую» карту
 	}
 
 	DemonicPocketMirror: {
@@ -1031,33 +1040,33 @@ Items: {
 		DisplayName: Элементальная линза
 		Tooltip:
 			'''
-			Атаки карт «элементов» накладывают на врагов соответствующие дебаффы
+			Атаки «элементальных» карт накладывают на врагов соответствующие дебаффы
 			Дебаффы от карт, которые уже накладывают их, длятся дольше
 			'''
 	}
 
 	GamblerTest: {
-		DisplayName: Gambler Test Accessory
+		DisplayName: Тестовый аксессуар картёжника
 		Tooltip:
 			'''
-			Allows you to see the next 3 cards you will draw
-			50% chance not to consume chips
-			Maximum chips increased by 45
-			Redraws cooldown reduced by 29 seconds
-			Maximum redraws increased by 4
-			[c/FF0000:Test Item]
+			Позволяет увидеть следующие 3 карты, которые вы вытянете
+			50% шанс не израсходовать фишки
+			Максимальное количество фишек увеличивается на 45
+			Снижает время перезарядки повторных вытягиваний до 29 секунд
+			Увеличивает максимальное количество повторных вытягиваний на 4
+			[c/FF0000:Предмет тестировки]
 			'''
 	}
 
 	ImpDiceCup: {
 		DisplayName: Стакан для костей беса
-		Tooltip: На кости не могут выпасть на 1 или 2.
+		Tooltip: Вам не могут выпасть 1 или 2 оч. на кости
 
 	}
 
 	LuckySprout: {
 		DisplayName: Счастливый росток
-		Tooltip: Кусты карт из набора «биом»  остаются на месте вместо исчезновения
+		Tooltip: Кусты «биомных» карт остаются на месте вместо исчезновения
 	}
 
 	PileOfChips: {
@@ -1071,7 +1080,7 @@ Items: {
 
 	SlimyLollipop: {
 		DisplayName: Слизневый леденец
-		Tooltip: Периодически выпускает дружелюбных слизней, когда активна карта «слизня»
+		Tooltip: Периодически выпускает дружелюбных слизней, когда активна «слизневая» карта
 	}
 
 	VultureCharm: {
@@ -1083,8 +1092,8 @@ Items: {
 		DisplayName: Нагрудник Тюхе
 		Tooltip:
 			'''
-			Шанс азартного критического удара увеличен на 10%
-			Максимальное количество повторных вытягиваний увеличено на 1
+			Увеличивает шанс азартного критического удара на 10%
+			Увеличивает максимальное количество повторных вытягиваний на 1
 			'''
 	}
 
@@ -1095,22 +1104,22 @@ Items: {
 
 	GamblerDungeonLegs: {
 		DisplayName: Поножи Тюхе
-		Tooltip: Азартный урон увеличен на 10%
+		Tooltip: Увеличивает азартный урон на 10%
 	}
 
 	OutlawHat: {
 		DisplayName: Шляпа изгоя
-		Tooltip: Максимальное количество фишек увеличено на 3
+		Tooltip: Увеличивает максимальное количество фишек на 3
 	}
 
 	OutlawPants: {
 		DisplayName: Штаны изгоя
-		Tooltip: Азартный урон увеличен на 4%
+		Tooltip: Увеличивает азартный урон на 4%
 	}
 
 	OutlawVest: {
 		DisplayName: Жилет изгоя
-		Tooltip: Азартный урон увеличен на 4%
+		Tooltip: Увеличивает азартный урон на 4%
 	}
 
 	DeckBone: {
@@ -1141,7 +1150,7 @@ Items: {
 	}
 
 	DeckJungle: {
-		DisplayName: Колода карт из джунглей
+		DisplayName: Колода карт джунглей
 		Tooltip:
 			'''
 			Позволяет использовать способности картёжника
@@ -1173,11 +1182,11 @@ Items: {
 	}
 
 	GamblerDummy: {
-		DisplayName: Карта-Манекен
+		DisplayName: Карта-манекен
 		Tooltip:
 			'''
 			Позволяет использовать определённые игральные карты 
-			Правый клик для перебора карт в вашей колоде
+			Нажмите ПКМ для перебора карт в вашей колоде
 			Может наносить урон только манекенам
 			У карт, не наносящих урон, эффект отсутсвует
 			'''
@@ -1214,7 +1223,7 @@ Items: {
 
 	VulturePotion: {
 		DisplayName: Зелье стервятника
-		Tooltip: Увеливает генерацию фишек на 20%
+		Tooltip: Увеливает скорость появления фишек на 20%
 	}
 
 	VultureTalon: {
@@ -1237,8 +1246,8 @@ Items: {
 		DisplayName: Игральная карта: Пузырьки
 		Tooltip:
 			'''
-			Призывает пузыри, которые взлетают вверх.
-			Если отпустить левую кнопку мыши, все пузыри совершат рывок
+			Призывает пузыри, которые взлетают вверх
+			Отпустите ЛКМ, чтобы все пузыри совершили рывок
 			Урон пузырей увеличивается со временем
 			'''
 	}
@@ -1256,7 +1265,7 @@ Items: {
 		DisplayName: Игральная карта: Детонатор
 		Tooltip:
 			'''
-			Бросает взрывчатку, которая взорвётся когда вы отпустите левую кнопку мыши
+			Бросает взрывчатку, которая взорвётся когда вы отпустите ЛКМ
 			Перед взрывом есть небольшая задержка
 			'''
 	}
@@ -1290,7 +1299,7 @@ Items: {
 		DisplayName: Игральная карта: Страж ночи
 		Tooltip:
 			'''
-			Призывает Прислужника Ктулху, который совершает рывок к курсору
+			Призывает прислужника Ктулху, который совершает рывок в сторону курсора
 			Прислужник атакует только если курсор находится достаточно далеко от его местоположения
 			'''
 	}
@@ -3407,7 +3416,7 @@ Items: {
 	}
 
 	DancerHallowedHead: {
-		DisplayName: Hallowed Masque
+		DisplayName: Освящённа театральная маска
 		Tooltip: To be continued..?
 	}
 
@@ -3481,10 +3490,10 @@ Items: {
 }
 
 NPCs: {
-	BoundChemist.DisplayName: Bound Chemist
+	BoundChemist.DisplayName: Связанный химик
 
 	Chemist: {
-		DisplayName: Chemist
+		DisplayName: Химик
 
 		TownNPCMood: {
 			Content: This is a neat place to experiment in!
@@ -3503,6 +3512,45 @@ NPCs: {
 			HateNPC: "{NPCName} keeps pestering me about creating new weapons, can't he leave me alone?"
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
+		}
+		
+		UI: {
+			RHint: Reaction Hint
+			SHint: Special Hint!
+		}
+
+
+		Dialogues: {
+			1: Спс, you spared me a lot of troubles right there, or... Let's not talk about it.
+			2: Want your blood donated to science? No? Then leave.
+			3: Of course you can't use normal bottles for alchemy! Give me money!
+			4: Ugh, what, you want to blow yourself up or something?
+			5: DON'T get stains on anything! I don't care if I already did!
+			6: So you're interested in alchemy AND haven't exploded yet? Impressive.
+			7: Always wear your gloves! By the way, have you seen my gloves?
+			8: You know, you can use a centrifuge for stain removal! Kind of.
+			9: You can be a catalyst for science! Or a pile of ash. Try to keep priorities.
+			10: Alchemy makes the world go around... current scientific theories purport.
+			11: Safety warning: do not drink alchemical compounds. Unless I can take notes.
+			12: Some people call me a reactionary.
+			13: Alchemy is just sublime!
+			14: Life is just one big reaction!
+			15: Undeath is just one big reaction! I don't know why the moon does that.
+			16: Do you think the moon... is made of attractite?!
+			17: The scientific method is... try until it doesn't explode!
+			18: Here's your daily recipe... note that it itself is not an ingredient.
+			19: There you go, try not to lose a hand with this one.
+			20: I didn't take the time to try that one. If I don't see you tomorrow, I'll assume it doesn't work.
+			21: And one perfectly fine recipe, completely free of charge! Or is it?
+			22: That one should work. Maybe. Possibly. I wouldn't put you in danger, would I?
+			23: If it's free, you're probably the product, you say? Naaah... please, just don't try it in the vicinity.
+			24: I need time to think about more recipes. Maybe can you go and kill a few baddies, meanwhile?
+			25: Over-exposure to my brilliant ideas may be dangerous for a trainee.
+			26: I already gave you one today, why don't you try and come up with your own recipes?
+			27: There's nothing I need you to test for me right now. Wait, what did I just say?
+			28: Since this is your first time asking, here are three hints for the price of one, along with a little gift! I'd highly advise getting your hands on a hidden reactions codex, now...
+			29: I see you found some glowing mushrooms. Did you know that you can make a pretty good thread with them? Here's the recipe.
+			30: Jungle lilies, I love these flowers! I bet you're wondering how to make them bloom ain't you? Here's the solution.
 		}
 
 		Census.SpawnCondition: Find in the main mineshaft, in the center of your world
@@ -3889,14 +3937,18 @@ Misc: {
 	ShapeshifterSage: Sage wildshape
 	ShapeshifterPredator: Predator wildshape
 	ShapeshifterWarden: Warden wildshape
+	NewHiddenReac: Найдена подсказка к новой секретной реакции!
+	NoHintsLeft: На этом уровне не осталось подсказок
+	FailedReaction: Failed reaction
+	EntryAdded: Запись {0} добавлена в рукопись о секретных реакциях!"
 }
 
 UI: {
 	PotionBag: {
 		ChangeState: Изменить состояние   – клавишой «Взаимодействовать» ({0}) без предмета по сумке
 		PutInInventory: Положить в инвентарь – клавишой «Взаимодействовать» ({0}) с предметом по сумке
-		PullOutPotion: Забрать настойку     – клавишой «Предметы 1-8» ({0}-{1})
-		PullOutPotions: Забрать настойки     – клавишой «Предмет 9» ({0})
+		PullOutPotion: Забрать отвар        – клавишой «Предметы 1-8» ({0}-{1})
+		PullOutPotions: Забрать отвары       – клавишой «Предмет 9» ({0})
 		PullOutDye: Забрать краситель    – клавишой «Предмет 10» ({0})
 		Dye: "{0} применён"
 		MoreInformation: Удерживайте клавишу «Автовыбор» ({0}) для большей информации
@@ -3905,6 +3957,17 @@ UI: {
 		ActiveTip: (будет отображаться в меню смешивания)
 		NotActive: неактивна
 		NotActiveTip: (не будет отображаться в меню смешивания)
+	}
+	
+	AlchemistItem: {
+		Mix: Нажмите ПКМ для смешивания
+		Cost: Использует {0} ед. концентрации вещества
+		Water: Элемент: Вода
+		Fire: Элемент: Огонь
+		Nature: Элемент: Природа
+		Air: Элемент: Воздух
+		Light: Элемент: Свет
+		Dark: Элемент: Тьма
 	}
 }
 
@@ -3917,8 +3980,8 @@ DamageClasses: {
 	Shapeshifter: -Оборотень-
 	AlchemistDamageClass.DisplayName: ед. химического урона
 	DancerDamageClass.DisplayName: ед. равновесящего урона
-	GamblerChipDamageClass.DisplayName: ед. картёжного урона
-	GamblerDamageClass.DisplayName: ед. картёжного урона
+	GamblerChipDamageClass.DisplayName: ед. азартного урона
+	GamblerDamageClass.DisplayName: ед. азартного урона
 
 	GuardianDamageClass: {
 		DisplayName: ед. противного урона
@@ -3928,17 +3991,17 @@ DamageClasses: {
 			Description: Increases maximum guards and slams, life regen and defense by 3
 		}
 	}
-
+			
 	ShamanDamageClass.DisplayName: shamanic damage
 	ShapeshifterDamageClass.DisplayName: feral damage
 }
 
 Conditions: {
-	SlimeRain: Mods.OrchidMod.Conditions.SlimeRain
-	GamblerSetSlime: Mods.OrchidMod.Conditions.GamblerSetSlime
-	GamblerSetBoss: Mods.OrchidMod.Conditions.GamblerSetBoss
-	GamblerSetBiome: Mods.OrchidMod.Conditions.GamblerSetBiome
-	GamblerSetElemental: Mods.OrchidMod.Conditions.GamblerSetElemental
-	AlchemistKnownReactions4: Mods.OrchidMod.Conditions.AlchemistKnownReactions4
-	DisabledThorium: Mods.OrchidMod.Conditions.DisabledThorium
+	SlimeRain: A slime rain is active
+	GamblerSetSlime: The player hs more than 2 "Slime" set cards in their deck
+	GamblerSetBoss: The player hs more than 2 "Boss" set cards in their deck
+	GamblerSetBiome: The player hs more than 2 "Biome" set cards in their deck
+	GamblerSetElemental: The player hs more than 2 "Elemental" set cards in their deck
+	AlchemistKnownReactions4: Игроком изучено как минимум 4 секретных реакции
+	DisabledThorium: Thorium mod is disabled
 }
