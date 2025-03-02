@@ -1193,21 +1193,21 @@ Items: {
 	}
 
 	GamblerDummyTest: {
-		DisplayName: Gambler Test Card
+		DisplayName: Игральная карта для тестировки
 		Tooltip:
 			'''
-			Allows the use of specific gambler cards
-			Right click to cycle through your deck
-			[c/FF0000:Test Item]
+			Позволяет использовать определённые игральные карты
+			Нажмите ПКМ для перебора карт в вашей колоде
+			[c/FF0000:Предмет тестировки]
 			'''
 	}
 
 	GamblerReset: {
-		DisplayName: Playing Card : RESET
+		DisplayName: Игральная карта: СБРОС
 		Tooltip:
 			'''
-			Resets gambling cards
-			[c/FF0000:Test Item]
+			Сбрасывает карты в колоде
+			[c/FF0000:Предмет тестировки]
 			'''
 	}
 
@@ -1314,230 +1314,231 @@ Items: {
 	}
 
 	GoblinArmyCard: {
-		DisplayName: Playing Card : Erratic Magic
+		DisplayName: Игральная карта: Нестабильная магия
 		Tooltip:
 			'''
-			Throws a portal, firing shadow bolts at an increasing rate
-			The portal will disappear upon releasing left click or getting too far from it
+			Бросает портал, который стреляет теневыми снарядами с постепенно увеличивающейся скоростью
+			Портал исчезает если вы отпустите левую кнопку мыши или если игрок будет слишком далеко
 			'''
 	}
 
 	GoldChestCard: {
-		DisplayName: Playing Card : Enchantment
-		Tooltip: Releases damaging sparkles
+		DisplayName: Игральная карта: Зачарование
+		Tooltip: Выпускает зачарованные искры
 	}
 
 	IceChestCard: {
-		DisplayName: Playing Card : Icicle
-		Tooltip: Summons icicles, falling from the ceiling above your cursor
+		DisplayName: Игральная карта: Сосульки
+		Tooltip: Призывает сосульки, падающие сверху к местоположению курсора
 	}
 
 	IvyChestCard: {
-		DisplayName: Playing Card : Deep Forest
+		DisplayName: Игральная карта: Чаща
 		Tooltip:
 			'''
-			Releases bursts of leaves, able to be pushed with the cursor
-			The further they are pushed, the more damage they deal
-			Only 3 sets of leaves can exist at once
+			Выпускает порывы листьев, которые можно толкать курсором
+			Чем дальше они отталкиваются, тем больше урона наносят
+			Одновременно может существовать только 3 набора листьев
 			'''
 	}
 
 	JungleCard: {
-		DisplayName: Playing Card : Jungle
+		DisplayName: Игральная карта: Джунгли
 		Tooltip:
 			'''
-			Summons a jungle bush above your head
-			Drag and release a fruit to launch it
+			Призывает куст из джунглей над вашей головой
+			Перетащите и отпустите фрукт, чтобы запустить его
 			'''
 	}
 
 	JungleSlimeCard: {
-		DisplayName: Playing Card : Spiky Gelatin
+		DisplayName: Игральная карта: Колючий желатин
 		Tooltip:
 			'''
-			Summons a bouncy jungle slime, following your cursor
-			Each successful hit increases damage, touching the ground resets it
+			Призывает прыгучего слизня джунглей, следующего за курсором
+			Каждое успешное попадание увеличивает урон, касание земли сбрасывает его
 			'''
 	}
 
 	KingSlimeCard: {
-		DisplayName: Playing Card : Blue King
+		DisplayName: Игральная Карта: Синий король
 		Tooltip:
 			'''
-			Summons a bouncy slime, following your cursor, and jumping up to it
-			Gains in damage with fall distance and enemy hits, touching on the ground resets it
+			Призывает прыгучего короля слизней, следующего за курсором
+			Каждое успешное попадание увеличивает урон, касание земли сбрасывает его
+			Чем больше высота падения, тем больше урон от атаки
 			'''
 	}
 
 	LavaSlimeCard: {
-		DisplayName: Playing Card : Living Lava
+		DisplayName: Игральная карта: Живая лава
 		Tooltip:
 			'''
-			Summons a bouncy lava slime, following your cursor
-			Each successful hit increases damage, touching the ground resets it
-			Every 3 consecutive hits, the slime will release a damaging explosion
+			Призывает прыгучего лавового слизня, следующего за курсором
+			Каждое успешное попадание увеличивает урон, касание земли сбрасывает его
+			Каждые 3 удара, слизень выпускает разрушительный взрыв
 			'''
 	}
 
 	MushroomCard: {
-		DisplayName: Playing Card : Glowing Mushroom
+		DisplayName: Игральная карта: Светящийся гриб
 		Tooltip:
 			'''
-			Summons a mushroom bush above your head
-			Drag and release a mushroom to launch it
-			Empowers once after bouncing
+			Призывает грибной куст над вашей головой
+			Перетащите и отпустите гриб, чтобы запустить его
+			Усиливается после отскока
 			'''
 	}
 
 	OceanCard: {
-		DisplayName: Playing Card : Ocean
+		DisplayName: Игральная карта: Океан
 		Tooltip:
 			'''
-			Summons a palm bush above your head
-			Drag and release a coconut to launch itA harsh landing will make the coconut explode
+			Призывает пальмовый куст над вашей головой
+			Перетащите и отпустите кокос, чтобы запустить его. Жёсткая посадка заставит кокос взорваться
 			'''
 	}
 
 	QueenBeeCard: {
-		DisplayName: Playing Card : Poisonous Queen
+		DisplayName: Игральная карта: Королева яда
 		Tooltip:
 			'''
-			Summons a bee hive, following your cursor
-			Shake it to summon bees
+			Призывает пчелиный улей, следующий за курсором
+			Потрясите его, чтобы призвать пчёл
 			'''
 	}
 
 	SapCard: {
-		DisplayName: Playing Card : Unstable Sap
+		DisplayName: Игральная карта: Нестабильный живительный сок
 		Tooltip:
 			'''
-			Releases a slow-moving sap bubble, following the cursor
-			Upon releasing the mouse click, the bubble will explode
-			The longer the bubble exists, the more explosion damage
+			Выпускает медленно движущийся пузырь сока, следующий за курсором
+			При отпускании кнопки мыши пузырь взрывается
+			Чем дольше существует пузырь, тем больше урон от взрыва
 			'''
 	}
 
 	ShuffleCard: {
-		DisplayName: Playing Card : Shuffle
+		DisplayName: Игральная карта: Перетасовка
 		Tooltip:
 			'''
-			Randomly shoots a selection of clubs, spades, diamonds and heartz
-			Each projectile has its own properties and behaviour
-			Hold the attack button to create more projectiles and enhance their effects
-			Damage increases with the number of cards in your deck
+			Случайно стреляет трефами, пиками, бубнами и червами
+			Каждая масть имеет свои свойства и поведение
+			Удерживайте кнопку атаки, чтобы создать больше снарядов и усиливать их эффекты
+			Урон увеличивается с количеством карт в вашей колоде
 			'''
 	}
 
 	SkeletronCard: {
-		DisplayName: Playing Card : Curse of the Dungeon
+		DisplayName: Игральная карта: Проклятье Темницы
 		Tooltip:
 			'''
-			Summons a skull, slowly following your cursor
-			Based on the distance between your cursor and it, the projectile will behave differently
+			Призывает череп, следующий за курсором
+			В зависимости от расстояния до курсора, у черепа будут разные атаки
 			'''
 	}
 
 	SkyCard: {
-		DisplayName: Playing Card : Sky
+		DisplayName: Игральная карта: Космос
 		Tooltip:
 			'''
-			Summons a cloud bush above your head
-			Drag and release a fruit to launch it
-			Every third shot will release a star
-			Aim at the star to create more projectiles
+			Призывает облачный куст над вашей головой
+			Перетащите и отпустите фрукт, чтобы запустить его
+			Каждый третий выстрел создаёт звезду
+			Цельтесь в звезду, чтобы создать ещё больше снарядов
 			'''
 	}
 
 	SlimeCard: {
-		DisplayName: Playing Card : Bouncy Beginnings
+		DisplayName: Игральная карта: Прыгучее начало
 		Tooltip:
 			'''
-			Summons a bouncy slime, following your cursor
-			Each successful hit increases damage, touching the ground resets it
+			Призывает прыгучего слизня, следующего за курсором
+			Каждое успешное попадание увеличивает урон, касание земли сбрасывает его
 			'''
 	}
 
 	SlimeRainCard: {
-		DisplayName: Playing Card : Jelly Clouds
+		DisplayName: Игральная карта: Желатиновые облака
 		Tooltip:
 			'''
-			Summons a slime rain cloud, following your cursor
-			Slimes will actively chase enemies after landing
-			The longer the slimes falls, the more damage they do
+			Призывает облако слизней, следующее за курсором
+			Слизни будут преследовать врагов после приземления
+			Чем дольше падают слизни, тем больше урона они наносят
 			'''
 	}
 
 	SnowCard: {
-		DisplayName: Playing Card : Snow
+		DisplayName: Игральная карта: Снег
 		Tooltip:
 			'''
-			Summons a snow bush above your head
-			Drag and release a fruit to launch it
+			Призывает снежный куст над вашей головой
+			Перетащите и отпустите фрукт, чтобы запустить его
 			'''
 	}
 
 	BouncyChip: {
-		DisplayName: Bouncy Chip
-		Tooltip: Throws bouncy gambling chips at your foes
+		DisplayName: Прыгучая фишка
+		Tooltip: Кидает прыгучую фишку в врагов
 	}
 
 	CopperChip: {
-		DisplayName: Copper Chip
-		Tooltip: Throws gambling chips at your foes
+		DisplayName: Медная фишка
+		Tooltip: Кидает фишки в врагов
 	}
 
 	FossilChip: {
-		DisplayName: Fossil Chip
-		Tooltip: Throws gambling chips at your foes
+		DisplayName: Ископаемая фишка
+		Tooltip: Кидает фишки в врагов
 	}
 
 	GamblingChip: {
-		DisplayName: Gambling Chip
-		Tooltip: Throws gambling chips at your foes
+		DisplayName: Игральная фишка
+		Tooltip: Кидает фишки в врагов
 	}
 
 	GoldChip: {
-		DisplayName: Gold Chip
-		Tooltip: Throws gambling chips at your foes
+		DisplayName: Золотая фишка
+		Tooltip: Кидает фишки в врагов
 	}
 
 	HellChip: {
-		DisplayName: Hellfire Chip
-		Tooltip: Throws explosive chips at your foes
+		DisplayName: Фишка из адского камня
+		Tooltip: Кидает взрывные фишки в врагов
 	}
 
 	MeteorDetonator: {
-		DisplayName: Meteor Detonator
-		Tooltip: Timed explosions will deal double damage in a larger radius
+		DisplayName: Метеоритный детонатор
+		Tooltip: При полной зарядке, взрывы нанесут двойной урон в увеличенном радиусе
 	}
 
 	PlatinumChip: {
-		DisplayName: Platinum Chip
-		Tooltip: Throws gambling chips at your foes
+		DisplayName: Платиновая фишка
+		Tooltip: Кидает фишки в врагов
 	}
 
 	Rusalka: {
-		DisplayName: Rusalka
+		DisplayName: Русалка
 		Tooltip:
 			'''
-			Sends delayed projectiles, dealing 50% more damage
-			25% chance not to consume chip
+			Бросает дополнительные фишки с задержкой, которые наносят на 50% урона больше
+			25% шанс не потратить фишку
 			'''
 	}
 
 	TinChip: {
-		DisplayName: Tin Chip
-		Tooltip: Throws explosive chips at your foes
+		DisplayName: Оловянная фишка
+		Tooltip: Кидает фишки в врагов
 	}
 
 	GamblingDie: {
-		DisplayName: Gambling Die
-		Tooltip: Every second gambler hit deals 1-6 increased damage
+		DisplayName: Кость Картёжника
+		Tooltip: В зависимости от результата броска кости, игрок получает бонус к урону
 	}
 
 	HoneyDie: {
-		DisplayName: Wax Die
-		Tooltip: Recovers 1 - 6 health on gambling critical strike
+		DisplayName: Медовая кость
+		Tooltip: Восстанавливает 1-6 здоровья при критическом ударе оружием картёжника
 	}
 
 	OrnateOrchid: {
