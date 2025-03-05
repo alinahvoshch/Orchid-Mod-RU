@@ -6,98 +6,98 @@ Keybinds: {
 Tiles: {
 	JungleLilyTile.MapEntry: Лилия джунглей
 	ShamanBiomeChestTile.MapEntry: Светящийся грибной сундук
-	GuardianBuffStationTile.MapEntry: Spinning Dummy
-	VerveineQuarterstaffTile.MapEntry: Farting Plant
+	GuardianBuffStationTile.MapEntry: Вращающийся манекен
+	VerveineQuarterstaffTile.MapEntry: Вонючее растение
 }
 
 Buffs: {
 	TitanicBuff: {
-		Description: Mods.OrchidMod.Buffs.TitanicBuff.Description
+		Description: ""
 		DisplayName: Titanic Buff
 	}
 
 	LodestoneSlow: {
-		Description: Mods.OrchidMod.Buffs.LodestoneSlow.Description
+		Description: ""
 		DisplayName: Lodestone Slow
 	}
 
 	GraniteAura: {
-		Description: Mods.OrchidMod.Buffs.GraniteAura.Description
+		Description: ""
 		DisplayName: Granite Aura
 	}
 
 	AquaBump: {
-		Description: Mods.OrchidMod.Buffs.AquaBump.Description
+		Description: ""
 		DisplayName: Aqua Bump
 	}
 
 	ShroomHeal: {
-		Description: Mods.OrchidMod.Buffs.ShroomHeal.Description
+		Description: ""
 		DisplayName: Shroom Heal
 	}
 
 	ShamanicEmpowerment: {
-		Description: Mods.OrchidMod.Buffs.ShamanicEmpowerment.Description
+		Description: ""
 		DisplayName: Shamanic Empowerment
 	}
 
 	MythrilDefense: {
-		Description: Mods.OrchidMod.Buffs.MythrilDefense.Description
+		Description: ""
 		DisplayName: Mythril Defense
 	}
 
 	DeepForestAura: {
-		Description: Mods.OrchidMod.Buffs.DeepForestAura.Description
+		Description: ""
 		DisplayName: Deep Forest Aura
 	}
 
 	WindStun: {
-		Description: Mods.OrchidMod.Buffs.WindStun.Description
+		Description: ""
 		DisplayName: Wind Stun
 	}
 
 	WindSlow: {
-		Description: Mods.OrchidMod.Buffs.WindSlow.Description
+		Description: ""
 		DisplayName: Wind Slow
 	}
 
 	WindDamage: {
-		Description: Mods.OrchidMod.Buffs.WindDamage.Description
+		Description: ""
 		DisplayName: Wind Damage
 	}
 
 	LeafSlow: {
-		Description: Mods.OrchidMod.Buffs.LeafSlow.Description
+		Description: ""
 		DisplayName: Leaf Slow
 	}
 
 	HellHit: {
-		Description: Mods.OrchidMod.Buffs.HellHit.Description
+		Description: ""
 		DisplayName: Hell Hit
 	}
 
 	EarthTotemRevive: {
-		Description: Mods.OrchidMod.Buffs.EarthTotemRevive.Description
+		Description: ""
 		DisplayName: Earth Totem Revive
 	}
 
 	DiabolistCauterizeCooldown: {
-		Description: Mods.OrchidMod.Buffs.DiabolistCauterizeCooldown.Description
+		Description: ""
 		DisplayName: Diabolist Cauterize Cooldown
 	}
 
 	BrokenPower: {
-		Description: Mods.OrchidMod.Buffs.BrokenPower.Description
+		Description: ""
 		DisplayName: Broken Power
 	}
 
 	AbyssEmpowerment: {
-		Description: Mods.OrchidMod.Buffs.AbyssEmpowerment.Description
+		Description: ""
 		DisplayName: Abyss Empowerment
 	}
 
 	RCRemoteBuff: {
-		Description: Mods.OrchidMod.Buffs.RCRemoteBuff.Description
+		Description: ""
 		DisplayName: R C Remote Buff
 	}
 
@@ -325,7 +325,7 @@ AlchemistRecipe: {
 	
 	RecipeBeeSwarm: {
 		DisplayName: Пчелиный рой
-		Tooltip: Выпускает рой наносящий урон пчёл вокруг игрока
+		Tooltip: Выпускает рой наносящий урон пчёл вокруг вас
 	}
 	
 	RecipeOilBubble: {
@@ -369,118 +369,118 @@ AlchemistRecipe: {
 	}
 	
 	RecipeBurningSamples: {
-		DisplayName: Burning Samples
-		Tooltip: Using slimy samples with a fire element will release damaging embers
+		DisplayName: Горящий образец
+		Tooltip: Использование слизистых образцов, наполненных огнём, выпустит наносящие урон угли
 	}
 	
 	RecipeDemonReeks: {
-		DisplayName: Burning Samples
-		Tooltip: Demon breath projectiles will replicate
+		DisplayName: Демоническая вонь
+		Tooltip: Снаряды дыхания демона будут дублироваться
 	}
 	
 	RecipeFireSpores: {
-		DisplayName: Fire Spores
-		Tooltip: Releases a sizeable amount of fire spores, which doesn't destroy existing ones
+		DisplayName: Огненные споры
+		Tooltip: Выпускает большое количество огненных спор, не уничтожающих уже существующие споры
 	}
 	
 	RecipeGlowshroomHealing: {
-		DisplayName: Glowshroom Healing
-		Tooltip: Heals the player for 25 health
+		DisplayName:Исцеление светящихся грибов
+		Tooltip: Исцеляет 25 ед. вашего здоровья
 	}
 	
 	RecipeJungleLilyPurification: {
-		DisplayName: Lily Purification
-		Tooltip: Cleanses most common early-game debuffs and blooms jungle lilies around the user
+		DisplayName: Лилейное очищение
+		Tooltip: Устраняет большинство слабых дебаффов и заставляет цвести джунглевые лилии, находящиеся рядом с игроком
 	}
 	
 	RecipeLivingBeehive: {
-		DisplayName: Living Beehive
-		Tooltip: Every attack using 3 or more element will summon bees
+		DisplayName: Живой пчелиный улей
+		Tooltip: Любая атака, использующая 3 или более элементов, призовёт пчёл
 	}
 	
 	RecipeMistySteps: {
-		DisplayName: Misty Steps
-		Tooltip: Releases harmful mist when moving
+		DisplayName: Шаги в тумане
+		Tooltip: Выпускают наносящий урон туман при движении
 	}
 	
 	RecipeMushroomThread: {
-		DisplayName: Mushroom Thread
-		Tooltip: Creates a sample of Mushroom Thread, which can be used to create armor
+		DisplayName: Грибная нить
+		Tooltip: Создайт грибную нить, которую можно использовать для создания брони
 	}
 	
 	RecipePermanentFreeze: {
-		DisplayName: Permanent Freeze
-		Tooltip: Constantly applies the flash freeze aura around the player
+		DisplayName:  Мгновенная заморозка
+		Tooltip: Постоянно накладывает ауру моментальной заморозки вокруг вас
 	}
 	
 	RecipePoisonousSlime: {
-		DisplayName: Poisonous Slime
-		Tooltip: Increases the likelyhood of spawning slime bubbles, creating spiked jungle slimes
+		DisplayName: Отравленный слизень
+		Tooltip: Увеличивает шансы появления слизневых шариков, призывающих шипастых слизней джунглей
 	}
 	
 	RecipeBuilderPotion: {
-		DisplayName: Builder Potion
-		Tooltip: Gives 30 seconds of builder Potion effect
+		DisplayName: Зелье строителя
+		Tooltip: Даёт эффект зелья строителя на 30 секунд
 	}
 	
 	RecipeFeatherfallPotion: {
-		DisplayName: Featherfall Potion
-		Tooltip: Gives 30 seconds of featherfall Potion effect
+		DisplayName: Зелье пёрышка
+		Tooltip: Даёт эффект зелья пёрышка на 30 секунд
 	}
 	
 	RecipeFlipperPotion: {
-		DisplayName: FlipperPotion
-		Tooltip: Gives 30 seconds of flipper Potion effect
+		DisplayName: Зелье гравитации
+		Tooltip: Даёт эффект зелья гравитации на 30 секунд
 	}
 	
 	RecipeInvisibilityPotion: {
-		DisplayName: Invisibility Potion
-		Tooltip: Gives 30 seconds of invisibility Potion effect
+		DisplayName: Зелье невидимости
+		Tooltip: Даёт эффект зелья невидимости на 30 секунд
 	}
 	
 	RecipeNightOwlPotion: {
-		DisplayName: Night Owl Potion
-		Tooltip: Gives 30 seconds of night owl Potion effect
+		DisplayName: Зелье ночного зрения
+		Tooltip: Даёт эффект зелья ночного зрения на 30 секунд
 	}
 	
 	RecipeObsidianSkinPotion: {
-		DisplayName: Obsidian Skin Potion
-		Tooltip: Gives 30 seconds of obsidian skin Potion effect
+		DisplayName: Зелье обсидиановой кожи
+		Tooltip: Даёт эффект зелья обсидиановой кожи на 30 секунд
 	}
 	
 	RecipePropulsion: {
 		DisplayName: Толчок
-		Tooltip: Подбрасывает игрока вверх
+		Tooltip: Подбрасывает вас вверх
 	}
 	
 	RecipePurifyingLilies: {
-		DisplayName: Purifying Lilies
-		Tooltip: Each alchemical attack using two or more elements releases a purifying aura
+		DisplayName: Очищающие лилии
+		Tooltip: Каждая алхимическая атака, использующая два или более элемента, выпустит очищающую ауру
 	}
 	
 	RecipeSpiritedDroplets: {
-		DisplayName: Spirited Droplets
-		Tooltip: Chemical attacks will release spirited water flames
+		DisplayName: Горячие капли
+		Tooltip: Алхимические атаки выпускают горячие водяные огни
 	}
 	
 	RecipeStardustConfusion: {
-		DisplayName: Stardust Confusion
-		Tooltip: Forest Samples sunflowers inflict confusion on hit
+		DisplayName:  Запутанность звёздной пыли
+		Tooltip: Подсолнухи пробы леса накладывают запутывают поражённых врагов
 	}
 	
 	RecipeStellarTalcOrbit: {
-		DisplayName: Stellar Talc Orbit
-		Tooltip: Stellar Talc projectiles will orbit the user
+		DisplayName: Звёздный тальк
+		Tooltip: Кусок звёздного талька будет кружить вокруг вас
 	}
 	
 	RecipeSunflowerSeeds: {
-		DisplayName: Sunflower Seeds
-		Tooltip: Releases damaging sunflower seeds around the player
+		DisplayName: Семена подсолнуха
+		Tooltip: Разбрасывает наносящие урон семена подсолнуха вокруг вас
 	}
 	
 	RecipeWaterSpores: {
-		DisplayName: Water Spores
-		Tooltip: Releases a sizeable amount of water spores, which doesn't destroy existing ones
+		DisplayName: Водяные споры
+		Tooltip: Выпускает большое количество водяных спор, не уничтожающих уже существующие споры
 	}
 }
 
@@ -1277,6 +1277,7 @@ Items: {
 	GamblerDungeonHead: {
 		DisplayName: Головной убор Тюхе
 		Tooltip: Максимальное количество фишек увеличено на 5
+		SetBonus: Разыгрывание карт даёт от 1-2 фишки
 	}
 
 	GamblerDungeonLegs: {
@@ -1287,6 +1288,7 @@ Items: {
 	OutlawHat: {
 		DisplayName: Шляпа изгоя
 		Tooltip: Увеличивает максимальное количество фишек на 3
+		SetBonus: Увеличивает максимальное количество повторных вытягиваний на 1
 	}
 
 	OutlawPants: {
@@ -1538,7 +1540,7 @@ Items: {
 	}
 
 	KingSlimeCard: {
-		DisplayName: Игральная Карта: Синий король
+		DisplayName: Игральная карта: Синий король
 		Tooltip:
 			'''
 			Призывает прыгучего Короля слизней, следующего за курсором
@@ -1711,7 +1713,7 @@ Items: {
 
 	GamblingDie: {
 		DisplayName: Кость картёжника
-		Tooltip: В зависимости от результата броска кости, игрок получает бонус к урону
+		Tooltip: В зависимости от результата броска кости, вы получаете бонус к урону
 	}
 
 	HoneyDie: {
@@ -1720,56 +1722,56 @@ Items: {
 	}
 
 	OrnateOrchid: {
-		DisplayName: Ornate Orchid
-		Tooltip: "'Great for impersonating Orchid Devs!'"
+		DisplayName: Заколка орхидеи
+		Tooltip: «Отлично подходит для подражания внешности разработчиков Orchid!»
 	}
 
 	HarpyPotion: {
-		DisplayName: Cloud Burst Potion
+		DisplayName: Зелье облачного всплеска
 		Tooltip:
 			'''
-			Your first bonus jump will release a burst of damaging feathers
-			Allows you to double jump, if you cannot already
+			Позволяет совершать двойной прыжок, если у вас ещё нет предметов, дающих такой же функционал
+			Первый совершённый дополнительный прыжок приведёт к шквалу наносящих урон врагам перьев
 			'''
 	}
 
 	PrototypeSecrecy: {
-		DisplayName: Prototype Secrecy
+		DisplayName: Секретный прототип
 		Tooltip:
 			'''
-			Always critically strikes while returning
-			'Great for impersonating Orchid Devs!'
+			Всегда наносит критические удары на обратном пути
+			«Отлично подходит для подражания внешности разработчиков Orchid!»
 			'''
 	}
 
 	SquareMinecart: {
-		DisplayName: Square Minecart
-		Tooltip: "'Great for impersonating Orchid Devs!'"
+		DisplayName: Квадратная вагонетка
+		Tooltip: «Отлично подходит для подражания внешности разработчиков Orchid!»
 	}
 
 	OrchidEmblem: {
-		DisplayName: Orchid Emblem
+		DisplayName: Эмблема орхидеи
 		Tooltip:
 			'''
-			While the Guardians can continue their playthrough, the journey for both Alchemists and Gamblers stops here
-			A complete Shaman overhaul is on the way, and the class will come back soon!
-			Please, come and say hi on Discord if you want to support me ;)
+			Пока хранители продолжают свой путь, путешествие для алхимиков и картёжников на этом заканчивается
+			Класс шамана скоро вернётся, а его полная переработка уже ведётся!
+			Пожалуйста, если хотите поддержать меня, пройсто зайдите на наш Discord и передайте привет ;)
 			'''
 	}
 
 	RCRemote: {
-		DisplayName: RC Remote
-		Tooltip: "'Highly advanced elven technology enabling control over new, recently developed non-reindeer aircraft'"
+		DisplayName: Пульт радиоуправления
+		Tooltip: «Высокоразвитая эльфийская технология, позволяющая управлять новыми, недавно разработанными летательными аппаратами, не предназначенными для перевозки оленей»
 	}
 
 	ShamanBiomeChest: {
-		DisplayName: Shroom Chest
+		DisplayName: Светящийся грибной сундук
 		Tooltip: ""
 	}
 
 	ShroomKey: {
-		DisplayName: Shroom Key
-		Tooltip: Unlocks a Shroom Chest in the dungeon
+		DisplayName: Светящийся грибной ключ
+		Tooltip: Отпирает светящийся грибной сундук в Темнице
 	}
 
 	HeraldOfFrost: {
@@ -2720,877 +2722,873 @@ Items: {
 	}
 
 	GuardianTest: {
-		DisplayName: Guardian Test
+		DisplayName: Тестировка хранителя
 		Tooltip:
 			'''
-			Grants infinite guardian resources
-			[c/FF0000:Test Item]
+			Дарует бесконечный запас параметров хранителя
+			[c/FF0000:Предмет тестировки]
 			'''
 	}
 
 	EnchantedRune: {
-		DisplayName: Enchanted Rune
-		Tooltip: Summons protective enchanted sparkles
+		DisplayName: Зачарованная руна
+		Tooltip: Призывает защитные чазарованные искры
 	}
 
 	LivingRune: {
-		DisplayName: Living Rune
-		Tooltip: Summons orbiting sap bubbles
+		DisplayName: Живая руна
+		Tooltip: Призывает вращающиеся пузыри сока
 	}
 
 	EnchantedPavise: {
-		DisplayName: Enchanted Pavise
-		Tooltip: Shoots an enchanted shield blast
+		DisplayName: Зачарованная павеза
+		Tooltip: Выпускает заряд зачарованного меча
 	}
 
 	IronPavise: {
-		DisplayName: Iron Pavise
+		DisplayName: Железная павеза
 		Tooltip: ""
 	}
 
 	LeadPavise: {
-		DisplayName: Lead Pavise
+		DisplayName: Свинцовая павеза
 		Tooltip: ""
 	}
 
 	WoodenPavise: {
-		DisplayName: Wooden Pavise
+		DisplayName: Деревянная павеза
 		Tooltip: ""
 	}
 
 	GoldWarhammer: {
-		DisplayName: Gold Warhammer
+		DisplayName: Золотой боевой молот
 		Tooltip: ""
 	}
 
 	PlatinumWarhammer: {
-		DisplayName: Platinum Warhammer
+		DisplayName: Платиновый боевой молот
 		Tooltip: ""
 	}
 
 	Warhammer: {
-		DisplayName: Warhammer
-		Tooltip: Hurls a heavy hammer
+		DisplayName: Боевой молот
+		Tooltip: Бросает тяжёлый молот
 	}
 
 	CrimtaneShield: {
-		Tooltip: Restores 10 life on block
-		DisplayName: Scapula
+		DisplayName: Лопатка
+		Tooltip: Восстанавливает 10 ед. здоровья после блока
 	}
 
 	SkywareShield: {
-		Tooltip: Releases a burst of stars
-		DisplayName: Skyward
+		DisplayName: Небесный страж
+		Tooltip: Выпускает всплеск звёзд
 	}
 
 	MeteoriteShield: {
-		DisplayName: Meteorite Pavise
-		Tooltip: Burns hit enemies
+		DisplayName: Метеоритная павеза
+		Tooltip: Поджигает поражённых врагов
 	}
 
 	NightShield: {
-		DisplayName: Styx
+		DisplayName: Стикс 
 		Tooltip: ""
 	}
 
 	BijouShield: {
-		DisplayName: Bijoungwall
-		Tooltip: "'Only exists to please the eye'"
+		DisplayName: Украшенный заслон
+		Tooltip: «Нужна лишь для того, чтобы радовать глаз»
 	}
 
 	AdamantiteShield: {
-		DisplayName: Adamantite Pavise
+		DisplayName: Адамантитовая павеза
 		Tooltip: ""
 	}
 
 	HallowedShield: {
-		DisplayName: Svalinn
-		Tooltip: Releases lingering sparks of hallowed light
+		DisplayName: Свалинн
+		Tooltip: Выпускает искры освящённого света, задерживающиеся в воздухе
 	}
 
 	TitaniumShield: {
-		DisplayName: Titanium Aegis
-		Tooltip: Blocking or counterattacking generates a barrier of titanium shards
+		DisplayName: Титановая эгида
+		Tooltip: При блоке и контратаках, создаёт барьер из титановых осколков
 	}
 
 	ChlorophyteShield: {
-		DisplayName: Chlorophyte Pavise
-		Tooltip: Shoots spore clouds
+		DisplayName: Хлорофитовая павеза
+		Tooltip: Выпускает облако спор
 	}
 
 	SpectreShield: {
-		DisplayName: Spectre Pavise
-		Tooltip: Releases homing souls when blocking projectiles
+		DisplayName: Призрачная павеза
+		Tooltip: Выпускает самонаводящиеся души после блокирования снарядов
 	}
 
 	BambooWarhammer: {
-		DisplayName: Bamboo Mallet
+		DisplayName: Бамбуковый колотильщик
 		Tooltip: ""
 	}
 
 	DesertWarhammer: {
-		DisplayName: Stormbreaker
-		Tooltip: Continuously zaps nearby enemies
+		DisplayName: Грозобойник
+		Tooltip: Постоянно электрезует ближайших врагов
 	}
 
 	CrimsonWarhammer: {
-		DisplayName: Heartbeat
-		Tooltip: Restores life on hit
+		DisplayName: Сердцебиение
+		Tooltip: Востанавливает здоровье при попадании
 	}
 
 	JungleWarhammer: {
-		DisplayName: Ivy Cudgel
+		DisplayName: Плющевая дубина
 		Tooltip: Releases sharp leaves on impact
 	}
 
 	HellWarhammer: {
-		DisplayName: Grond
-		Tooltip: Explodes on full charge
+		DisplayName: Гронд 
+		Tooltip: Создаёт взрывы при полной зарядке
 	}
 
 	PirateWarhammer: {
-		Tooltip: Swing hits make enemies drop more gold
-		DisplayName: Pirate Warhammer
+		DisplayName: Пиратский боевой молот
+		Tooltip: Со врагов, атакованных взмахом, выпадает больше золота
 	}
 
 	ChlorophyteWarhammer: {
-		Tooltip: Shoots spore clouds
-		DisplayName: Chlorophyte Gavel
+		DisplayName: Хлорофитовый отбойник
+		Tooltip: Выпускает облако спор
 	}
 
 	TempleWarhammer: {
-		Tooltip: Releases homing sparks
-		DisplayName: Temple Warhammer
+		DisplayName: Боевой молот храма
+		Tooltip: Выпускает самонаводящиеся искры
 	}
 
 	BeeRune: {
-		Tooltip: Releases bees at nearby foes
-		DisplayName: Queen's Rune
+		DisplayName: Руна Королевы
+		Tooltip: Напускает пчёл на ближайших врагов
 	}
 
 	HellRune: {
-		DisplayName: Surtr's Sigil
-		Tooltip: Summons horizontally-moving fireballs
+		DisplayName: Символ Суртра
+		Tooltip: Призывает горизонтально движующиеся огненные шары
 	}
 
 	RuneRune: {
-		DisplayName: Runefire Rune
-		Tooltip: Summons runic fireballs
+		DisplayName: Огнеруническая руна
+		Tooltip: Призывает рунические огненные шары
 	}
 
 	FrostRune: {
-		Tooltip: Summons a circle of ornaments
-		DisplayName: Ornament Rune
+		DisplayName: Украшенная руна
+		Tooltip: Призывает круг из украшений
 	}
 
 	EmpressRune: {
-		DisplayName: Constellation
-		Tooltip: Summons a constellation of sparkles
+		DisplayName: Созвездие
+		Tooltip: Призывает звёздное созвездие
 	}
 
 	GuardianBambooHead: {
-		DisplayName: Bamboo Helmet
+		DisplayName: Бамбуковый шлем
 		Tooltip:
 			'''
-			Slowly regenerates guards over time
-			Enemies are more likely to target you
+			Ваш запас очков обороны будут медленно восполняться
+			Враги будут чаще выбирать вас в качестве цели
 			'''
-		SetBonus: consuming guards or slams increases defense by 25%
+		SetBonus: Использование очков обороны или ударов рукой увеличивает защиту на 25%
 	}
 
 	GuardianBambooChest: {
-		DisplayName: Bamboo Chestplate
+		DisplayName: Бамбуковый нагрудник
 		Tooltip:
 			'''
-			Slowly regenerates guards and slams over time
-			Increases maximum guards by 1
+			Ваш запас очков обороны и ударов рукой будут медленно восполняться
+			Увеличивает максимальный запас чоков обороны на 1 ед.
 			'''
 	}
 
 	GuardianBambooLegs: {
-		DisplayName: Bamboo Legguards
+		DisplayName: Бамбуковые поножи
 		Tooltip:
 			'''
-			Slowly regenerates slams over time
-			Increases maximum slams by 1
+			Ваши запас ударов очков рукой будут медленно восполняться
+			Увеличивает максимальное запас чоков ударов рукой на 1 ед.
 			'''
 	}
 
 	GuardianMeteoriteChest: {
-		DisplayName: Meteor Warden Chestplate
+		DisplayName: Нагрудник метеорного надзирателя
 		Tooltip:
 			'''
-			5% increased opposing damage
-			Increases maximum slams by 1
-			Enemies are more likely to target you
+			Увеличивает противный урон на 5%
+			Увеличивает максимальный запас чоков обороны на 1 ед.
+			Враги будут чаще выбирать вас в качестве цели
 			'''
 	}
 
 	GuardianMeteoriteHead: {
-		DisplayName: Meteor Warden Helmet
+		DisplayName: Шлем метеорного надзирателя
 		Tooltip:
 			'''
-			5% increased opposing damage
-			Increases maximum guards by 1
+			Увеличивает противный урон на 5%
+			Увеличивает максимальный запас очков обороны на 1 ед.
 			'''
-		SetBonus: 50% chance for blocks and parries to grant two slams
+		SetBonus: Блоки и парирования имеют 50% шанс дать 2 оч. ударов рукой
 	}
 
 	GuardianMeteoriteLegs: {
-		DisplayName: Meteor Warden Boots
+		DisplayName: Ботинки метеорного надзирателя
 		Tooltip:
 			'''
-			10% increased melee speed
-			10% increased movement speed
+			Увеличивает скорость ближнего боя на 10%
+			Увеличивает скорость передвижения на 10%
 			'''
 	}
 
 	GuardianEmpressChest: {
-		DisplayName: Dawn Valkyrie Mail
+		DisplayName: Латы надзирателя рассвета
 		Tooltip:
 			'''
-			Increases maximum slams by 2 and regenerates slams over time
-			25% increased melee speed
+			Увеличивает максимальный запас ударов очков рукой на 2 ед., а также их скорость восполнения
+			Увеличивает скорость ближнего боя на 25%
 			'''
 		SetBonus:
 			'''
-			greatly increases rune projectile quantity and standard range
-			50% increased rune and standard duration
+			Значительно увеличивает количество рун и радиус действия штандартов
+			Увеличивает длительность рун и штандартов на 50%
 			'''
 	}
 
 	GuardianEmpressChestAlt: {
-		DisplayName: Dawn Warden Plate
+		DisplayName: Нагрудник надзирателя рассвета
 		Tooltip:
 			'''
-			Increases maximum guards by 2 and regenerates guards over time
-			Enemies are more likely to target you
+			Увеличивает максимальный запас очков обороны на 2 ед., а также их скорость восполнения
+			Враги будут чаще выбирать вас в качестве цели
 			'''
 		SetBonus:
 			'''
-			100% increased damage resistance while holding a pavise or gauntlets
-			Enemies are significantly more likely to target you
+			Увеличивает сопротивление урону на 100% при ношении повезы и перчаток
+			Враги будут значительно чаще выбирать вас в качестве цели
 			'''
 	}
 
 	GuardianEmpressHead: {
-		DisplayName: Dawnlight Circlet
+		DisplayName: Венок луча рассвета
 		Tooltip:
 			'''
-			12% increased opposing damage
-			Increases maximum guards and slams by 1
-			Enemies are more likely to target you
+			Увеличивает противный урон на 12%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 1 ед.
+			Враги будут чаще выбирать вас в качестве цели
 			'''
 	}
 
 	GuardianEmpressLegs: {
-		DisplayName: Dawnlight Talaria
+		DisplayName: Таларии луча рассвета
 		Tooltip:
 			'''
-			10% increased opposing damage
-			15% increased movement speed
-			Enemies are more likely to target you
+			Увеличивает противный урон на 10%
+			Увеличивает скорость передвижения на 15%
+			Враги будут чаще выбирать вас в качестве цели
 			'''
 	}
 
 	GuardianAdamantiteHead: {
-		DisplayName: Adamantite Visor
+		DisplayName: Адамантитовый визор
 		Tooltip:
 			'''
-			12% increased opposing damage and critical strike chance
-			Increases maximum guards by 2
-			Enemies are more likely to target you
+			Увеличивает противный урон и шанс противного критического удара на 12%
+			Увеличивает максимальный запас очков обороны на 2 ед.
+			Враги будут чаще выбирать вас в качестве цели
 			'''
-		SetBonus: Regenerates guards over time
+		SetBonus: Ваши очки обороны будут восполняться
 	}
 
 	GuardianTitaniumHead: {
-		DisplayName: Titanium Greathelm
+		DisplayName: Титановый тяжёлый шлем
 		Tooltip:
 			'''
-			15% increased opposing damage and 8% increased opposing critical strike chance
-			Increases maximum guards and slams by 1
-			Enemies are more likely to target you
+			Увеличивает противный урон на 15% и шанс противного критического удара на 8%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 1 ед.
+			Враги будут чаще выбирать вас в качестве цели
 			'''
 	}
 
 	GuardianHallowedHead: {
-		DisplayName: Hallowed Greathelm
+		DisplayName: Освящённый тяжёлый шлем
 		Tooltip:
 			'''
-			12% increased opposing damage and critical strike chance
-			Increases maximum guards and slams by 2
-			Enemies are more likely to target you
+			Увеличивает противный урон и шанс противного критического удара на 12%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 2 ед.
+			Враги будут чаще выбирать вас в качестве цели
 			'''
 	}
 
 	GuardianChlorophyteHead: {
-		DisplayName: Chlorophyte Greathelm
+		DisplayName: Хлорофитовый тяжёлый шлем
 		Tooltip:
 			'''
-			16% increased opposing damage and melee speed
-			Increases maximum guards and slams by 2
-			Enemies are more likely to target you
+			Увеличивает противный урон и скорость ближнего боя на 16%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 2
+			Враги будут чаще выбирать вас в качестве цели
 			'''
 	}
 
 	GuardianEmpressMaterial: {
-		DisplayName: Prismatic Plating
-		Tooltip: "'Extremely light'"
+		DisplayName: Призматическое покрытие
+		Tooltip: «Пульсирует светлой энергией»
 	}
 
 	GoblinSpike: {
-		DisplayName: Goblin Shield Spike
-		Tooltip: Deals 100% of your defense as opposing damage to blocked enemies
+		DisplayName: Гоблинский шипованный щит
+		Tooltip: Наносит противный урон, равный 100% от вашей защиты, при блоке врага
 	}
 
 	GuardianEmblem: {
-		DisplayName: Эмблема стражника
+		DisplayName: Эмблема хранителя
 		Tooltip: Увеличивает противный урон на 15%
 	}
 
 	DungeonSpike: {
-		DisplayName: Spouting Shield Spike
+		DisplayName: Фонтанирующий шипованный щит
 		Tooltip:
 			'''
-			Deals 150% of your defense as opposing damage to blocked enemies
-			Blocking projectiles releases a water bolt, dealing your shield spike damage
+			Наносит противный урон, равный 150% от вашей защиты, при блоке врага
+			Блокирование снарядов выпускает водяной выстерл, наносящий урон щита
 			'''
 	}
 
 	MechanicalSpike: {
-		DisplayName: Mechanical Shield Spike
+		DisplayName: Механический шипованный щит
 		Tooltip:
 			'''
-			Deals 200% of your defense as opposing damage to blocked enemies
-			Blocking projectiles fires lasers at nearby enemies, dealing your shield spike damage
-			15% increased opposing damage for 10 seconds after a successful block
+			Наносит противный урон, равный 150% от вашей защиты, при блоке врага
+			Блокирование снарядов приводит к выстрелу лазером в ближайших врагов, наносящим урон щита
+			Увеличивает противный урон на 15% на 10 секунд после успешного блока
 			'''
 	}
 
 	TempleSpike: {
-		DisplayName: Lihzahrd Shield Spike
+		DisplayName: Ящщеровый шипованный щит
 		Tooltip:
 			'''
-			Deals 200% of your defense as opposing damage to blocked enemies
-			Blocking projectiles unleashes a deadly sun laser, dealing your shield spike damage
-			15% increased opposing damage for 10 seconds after a successful block
-			10% increased opposing critical strike chance 
+			Наносит противный урон, равный 200% от вашей защиты, при блоке врага
+			Блокирование снарядов приводит к выстрелу лазером, наносящим урон щита
+			Увеличивает противный урон на 15% на 10 секунд после успешного блока
+			Увеличивает шанс противного критического удара на 10% 
 			'''
 	}
 
 	Skateboard: {
-		DisplayName: Skateboard
+		DisplayName: Скейтборд
 		Tooltip:
 			'''
-			Block downwards while falling to skate on the ground
-			Slam enemies downwards to launch yourself in the air
+			Сделайте блок вниз в воздухе, чтобы скользить по земле
+			Выполните удар рукой, подлететь в воздух
 			'''
 	}
 
 	DemoniteShield: {
-		DisplayName: Veil of Night
+		DisplayName: Завеса ночи
 		Tooltip: ""
 	}
 
 	CorruptionWarhammer: {
-		DisplayName: Soul Crusher
+		DisplayName: Душебой
 		Tooltip: ""
 	}
 
 	GuideShield: {
-		DisplayName: Guide to Shield Surfing
-		Tooltip: Allows cancelling fall damage by blocking the ground
+		DisplayName: Руководство по сёрфингу на щите
+		Tooltip: Позволяет нейтролизовывать урон от падения с помощью блока
 	}
 
 	GuideShieldBounce: {
-		DisplayName: Guide to Shield Bouncing
-		Tooltip: Allows bouncing by blocking the ground
+		DisplayName: Руководство по отпрыгиванию на щите
+		Tooltip: Позволяет отпыгивать от поверхности с помощью блока
 	}
 
 	GuardianCobaltHead: {
-		DisplayName: Cobalt Kabuto
+		DisplayName: Кобальтовое кабуто
 		Tooltip:
 			'''
-			15% increased movement and melee speed
-			Increases maximum slams by 2
-			Enemies are more likely to target you
+			Увеличивает скорость передвижения и ближнего боя на 15%
+			Увеличивает максимальный запас очков ударов рукой на 2 ед.
+			Враги будут чаще выбирать вас в качестве цели
 			'''
-		SetBonus: Quickly regenerates slams over time
+		SetBonus: Ваши очки обороны будут быстро восполняться
 	}
 
 	GuardianMythrilHead: {
-		DisplayName: Mythril Greathelm
+		DisplayName: Мифриловый тяжёлый шлем
 		Tooltip:
 			'''
-			10% increased opposing damage and critical strike chance
-			Increases maximum guards and slams by 1
-			Enemies are more likely to target you
+			Увеличивает противный урон и противный шанс критического удара на 10%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 1 ед.
+			Враги будут чаще выбирать вас в качестве цели
 			'''
-		SetBonus: 10% increased opposing critical strike chance
+		SetBonus: Увеличивает шанс противного критичесокго удара на 10%
 	}
 
 	GuardianOrichalcumHead: {
-		DisplayName: Orichalcum Greathelm
+		DisplayName: Орихалковый тяжёлый шлем
 		Tooltip:
 			'''
-			18% increased opposing critical strike chance and melee speed
-			Increases maximum guards and slams by 1
-			Enemies are more likely to target you
+			Увеличивает шанс противного критического удара и скорость ближнего боя на 18%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 1 ед.
+			Враги будут чаще выбирать вас в качестве целиu
 			'''
 	}
 
 	GuardianPalladiumHead: {
-		DisplayName: Palladium Greathelm
+		DisplayName: Палладиевый тяжёлый шлем
 		Tooltip:
 			'''
-			16% increased opposing damage
-			Increases maximum guards and slams by 1
-			Enemies are more likely to target you
+			Увеличивает противный урон на 16%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 1 ед.
+			Враги будут чаще выбирать вас в качестве цели
 			'''
 	}
 
 	GoblinRune: {
-		DisplayName: Goblin Runebark
-		Tooltip: Summons erratic shadowflames to protect you
+		DisplayName: Руна гоблинов
+		Tooltip: Призывает беспорядочные теневые пламя защищать вас
 	}
 
 	GuardianGitHelm: {
-		DisplayName: Gud Knight Helmet
+		DisplayName: Рыцарский шлем Gud'а
 		Tooltip:
 			'''
-			Increases maximum guards and slams by 1
-			Can be paired with ore armor
-			Enemies are more likely to target you
+			Увеличивает максимальный запас очков обороны и ударов рукой на 1 ед.
+			Экиперовка вместе с бронёй из базовых руд даст уникальный бонус косплекта
+			Враги будут чаще выбирать вас в качестве цели
 			'''
-		SetBonus: Increases movement speed after blocking or parrying
+		SetBonus: Увеличивает скорость передвижения после блока или парирования
 	}
 
 	GuardianRunePotion: {
-		DisplayName: Runic Potion
-		Tooltip: Increases the number of guardian rune projectiles
+		DisplayName: Руническое зелье
+		Tooltip: Увеличивает количество рунных станрядов хранителя
 	}
 
 	GuardianHoneyPotion: {
-		DisplayName: Sweetguard Potion
-		Tooltip: Restores life on block or parry
+		DisplayName: Сладнохранное зелье
+		Tooltip: Востанавливает жизнь при блокировании и парировании
 	}
 
 	Guard: {
-		DisplayName: Guard
+		DisplayName: Очко обороны
 		Tooltip: ""
 	}
 
 	SilverGauntlet: {
-		DisplayName: Silver Gauntlets
+		DisplayName: Серебрянные перчатки
 		Tooltip: ""
 	}
 
 	TungstenGauntlet: {
-		DisplayName: Tungsten Gauntlets
+		DisplayName: Вольфрамовые перчатки
 		Tooltip: ""
 	}
 
 	JungleGauntlet: {
-		DisplayName: Grass Knuckles
+		DisplayName: Травяные кастеты
 		Tooltip:
 			'''
-			Charged punches poison enemies
-			Parrying massively increases melee speed for a short time
+			Заряженные удары отправляют врагов
+			Использование парирования значительно ускоряет скорость ближнего боя на короткое время
 			'''
 	}
 
 	SpiderGauntlet: {
-		DisplayName: Touch of Death
-		Tooltip: Launches fangs after a parry
+		DisplayName: Смертельное косание
+		Tooltip: Выпускает клыки после парирования
 	}
 
 	MechanicalGauntlet: {
-		DisplayName: Iron Fist
+		DisplayName: Стальной кулак
 		Tooltip:
 			'''
-			Press UP or DOWN to control descent while charging
-			Fully charge or counterattack to rocket punch
+			Удерживайте ВВЕРХ и ВНИЗ для управления скорсотью падения во время зарядки атаки
+			Полность заряженые атаки и контратаки вызывают рокетный выпад
 			'''
 	}
 
 	NanitesGauntlet: {
-		DisplayName: Cybernetic Strongarm
+		DisplayName: Сильная кибернетическая рука
 		Tooltip:
 			'''
-			Drastically improves movement capabilities when held
-			Restores life on hit and parry
-			'Nanomachines, Son!'
+			Значительно улучшает подвижность, когда находится в руках
+			Востанавливает здоровье при атаке и парировании
+			«Наномашины, сынок!»
 			'''
 	}
 
 	IceStandard: {
-		DisplayName: Frozen Tirade
+		DisplayName: Замёрзшая тирада
 		Tooltip:
 			'''
-			Fully charging continuously slows nearby enemies
-			When reinforced, grants 20% increased damage resistance
+			Замедляет ближайших врагов при полной зарядке
+			При усилении, увеличивает сопротивление урону на 20%
 			'''
 	}
 
 	CopperStandard: {
-		DisplayName: Copper Standard
+		DisplayName: Медный штандарт
 		Tooltip:
 			'''
-			Fully charging increases defense by 4
-			When reinforced, increases maximum guards by 1 and regenerates guards over time
+			Увеличивает защиту на 4 ед. при полной зарядке
+			При усилении, увеличивает масимальный запас очков обороны на 1 ед., а также позволяет очкам обороны восполняться со временем
 			'''
 	}
 
 	TinStandard: {
-		DisplayName: Tin Standard
+		DisplayName: Оловянный штандарт
 		Tooltip:
 			'''
-			Fully charging increases defense by 4
-			When reinforced, increases maximum guards and slams by 1 and slowly regenerates them
+			Увеличивает защиту на 4 ед. при полной зарядке
+			При усилении, увеличивает масимальный запас очков удара рукой на 1  ед., а также позволяет очкам удара рукой медленно восполняться со временем
 			'''
 	}
 
 	PirateStandard: {
-		DisplayName: Jolly Roger
+		DisplayName: Весёлый Роджер
 		Tooltip:
 			'''
-			Fully charging causes nearby enemies to drop more money on death
-			When reinforced, increases your opposing damage by 10%
+			С убитых врагов будет выпадать больше монет при полной зарядке
+			При усилении, увеличивает ваш противный урон на 10%
 			'''
 	}
 
 	PlanteraStandard: {
-		DisplayName: Petal Pennant
+		DisplayName: Лепестковая лепта
 		Tooltip:
 			'''
-			Fully charging increases maximum life by 50
-			When reinforced, drastically increases life regeneration at low life
+			Увеличивает максимальный запас здоровья на 50 ед. при полной зарядке
+			При усилении, значительно ускоряет регенерацию при низком показателе здоровья
 			'''
 	}
 
 	DesertStandard: {
-		DisplayName: Blitz Banner
+		DisplayName: Блиц-баннер
 		Tooltip:
 			'''
-			Fully charging increases movement speed by 15%
-			When reinforced, charged hits and slams cause chain lightning between enemies in range
+			Увеличивает скорость передвижения на 15% при полной зарядке
+			При усилении, пускает цепную молнию между ближайшими врагами после заряженных атак и ударов рукой
 			'''
 	}
 
 	PaladinGauntlet: {
-		DisplayName: Tyr's Hand
+		DisplayName: Рука Тюра
 		Tooltip:
 			'''
-			Charged punches release homing shards of light
-			Parries improve non-charged punches
+			Заряженные удары выпускают самонаводящиеся осколки света
+			Парирования усиляют незаряженные атаки
 			'''
 	}
 
 	CobaltGauntlet: {
-		DisplayName: Cobalt Tekko
+		DisplayName: Кобальтовое текко
 		Tooltip: ""
 	}
 
 	PalladiumGauntlet: {
-		DisplayName: Palladium Gauntlets
+		DisplayName: Палладиевая перчатка
 		Tooltip: ""
 	}
 
 	MythrilWarhammer: {
-		DisplayName: Mythril Warhammer
+		DisplayName: Мифриловый боевой молот
 		Tooltip: ""
 	}
 
 	OrichalcumWarhammer: {
-		DisplayName: Orichalcum Warhammer
-		Tooltip: Light and bouncy
+		DisplayName: Орихалковый боевой молот
+		Tooltip: Прыгучий и лёгкий
 	}
 
 	BadgeBattlesPast: {
-		DisplayName: Badge of Battles Past
-		Tooltip: Opposing damage continuously increases while blocking with a pavise
+		DisplayName: Коркада прошедших битв
+		Tooltip: Противный урон будет постоянно увеличиваться при блокировании врагов повезой
 	}
 
 	ColossalWormTooth: {
-		DisplayName: Colossal Worm Tooth
-		Tooltip: Players affected by your standards gain 5% increased damage
+		DisplayName: Громадный зуб червя
+		Tooltip: Игроки под действием ваших штандартов получают 5%-ное увеличение урона
 	}
 
 	TerrifyingMonsterFang: {
-		DisplayName: Terrifying Monster Fang
-		Tooltip: Players affected by your standards gain life regeneration
+		DisplayName: Ужасающий клык монстра
+		Tooltip: Игроки под действием ваших штандартов получают ускорение регенерации здоровья
 	}
 
 	MoonLordRune: {
-		DisplayName: Moon Rune
-		Tooltip: Summons otherworldly portals to protect you
+		DisplayName: Лунная руна
+		Tooltip: Призывает потусторонние порталы, чтобы защитить вас
 	}
 
 	HorizonFragment: {
-		DisplayName: Horizon Fragment
-		Tooltip: The edge of vastness beyond comprehension lies within this fragment
+		DisplayName: Фрагмент горизонта
+		Tooltip: «В этом фрагменте скрыта грань непостижимых просторов»
 	}
 
 	HorizonShield: {
-		DisplayName: Terminus
+		DisplayName: Завет
 		Tooltip:
 			'''
-			Releases homing bolts of energy
-			Counterattacking after a block launches an empowered bolt
-			'Your enemies' vanishing point'
+			Выпускает самонаводящиеся заряды энергии
+			Контратаки после блока выпускают усиленный заряд
+			«Это завет их жизней»
 			'''
 	}
 
 	HorizonLance: {
-		DisplayName: Horizon Firmament
+		DisplayName: Фрагмент горизонта
 		Tooltip:
 			'''
-			Fully charging unleashes a damaging aurora
-			When reinforced, greatly increases life regeneration
-			Parrying restores 10% of defense as life
-			'The fine line between the heavens and the world below'
+			Полностью заряженные атаки вызывают наносящее урон северное сияние
+			При укреплении, значительно ускоряет регенерацию здоровья
+			Парирования востанавливают здоровье, равное 10% от вашей защиты
+			«Тонкая грань между небесами и поднебесьем»
 			'''
 	}
 
 	MoonLordShield: {
-		DisplayName: Sickflip
+		DisplayName: Охрененное сальто
 		Tooltip:
 			'''
-			Block downwards in the air to skate
-			Slam to do cool tricks
+			Сделайте блок вниз в воздухе, чтобы скользить по небу
+			Выполните удар рукой, чтобы сделать трюк
 			'''
 	}
 
 	GuardianBuffStation: {
-		DisplayName: Spinning Dummy
-		Tooltip: Increases maximum slams
+		DisplayName: Вращающийся манекен
+		Tooltip: Увеличивает максимальный запас очков ударов рукой
 	}
 
 	EmpressPlateChest: {
-		DisplayName: Ancient Dawnlight Chestplate
+		DisplayName: Древний нагрудник луча рассвета
 		Tooltip: ""
 	}
 
 	EmpressPlateHead: {
-		DisplayName: Ancient Dawnlight Helmet
+		DisplayName: Древний шлем луча рассвета
 		Tooltip: ""
 	}
 
 	EmpressPlateLegs: {
-		DisplayName: Ancient Dawnlight Leggings
+		DisplayName: Древние поножи луча рассвета
 		Tooltip: ""
 	}
 
 	HorizonDye: {
-		DisplayName: Horizon Dye
+		DisplayName: Краситель горизонта
 		Tooltip: ""
 	}
 
 	GuardianHorizonChest: {
-		DisplayName: Horizon Breastplate
+		DisplayName: Нагрудник горизонта
 		Tooltip:
 			'''
-			25% increased damage resistance, opposing damage and melee speed
-			Increases max life by 100
+			Увеличивает сопротивление урону, противный урон и скорость ближнего боя на 25%
+			Увеличивает максимальный запас здоровья на 100 ед.
 			'''
 	}
 
 	GuardianHorizonHead: {
-		DisplayName: Horizon Greathelm
+		DisplayName: Конический шлем горизонта
 		Tooltip:
 			'''
-			15% increased damage resistance, opposing damage and critical strike chance
-			Enemies are significantly more likely to target you
+			Увеличивает сопротивление урону, противный урон и шанс противного критического удара на 15%
+			Враги будут значительно чаще выбирать вас в качестве цели
 			'''
-		SetBonus: while above 50% max life, consume life instead of guards or slams
+		SetBonus: Вы будите расходовать своё здоровье вместо очков обороны и ударов рукой, если оно превышает 50% от максимального
 	}
 
 	GuardianHorizonLegs: {
-		DisplayName: Horizon Leggings
+		DisplayName: Поножи горизонта
 		Tooltip:
 			'''
-			20% increased damage resistance, movement and melee speed
-			Increases maximum guards and slams by 3
+			Увеличивает сопротивление урону, скорость передвижения и ближнего боя на 20%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 3 ед.
 			'''
 	}
 
 	SageOwl: {
-		DisplayName: Starry Owl Idol
-		LeftClick: Shoots a barrage of feathers
-		RightClick: Marks enemies below you, increasing damage taken by 3
-		Jump: Fly up before hovering, increasing damage and attack speed
-		Passive: Increases night vision
-		Tooltip: Transforms you into a Starry Owl, gaining unique abilities
+		DisplayName: Идол звёздной совы
+		LeftClick: Стреляет шквалом перьев
+		RightClick: Отмечает врагов под вами, увеличивая наносимый урон на 3 ед.
+		Jump: Вслетает, перед тем как начать парить, увеличивая урон и скорость атаки
+		Passive: Улучшает ночное зрение
+		Tooltip: Обращает вас в звёздную сову, даруя уникальные навыки
 	}
 
 	WardenTortoise: {
-		DisplayName: Sturdy Snapjaw Idol
-		LeftClick: Snaps your jaws, reinforced after negating damage
-		RightClick: Go into your shell, negating incoming damage
-		Jump: Cannot jump, gains a burst of movement speed instead
-		Passive: Damage taken reduced by 20%
-		Tooltip: Transforms you into a Snapjaw, gaining unique abilities
+		DisplayName: Идол крепкого щёлкозуба
+		LeftClick: Захлопывает челюсти, усиливающимися после блокирования урона
+		RightClick: Прячетесь в панцире, блокируя входящий урон
+		Jump: Ускоряет передвижение вместо прыжка
+		Passive: Получаемый урон снижен на 20%
+		Tooltip: Обращает вас в щёлказуба, даруя уникальные навыки
 	}
 
 	PredatorIceFox: {
-		DisplayName: Ice Fox Statuette
-		LeftClick: Conjures up to 3 foxfire flames
-		RightClick: Become ethereal, damaging enemies you pass through
-		Jump: Can periodically blink, conjuring 3 foxfire flames
-		Passive: Shapeshifting in and out gives decaying movement speed
-		Tooltip: Transforms you into a Fox spirit, gaining unique abilities
+		DisplayName: Статуэтка ледяной лесы
+		LeftClick: Призывает 3 лисиных огонька
+		RightClick: Переводит вас в призрачную форму. Вы будете наносить урон врагам, через которых проходите.
+		Jump: Переодически совершает телепортирующий рывок, вызывая 3 лисиных огонька
+		Passive: Обращение в человека и обратно снижает скорость передвижения
+		Tooltip: Обращает вас в лесу-духа, даруя уникальные навыки
 	}
 
 	PredatorHarpy: {
-		DisplayName: Harpy Effigy
-		LeftClick: Shoots razor sharp feathers
-		RightClick: Dashes horizontally, releasing a barrage of feathers
-		Jump: Flaps your wings up to 3 times, gaining height
-		Passive: Every jump or dash improves your next attack
-		Tooltip: Transforms you into a Harpy, gaining unique abilities
+		DisplayName: Чучело гарпии
+		LeftClick: Стреляет бритвенно остромы перьями
+		RightClick: Совершает горизонтальный рывок, выпуская шквал перьев
+		Jump: Взмахните крыльями 3 раза, чтобы набрать высоту
+		Passive: Каждый прыжок и рывок усиляет вашу следующую атаку
+		Tooltip: Обращает вас в гарпию, даруя уникальные навыки
 	}
 
 	SageBee: {
-		DisplayName: Bee Effigy
-		LeftClick: Fires barbed stingers, continuously damaging hit enemies
-		RightClick: Releases a swarm of bees, made larger by the amount of stingers
-		Jump: Dashes in the direction of your movement
-		Passive: Shapeshifting in and out covers nearby players in honey
-		Tooltip: Transforms you into a Bee, gaining unique abilities
+		DisplayName: Чучело пчелы
+		LeftClick: Стреляет зазубренным жалом, застревающем во врагах
+		RightClick: Выпускает пчелиный рой, становящийся больше в зависимости от запаса жал
+		Jump: Совершает рывок по направлению вашего движения
+		Passive: Обращение в человека и обратно покрывает мёдом ближайших союзников
+		Tooltip: Обращает вас в пчелу, даруя уникальные навыки
 	}
 
 	WardenSpider: {
-		DisplayName: Shellweb Idol
-		LeftClick: A violent bite, healing off of webbed enemies
-		RightClick: Fires a web, allowing to execute enemies below 100 health
-		Jump: The web can be used to pull yourself towards tiles or webs
-		Passive:
-			'''
-			Executing enemies recover 10 health and grants 15 defense
-			The execute threshold and healing are reduced in other shapes
-			'''
-		Tooltip: Transforms you into a Shellweb Spider, gaining unique abilities
+		DisplayName: Идол ракушечника
+		LeftClick: Совершает сильный укус, который изцеляет вас, если был поражён покрытый паутиной враг
+		RightClick: Выстреливает паутиной, уничтожающую врагов, у которых менее 100 ед. здоровья
+		Jump: Позволяет использвать паутину, чтобы притягиваться к блокам или другим паутинам
+		Passive: Убийства врагов восстанавливают вам 10 ед. здоровья и дарают 15 ед. защиты. Порог усиления и исцеления снижен в других формах.
+		Tooltip: Обращает вас в паука-ракушечника, даруя уникальные навыки
 	}
 
 	SageBat: {
-		DisplayName: Bat Idol
-		LeftClick: Charge a sound blast, dealing massive damage to echolocated enemies
-		RightClick: Emit a sound wave, echolocating hit enemies if caught on the way back
-		Jump: Can jump two additional times
-		Passive: Can hang from ceilings, regenerating life and reducing aggro
-		Tooltip: Transforms you into a Bat, gaining unique abilities
+		DisplayName: Идол летучей мыши
+		LeftClick: Заряжает звуковой выстрел, ноносящий большой урон эхолокированным врагам
+		RightClick: Выпускает звуоквую волну, эхолокирющую врагов, поражённых на обратном пути волны
+		Jump: Позволяет совершать тройной прыжок
+		Passive: Позволяет висеть на потолке, что увеличивает скорость регенерации здоровья и снижает агрессию врагов
+		Tooltip: Обращает вас в летучую мышь, даруя уникальные навыки
 	}
 
 	ShapeshifterShampoo: {
-		DisplayName: Premium Critter Shampoo
+		DisplayName: Премиальный шампунь для животных
 		Tooltip:
 			'''
-			Applies dye to shapeshifts
-			'You can't help but keep it for yourself'
+			Применяет красители к вашему обращению
+			«Ты не можешь не оставить это себе»
 			'''
 	}
 
 	ShapeshifterBlankEffigy: {
-		DisplayName: Humanoid Effigy
-		Tooltip: Transforms you into a Human... supposedly
+		DisplayName: Гуманоидное чучело
+		Tooltip: Превращает вас обратно в человека... наверное
 	}
 
 	HorizonDrill: {
-		DisplayName: Horizon Drill
+		DisplayName: Бур горизонта
 		Tooltip: ""
 	}
 
 	HorizonPickaxe: {
-		DisplayName: Horizon Pickaxe
+		DisplayName: Кирка горизонта
 		Tooltip: ""
 	}
 
 	HorizonHamaxe: {
-		DisplayName: Horizon Hamaxe
+		DisplayName: Молотопор горизонта
 		Tooltip: ""
 	}
 
 	CactusGauntlet: {
-		DisplayName: Cactus Gauntlets
-		Tooltip: Attackers take damage on parry
+		DisplayName: Кактусовые перчатки
+		Tooltip: Атакующие получают урон от парирования
 	}
 
 	Quarterstaff: {
-		DisplayName: Quarterstaff
+		DisplayName: Палица
 		Tooltip: ""
 	}
 
 	HellboneMaterial: {
-		DisplayName: Cremains
-		Tooltip: Used to craft some spooky stuff (but not yet!)
+		DisplayName: Прах
+		Tooltip: (Пока не) используется для создания некоторыщ жутких штучек
 	}
 
 	ThoriumLeafShield: {
-		DisplayName: Ghillie Cover
-		Tooltip: Breaks into sharp leaves on contact
+		DisplayName: Маскировочное укрытие
+		Tooltip: Распадается на острые листья при контакте
 	}
 
 	BambooQuarterstaff: {
-		DisplayName: Bamboo Pole
+		DisplayName: Бамбуковый шест
 		Tooltip: ""
 	}
 
 	DungeonQuarterstaff: {
-		DisplayName: Parted Seas
-		Tooltip: Shoots bolts of water when swung
+		DisplayName: Раздвинутые моря
+		Tooltip: Выпускает воядной выстрел при взмахах
 	}
 
 	CorruptionQuarterstaff: {
-		DisplayName: Wicked Fang
+		DisplayName: Скверный клык
 		Tooltip: ""
 	}
 
 	CrimsonQuarterstaff: {
-		DisplayName: Ricket
+		DisplayName: Рахит
 		Tooltip: ""
 	}
 
 	ShardQuarterstaff: {
-		DisplayName: Harmony
-		Tooltip: Has a chance to confuse
+		DisplayName: Гармония
+		Tooltip: Может запутать поражённых врагов
 	}
 
 	ThoriumDarksteelGauntlet: {
-		DisplayName: Hands of God
+		DisplayName: Рука Божья
 		Tooltip:
 			'''
-			Charge speed and range scales with defense
-			'A strong man once slaughtered Cthulhu with his fists'
+			Скорость и дальность атаки маштабируется от вашей защиты
+			«Однажды один сильный человек убил Ктулху голыми руками»
 			'''
 	}
 
 	HockeyQuarterstaff: {
-		DisplayName: Ultra Pro 9000X
+		DisplayName: Ультрапро 9000X
 		Tooltip:
 			'''
-			Fully charging turns struck enemies into projectiles
-			'The high-accuracy stick of hockey champions'
+			Польностью заряженные взмахи превращают врагов в снаряды
+			«Высокоточная клюшка чемпионов мира по хоккею»
 			'''
 	}
 
 	ThoriumStarScouterStandard: {
-		DisplayName: Stellar Stele
+		DisplayName: Звёздный взвод
 		Tooltip:
 			'''
-			Fully charging repels nearby enemies when they attack allies
-			When reinforced, double tap any direction to warp
-			Warping consumes a guard and grants a slam
+			При полной зарядке, откидывает врагов, атакующих ваших союзников
+			При усилении, нажмите дважди в любом направлении, чтобы совершить гиперпрыжок в эту сторону
+			Гиперпрыжок расходует 1 очко обороны и даёт 1 очко удара рукой
 			'''
 	}
 
 	MartianWarhammer: {
-		DisplayName: Kinetic Impact Driver
-		Tooltip: Instantly charges on hit
+		DisplayName: Двигатель кинетического удара
+		Tooltip: Мгновенно заряжается при попадании
 	}
 
 	HallowedQuarterstaff: {
-		DisplayName: Hallowed Quarterstaff
+		DisplayName: Освящённая палица
 		Tooltip: ""
 	}
 
@@ -3600,71 +3598,76 @@ Items: {
 	}
 
 	NeoAncientHallowedPlateMail: {
-		DisplayName: Neo-Ancient Hallowed Plate Mail
+		DisplayName: Нео-древние освящённые латы
 		Tooltip:
 			'''
-			'The future's past'
-			'Great for impersonating Orchid Devs!'
+			«Всё новое — хорошо забытое старое»
+			«Отлично подходит для подражания внешности разработчиков Orchid!»
 			'''
 	}
 
 	GuardianAncientHallowedHead: {
-		DisplayName: Ancient Hallowed Greathelm
-		Tooltip: ""
+		DisplayName: Древний освящённый тяжёлый шлем
+		Tooltip:
+			'''
+			Увеличивает противный урон и шанс противного критического удара на 12%
+			Увеличивает максимальный запас очков обороны и ударов рукой на 2 ед.
+			Враги будут чаще выбирать вас в качестве цели
+			'''
 	}
 
 	ThoriumGraniteGauntlet: {
-		DisplayName: Granite Feedbacker
+		DisplayName: Грантный удар сдачи
 		Tooltip:
 			'''
-			Slam projectiles or rapidly approaching enemies to deflect them
-			Deflecting consumes a guard and grants a slam
+			Отбивайте снаряды и быстро приближающихся врагов, чтобы отразить их.
+			Отбивания расходуют очки обороны и дают очки ударов рукой
 			'''
 	}
 
 	ThoriumThorsHammerWarhammer: {
-		DisplayName: Thor's Hammer: Opposing
+		DisplayName: Молот Тора: Охрана
 		Tooltip: ""
 	}
 
 	ThoriumAquaiteQuarterstaff: {
-		DisplayName: Wave Breaker
-		Tooltip: Jab is replaced by a powerful sweep that instantly charges on hit
+		DisplayName: Волнолом
+		Tooltip: Тыкающие удары заменяются взмахами, мгновенно заряжающие оружие при попадании
 	}
 
 	DukeGauntlet: {
-		DisplayName: Duke Gauntlet
+		DisplayName: Перчатки герцога
 		Tooltip: ""
 	}
 
 	TrashPavise: {
-		DisplayName: Trash Lid
+		DisplayName: Крышка от мусорного бака
 		Tooltip: ""
 	}
 
 	JewelerGauntlet: {
-		DisplayName: Jeweler's Gauntlets
-		Tooltip: Can be socketed by right clicking with a gem, providing various effects
-		Amethyst: Amethyst: attacks ignore a substantial amount of enemy defense
-		Topaz: Topaz: increases the length of invincibility after a parry
-		Sapphire: Sapphire: allows the player to double jump
-		Emerald: Emerald: allows the player to dash
-		Ruby: Ruby: greatly increases life regeneration after a parry
-		Diamond: Diamond: emits an aura of light
-		Amber: Amber: recovers 50% of a guard on charged attack hits
-		Aquamarine: Aquamarine: increases mobility in water when held
-		Opal: Opal: increases nearby players resource regeneration
-		None: No gem socketed
+		DisplayName: Перчатки ювелира
+		Tooltip: Вставьте самоцвет с помощью ПКМ, чтобы получить ункальный эффект
+		Amethyst: Аметист: Атаки игнорируют значительную часть вражесокй защиты
+		Topaz: Топаз: Увеличивает время неуязвимости после парирования
+		Sapphire: Сапфир: Позволяет пользователю совершать двойной прыжок
+		Emerald: Изумруд: Позволяет пользователю совершать рывок
+		Ruby: Рубин: Значительно ускоряет регенерацию здоровья после парирования
+		Diamond: Алмаз: Пользоватль будет излучать ауру света
+		Amber: Янтарь: Востанавливает 50% очков обороны от атак заряженных попаданий
+		Aquamarine: Аквамарин: Увеличивает мобильность в воде, когда пользователь держит их в руках
+		Opal: Опал: Увеличивает скорость восстановления параметров ближайших игроков
+		None: Самоцвет не вставлен
 	}
 
 	VerveineQuarterstaff: {
-		DisplayName: Verbena
-		Tooltip: Counterattacks release a noxious cloud
+		DisplayName: Вербена
+		Tooltip: Контратаки выпускают облако яда
 	}
 
 	ThoriumThoriumQuarterstaff: {
-		DisplayName: Thorium Quarterstaff
-		Tooltip: Releases sparks on hit
+		DisplayName: Ториевая палица
+		Tooltip: Выпускает искры при попадании
 	}
 }
 
@@ -4035,14 +4038,14 @@ Projectiles: {
 	WardenTortoiseProj.DisplayName: Chomp
 	PredatorIceFoxProj.DisplayName: Foxfire
 	PredatorIceFoxProjAlt.DisplayName: Foxfire
-	GuardianHorizonLanceAnchor.DisplayName: Horizon Firmament
-	GuardianHorizonLanceProj.DisplayName: Horizon Firmament
-	GuardianHorizonLanceProjAlt.DisplayName: Horizon Firmament
-	GuardianHorizonLanceCounter.DisplayName: Horizon Firmament
+	GuardianHorizonLanceAnchor.DisplayName: Фрагмент горизонта
+	GuardianHorizonLanceProj.DisplayName: Фрагмент горизонта
+	GuardianHorizonLanceProjAlt.DisplayName: Фрагмент горизонта
+	GuardianHorizonLanceCounter.DisplayName: Фрагмент горизонта
 	PredatorHarpyProj.DisplayName: Feather
 	PredatorHarpyProjAlt.DisplayName: Feather
 	SageBeeProj.DisplayName: Stringer
-	HorizonDrillProjectile.DisplayName: Horizon Drill
+	HorizonDrillProjectile.DisplayName: Буд горизонта
 	WardenSpiderProj.DisplayName: Warden Spider Proj
 	WardenSpiderWeb.DisplayName: Warden Spider Web
 	SageBatProj.DisplayName: Sage Bat Proj
@@ -4061,70 +4064,70 @@ Projectiles: {
 
 Configs: {
 	OrchidClientConfig: {
-		DisplayName: Orchid Client Config
-		Headers.General: General Header
+		DisplayName: Клиентская конфигурация
+		Headers.General: Основной раздел
 
 		ShowClassTags: {
-			Label: Show tags
-			Tooltip: "{$Enables/Disables the display of class tags}"
+			Label: Показывать метки
+			Tooltip: Включает метки классов на предметах
 		}
 
 		UseOldGuardianHammerUi: {
-			Label: Old Guardian Hammer UI
-			Tooltip: Use the old Guardian Hammer UI (Paper Mario style)
+			Label: Старый интерфейс молота хранителя
+			Tooltip: Использовать старый интерфейс молота хранителя (стиль Paper Mario)
 		}
 
 		SwapPaviseImputs: {
-			Label: Swap Pavise Imputs
-			Tooltip: Swap Left and Right click inputs for Guardian Pavises
+			Label: Сменить клавишу павезы
+			Tooltip: Меняет местами ЛКМ и ПКМ для павезы хранителя
 		}
 
 		SwapGauntletImputs: {
-			Label: Swap Parry Items Imputs
-			Tooltip: Swap Left and Right click inputs for Guardian Parry Items (Gauntlets, Quarterstaves, ...)
+			Label: Сменить клавишу предметов парирования
+			Tooltip: Меняет местами ЛКМ и ПКМ для предметов парирования хранителя (перчатки, палицы и т.д.)
 		}
 
 		AltGuardianChargeSounds: {
-			Label: Alternative Guardian Charge Sounds
-			Tooltip: Replaces the Sound played when fully charging a guardian item
+			Label: Заменить звук заряда хранителя
+			Tooltip: Заменяет звук, проигрываемый при полном заряде предмета хранителя на алтернативный
 		}
 
 		BlockCancelChain: {
-			Label: Pavise Block Cancel Auto-re-use
-			Tooltip: If possible, automatically starts blocking again when cancelling a block with right click
+			Label: Автоматическое использовать пассивный блок после отмены
+			Tooltip: По возможности, блокирование будет автоматически повторяться после отмены с помощью ПКМ
 		}
 
 		ShowModTags: {
-			Label: Show Mod Tags
-			Tooltip: "{$Enables/Disables the display of cross-content items tooltips (Load Crossmod-Content without required mods must be enabled in Orchid Server Config)}"
+			Label: Показать метки мода
+			Tooltip: Включает метки у предметов кроссмод-контента (загрузка кроссмод-контента без требуемых модов должна быть включена в серверной конфигурации Orchid)
 		}
 	}
 
 	OrchidServerConfig: {
-		DisplayName: Orchid Server Config
-		Headers.General: General Header
+		DisplayName: Серверная конфигурация
+		Headers.General: Основной раздел
 
 		LoadCrossmodContentWithoutRequiredMods: {
-			Label: Load Crossmod-Content without required mods
-			Tooltip: "{$Enables/Disables loading Crossmod-Content without required mods}"
+			Label: Загружать кроссмод-контент без требуемых модов
+			Tooltip: Определяет, будут ли загружаться кроссмод-контент без загрузки требуемых модов
 		}
 	}
 }
 
 Misc: {
-	GuardianGrantsGuard: Grants {0} guard when fully charged
-	GuardianGrantsGuards: Grants {0} guards when fully charged
-	GuardianGrantsSlam: Grants {1} slam when fully charged
-	GuardianGrantsSlams: Grants {1} slams when fully charged
-	GuardianGrantsGuardSlamSame: Grants {0} guard and slam when fully charged
-	GuardianGrantsGuardsSlamsSame: Grants {0} guards and slams when fully charged
-	GuardianGrantsGuardsSlam: Grants {0} guards and {1} slam when fully charged
-	GuardianGrantsGuardSlams: Grants {0} guard and {1} slams when fully charged
-	GuardianGrantsGuardsSlams: Grants {0} guards and {1} slams when fully charged
-	ShapeshifterLeftClick: "[c/AFFFAF:Attack: ]"
-	ShapeshifterRightClick: "[c/AFFFAF:Skill: ]"
-	ShapeshifterJump: "[c/AFFFAF:Mobility: ]"
-	ShapeshifterPassive: "[c/AFFFAF:Passive: ]"
+	GuardianGrantsGuard: Дарует {0} оч. обороны при полной зарядке
+	GuardianGrantsGuards: Дарует {0} оч. обороны при полной зарядке
+	GuardianGrantsSlam: Дарует {1} оч. удара рукой при полной зарядке
+	GuardianGrantsSlams: Дарует {1} оч. удара рукой при полной зарядке
+	GuardianGrantsGuardSlamSame: Дарует {0} оч. обороны и удара рукой при полной зарядке
+	GuardianGrantsGuardsSlamsSame: Дарует {0} оч. обороны и удара рукой при полной зарядке
+	GuardianGrantsGuardsSlam: Дарует {0} оч. обороны {1} оч. удара рукой при полной зарядке
+	GuardianGrantsGuardSlams: Дарует {0} оч. обороны {1} оч. удара рукой при полной зарядке
+	GuardianGrantsGuardsSlams: Дарует {0} оч. обороны {1} оч. удара рукой при полной зарядке
+	ShapeshifterLeftClick: "[c/AFFFAF:Атака: ]"
+	ShapeshifterRightClick: "[c/AFFFAF:Навык: ]"
+	ShapeshifterJump: "[c/AFFFAF:Передвижение: ]"
+	ShapeshifterPassive: "[c/AFFFAF:Пассивный навык: ]"
 	ShapeshifterNone: Other wildshape
 	ShapeshifterSage: Sage wildshape
 	ShapeshifterPredator: Predator wildshape
@@ -4133,6 +4136,9 @@ Misc: {
 	NoHintsLeft: На этом уровне не осталось подсказок
 	FailedReaction: Неудачная реакция
 	EntryAdded: Запись {0} добавлена в рукопись о секретных реакциях!
+	CurrentСard: "Текущая карта: "
+	PlayingСard: "Разыграная карта: "
+	Crossmod: "Это кроссмод предмет с "
 }
 
 UI: {
@@ -4162,6 +4168,54 @@ UI: {
 		Dark: Элемент: Тьма
 	}
 	
+	GamblerItem: {
+		Requires: Требует {0} {^0:карту;карты;карт} (в колоде: {1})
+		InDeck: Сейчас в вашей колоде
+		DeckIsFull: Колода заполнилась
+		RequiresMore: Требуется ещё {0} {^0:карта;карты;карт}
+		AddToDeck: Используйте для добавления в колоду
+		Sets: Наборы
+		Set: Набор
+		UsesChips: Использует {0} {^0:фишку;фишки;фишек}
+		DieDuration: Длительность действия: {0} {^0:секунда;секунды;секунд}
+	}	
+	
+	GuardianItem: {
+		LeftClick: ЛКМ
+		RightClick: ПКМ
+		ChargeToSwing:
+			'''
+			Зарядите, чтобы взмахнуть
+			Нажмите {0}, чтобы нанести колящий удар во время зарядки
+			'''
+		ParryDuration: Длительность парирования: {0} сек.
+		BlockDuration: Длительность блока: {0} сек.
+		Interrupted: Прерван
+		Charged: Заряжен
+		Reinforced: Усилен
+		Failed: Неудача
+		Guard: "{0} оч. {^0:обороны;обороны;обороны}"
+		Slam: "{0} оч. {^0:ударов рукой;ударов рукой;ударов рукой}"
+		Parry: Нажмите {0}, чтобы парировать
+		ChargeToThrow:
+			'''
+			Зарядите, чтобы бросить
+			Нажмите ПКМ, сделать взмах во время зарядки
+			'''
+		UsesUpTo: Позволяет использовать {0} {^0:удар рукой;удара руков;ударов рукой}
+		RuneDuration: Время действия руны: {0} сек.
+		Block: Нажмите {0}, чтобы сделать блок
+		BuffDuration: Длительность баффа: {0} сек.
+		HorizonLaceShieldStacks: Дарует 3 оч. обороны при полной зарядке
+		DamageOfDefense: Наносит противный урон, равный {0}% от вашей защиты
+	}
+	
+	DanserItem: {
+		ImpactWeapon: -Ударное оружие-
+		PhaseWeapon: -Фазовое оружие-
+		MomentumWeapon: Momentum Weapon
+	}
+	
 	ReactionBook: {
 		UnknownReaction: Неизвестная реакция
 		Page: Стр.: {0}/{1}
@@ -4172,7 +4226,7 @@ DamageClasses: {
 	Alchemist: -Алхимик-
 	Dancer: -Танцор-
 	Gambler: -Картёжник-
-	Guardian: -Стражник-
+	Guardian: -Хранитель-
 	Shaman: -Шаман-
 	Shapeshifter: -Оборотень-
 	AlchemistDamageClass.DisplayName: ед. химического урона
@@ -4190,7 +4244,7 @@ DamageClasses: {
 	}
 			
 	ShamanDamageClass.DisplayName: shamanic damage
-	ShapeshifterDamageClass.DisplayName: feral damage
+	ShapeshifterDamageClass.DisplayName: ед. дикого урона
 }
 
 Conditions: {
