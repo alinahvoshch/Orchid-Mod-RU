@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using OrchidMod.Common;
 using OrchidMod.Common.Global.Items;
@@ -246,10 +246,10 @@ namespace OrchidMod.Content.Guardian
 			}
 
 			int index = tooltips.FindIndex(ttip => ttip.Mod.Equals("Terraria") && ttip.Name.Equals("Knockback"));
-			tooltips.Insert(index + 1, new TooltipLine(Mod, "ParryDuration", OrchidUtils.FramesToSeconds((int)(parryDuration * Item.GetGlobalItem<GuardianPrefixItem>().GetBlockDuration())) + " second parry duration"));
+			tooltips.Insert(index + 1, new TooltipLine(Mod, "ParryDuration", Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.ParryDuration", OrchidUtils.FramesToSeconds((int)(parryDuration * Item.GetGlobalItem<GuardianPrefixItem>().GetBlockDuration())))));
 
-			string click = ModContent.GetInstance<OrchidClientConfig>().SwapGauntletImputs ? "Left" : "Right";
-			tooltips.Insert(index + 2, new TooltipLine(Mod, "ClickInfo", click + " click to parry")
+			string click = ModContent.GetInstance<OrchidClientConfig>().SwapGauntletImputs ? Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.LeftClick") : Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.RightClick");
+			tooltips.Insert(index + 2, new TooltipLine(Mod, "ClickInfo", Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.Parry", click))
 			{
 				OverrideColor = new Color(175, 255, 175)
 			});
