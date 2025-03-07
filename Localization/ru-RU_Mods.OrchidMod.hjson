@@ -12,118 +12,118 @@ Tiles: {
 
 Buffs: {
 	TitanicBuff: {
-		Description: ""
 		DisplayName: Titanic Buff
+		Description: ""
 	}
 
 	LodestoneSlow: {
-		Description: ""
 		DisplayName: Lodestone Slow
+		Description: ""
 	}
 
 	GraniteAura: {
-		Description: ""
 		DisplayName: Granite Aura
+		Description: ""
 	}
 
 	AquaBump: {
-		Description: ""
 		DisplayName: Aqua Bump
+		Description: ""
 	}
 
 	ShroomHeal: {
-		Description: ""
 		DisplayName: Shroom Heal
+		Description: ""
 	}
 
 	ShamanicEmpowerment: {
-		Description: ""
 		DisplayName: Shamanic Empowerment
+		Description: ""
 	}
 
 	MythrilDefense: {
-		Description: ""
 		DisplayName: Mythril Defense
+		Description: ""
 	}
 
 	DeepForestAura: {
-		Description: ""
 		DisplayName: Deep Forest Aura
+		Description: ""
 	}
 
 	WindStun: {
-		Description: ""
 		DisplayName: Wind Stun
+		Description: ""
 	}
 
 	WindSlow: {
-		Description: ""
 		DisplayName: Wind Slow
+		Description: ""
 	}
 
 	WindDamage: {
-		Description: ""
 		DisplayName: Wind Damage
+		Description: ""
 	}
 
 	LeafSlow: {
-		Description: ""
 		DisplayName: Leaf Slow
+		Description: ""
 	}
 
 	HellHit: {
-		Description: ""
 		DisplayName: Hell Hit
+		Description: ""
 	}
 
 	EarthTotemRevive: {
-		Description: ""
 		DisplayName: Earth Totem Revive
+		Description: ""
 	}
 
 	DiabolistCauterizeCooldown: {
-		Description: ""
 		DisplayName: Diabolist Cauterize Cooldown
+		Description: ""
 	}
 
 	BrokenPower: {
-		Description: ""
 		DisplayName: Broken Power
+		Description: ""
 	}
 
 	AbyssEmpowerment: {
-		Description: ""
 		DisplayName: Abyss Empowerment
+		Description: ""
 	}
 
 	RCRemoteBuff: {
-		Description: ""
-		DisplayName: R C Remote Buff
+		DisplayName: Радиоуправляемый вертолётик
+		Description: Вжжжжжжж
 	}
 
 	SquareMinecartBuff: {
-		Description: Riding in a minecart
-		DisplayName: Minecart
+		DisplayName: Вагонетка
+		Description: Вы катитесь в вагонетке
 	}
 
 	HarpyPotionBuff: {
-		Description: Ability to double jump, your fist bonus jump will release damaging feathers around you
-		DisplayName: Harpy Agility
+		DisplayName: Ловкость гарпии
+		Description: Дарует бонусный прыжок, вызывающий шквал из перьев
 	}
 
 	VulturePotionBuff: {
-		Description: 20% increased chip generation
-		DisplayName: Scavenger
+		DisplayName: Стервятник
+		Description: Скорость появления фишек увеличена на 20%
 	}
 
 	ConquerorsPennantBuff: {
-		Description: 10% increased gambling critical strike chance and movement speed
-		DisplayName: Conqueror's Thrill
+		DisplayName: Трепет завоевателя
+		Description: Шанс картёжного критического удара и скорсоть предвижения увеличены на 10%
 	}
 
 	SlimeSlow: {
-		Description: Reduced Movement Speed
-		DisplayName: Slime Slow
+		DisplayName: Слизневое замедление
+		Description: Скорость передвижения снижена
 	}
 
 	ReactionCooldown: {
@@ -132,178 +132,178 @@ Buffs: {
 	}
 
 	FlashFreeze: {
-		Description: Reduced Movement Speed
-		DisplayName: Flash Freeze
+		DisplayName: Мгновенная заморозка
+		Description: Скорость передвижения снижена
 	}
 
 	Catalyzed: {
-		Description: Triggers various alchemical properties
-		DisplayName: Catalyzed
+		DisplayName: Катализирован
+		Description: Активизирует различные алхимические свойства
 	}
 
 	Attraction: {
-		Description: Attracts nearby alchemist projectiles
-		DisplayName: Attraction
+		DisplayName: Аттаракция
+		Description: Аттарактирует ближайшие алхимические снаряды
 	}
 
 	StellarTalcBuff: {
-		Description: Stellar Talc projectiles will orbit around you
-		DisplayName: Stellar Orbit
+		DisplayName: Звёздная орбита
+		Description: Снаряды звёздного талька летают вокруг вас
 	}
 
 	StardustSamplesBuff: {
-		Description: Sunflowers created by Forest Samples apply confusion
-		DisplayName: Stardust Confusion
+		DisplayName: Запутанность звёздной пыли
+		Description: Подсолнухи пробы леса накладывают запутывают поражённых врагов
 	}
 
 	SpiritedWaterBuff: {
-		Description: Chemical attacks will release spirited water flames
-		DisplayName: Spirited Droplets
+		DisplayName: Горячие капли
+		Description: Алхимические атаки выпускают горячие водяные огни
 	}
 
 	SlimeFlaskBuff: {
-		Description: Using slimy samples with a fire element will release damaging embers
-		DisplayName: Burning Samples
+		DisplayName: Горящий образец
+		Description: Использование слизистых образцов с огненным элементом выпустит наносящие урон угли
 	}
 
 	ReactiveVialsBuff: {
-		Description: 10% increased chemical damage for your next chemical mixture
-		DisplayName: Reactive Elements
+		DisplayName: Реактивные элементы
+		Description: Химический урон ващей следующй химической смести увеличен на 10%
 	}
 
 	QueenBeeFlaskBuff: {
-		Description: Attacking with 3 or more element will summon bees
-		DisplayName: Human Beehive
+		DisplayName: Человеческий улей
+		Description: Атака с 3 и более элементов призовёт пчёл
 	}
 
 	MushroomHeal: {
-		Description: Alchemist attacks will create more spores
-		DisplayName: Mushroom Spores
+		DisplayName: Грибные споры
+		Description: Алхимические атаки создадут больше спор
 	}
 
 	MeteorSpeed: {
-		Description: Immune to knockback, 20% increased movement speed
-		DisplayName: Meteor Agility
+		DisplayName: Метеорная манёвренность
+		Description: Невосприимчевость к отбрасыванию и увеличение скорости передвижения на 20%
 	}
 
 	KingSlimeFlaskBuff: {
-		Description: Increases the likelyhood of spawning slime bubbles, creating spiked jungle slimes
-		DisplayName: Poisonous Slime
+		DisplayName: Отравленный слизень
+		Description: Увеличивает шансы появления слизневых пузырей, призывающих шипастых слизней джунглей
 	}
 
 	JungleLilyExtractBuff: {
-		Description: Each alchemical attack using two or more elements releases a purifying aura
-		DisplayName: Purifying Lilies
+		DisplayName: Очищающие лилии
+		Description: Каждая алхимическая атака, использующая два или более элемента, выпустит очищающую ауру
 	}
 
 	IceChestFlaskBuff: {
-		Description: Constantly freezes various alchemical projectiles and slows enemies around you
-		DisplayName: Permanent Freeze
+		DisplayName: Мгновенная заморозка
+		Description: Замораживает алхимические снаряды вокруг вас и замедляет ближайших врагов
 	}
 
 	DemonBreathFlaskBuff: {
-		Description: Demon breath will create more projectiles
-		DisplayName: Demon Reek
+		DisplayName: Демоническая вонь
+		Description: Дыхание дракона будет создавать больше снарядов
 	}
 
 	BloodMistFlaskBuff: {
-		Description: Periodically releases blood mist while moving
-		DisplayName: Misty Steps
+		DisplayName: Шаги в тумане
+		Description: Во время движения вы выпускаете кровавые облака
 	}
 
 	AttractiteAuraSmall: {
-		Description: Applies attractite to nearby enemies
-		DisplayName: Lesser Attractite Aura
+		DisplayName: Малая аттрактивная аура
+		Description: Накладывает аттракцию на ближайших врагов
 	}
 
 	GuardianSpikeBuff: {
-		DisplayName: Sharp Rebuttal
-		Description: 15% increased opposing damage
+		DisplayName: Резкий отказ
+		Description: Увеличение противного урона на 15%
 	}
 
 	BambooBuff: {
-		DisplayName: Bamboo Protection
-		Description: 25% increased defense
+		DisplayName: Бамбуковая защита
+		Description: Увеличение защиты на 25%
 	}
 
 	GuardianGitBuff: {
-		DisplayName: Got Gud
-		Description: 30% increased movement speed
+		DisplayName: Стал профи
+		Description: Увеличение скорости передвижения на 30%
 	}
 
 	GuardianRunePotionBuff: {
-		DisplayName: Rune Mastery
-		Description: Increased number of guardian rune projectiles
+		DisplayName: Руническое мастерство
+		Description: Увеличено количество защитных рун
 	}
 
 	GuardianJungleGauntletBuff: {
-		DisplayName: Feral Frenzy
-		Description: 100% increased melee speed
+		DisplayName: Дичайшее бешенство
+		Description: Увеличение скорости ближнего боя на 100%
 	}
 
 	GuardianSpiderGauntletBuff: {
-		DisplayName: Toxic Punches
-		Description: Punches shoot toxic fangs
+		DisplayName: Токсичные кулаки
+		Description: Удары выпускают токсичные клыки
 	}
 
 	GuardianMechanicalGauntletBuff: {
-		DisplayName: Rocket Punch
-		Description: Punch to propel yourself!
+		DisplayName: Ракетный удар
+		Description: Ударьте, чтобы придать себе ускорение!
 	}
 
 	GuardianHoneyPotionBuff: {
-		DisplayName: Sweetguard
-		Description: Recovers 1% of max life on block or parry
+		DisplayName:  Сладкая защита
+		Description: Восстановление 1% от максимального количества здоровья при блоке или парировании
 	}
 
 	GuardianPaladinGauntletBuff: {
-		DisplayName: Crusader Strikes
-		Description: Releases sparks of light when punching
+		DisplayName: Удары крестоносца
+		Description: Удары испускают искры света
 	}
 
 	GuardianBuffStationBuff: {
-		DisplayName: Battle Ready
-		Description: Increases maximum slams by 1
+		DisplayName: К бою готов
+		Description: Увеличивает максимальное количество очков ударов рукой на 1 ед.
 	}
 
 	SageOwlDebuff: {
-		DisplayName: Sage Owl Debuff
-		Description: Reduced defense
+		DisplayName: Ослабление мудрой совы
+		Description: Защита снижена
 	}
 
 	WardenTortoiseBuff: {
-		DisplayName: Snapjaw
-		Description: Your next chomp is greatly enhanced
+		DisplayName: Челюсти
+		Description: Ваш следующий укус значительно усилен
 	}
 
 	WardenSpiderDebuff: {
-		DisplayName: Shellweb
-		Description: Decreased movement speed
+		DisplayName: Паутинная оболчка
+		Description: Скорость передвижения снижена
 	}
 
 	WardenSpiderBuff: {
-		DisplayName: Shellweb Feast
-		Description: Increase defense by 15
+		DisplayName: Празднество паутинной оболочки
+		Description: Защита увеличена на 15%
 	}
 
 	SageBatDebuff: {
-		DisplayName: Echolocated
-		Description: Takes massive damage from bat attacks
+		DisplayName: Эхолокация
+		Description: Урон от атак летучих мышей значительно увеличен
 	}
 
 	HockeyQuarterstaffDebuff: {
-		Description: Pucked Up
-		DisplayName: Wee!
+		DisplayName: Ви-и-и!
+		Description: Подобранный
 	}
 
 	RubyHealing: {
-		DisplayName: Ruby Healing
-		Description: Life regeneration is greatly increased
+		DisplayName: Рубиновое исцеление
+		Description: Скорость регенерации жизни значительно увеличена
 	}
 
 	OpalResources: {
-		DisplayName: Opal Resources
-		Description: 10% increased resource regeneration
+		DisplayName: Опаловые параметры
+		Description: Регенерация параметров увеличена на 10%
 	}
 }
 
@@ -370,7 +370,7 @@ AlchemistRecipe: {
 	
 	RecipeBurningSamples: {
 		DisplayName: Горящий образец
-		Tooltip: Использование слизистых образцов, наполненных огнём, выпустит наносящие урон угли
+		Tooltip: Использование слизистых образцов с огненным элементом выпустит наносящие урон угли
 	}
 	
 	RecipeDemonReeks: {
@@ -409,13 +409,13 @@ AlchemistRecipe: {
 	}
 	
 	RecipePermanentFreeze: {
-		DisplayName:  Мгновенная заморозка
+		DisplayName: Мгновенная заморозка
 		Tooltip: Постоянно накладывает ауру моментальной заморозки вокруг вас
 	}
 	
 	RecipePoisonousSlime: {
 		DisplayName: Отравленный слизень
-		Tooltip: Увеличивает шансы появления слизневых шариков, призывающих шипастых слизней джунглей
+		Tooltip: Увеличивает шансы появления слизневых пузырей, призывающих шипастых слизней джунглей
 	}
 	
 	RecipeBuilderPotion: {
@@ -464,7 +464,7 @@ AlchemistRecipe: {
 	}
 	
 	RecipeStardustConfusion: {
-		DisplayName:  Запутанность звёздной пыли
+		DisplayName: Запутанность звёздной пыли
 		Tooltip: Подсолнухи пробы леса накладывают запутывают поражённых врагов
 	}
 	
@@ -1761,7 +1761,11 @@ Items: {
 
 	RCRemote: {
 		DisplayName: Пульт радиоуправления
-		Tooltip: «Высокоразвитая эльфийская технология, позволяющая управлять новыми, недавно разработанными летательными аппаратами, не предназначенными для перевозки оленей»
+		Tooltip:
+			'''
+			Призывает радиоуправляемый вертолётик
+			«Высокоразвитая эльфийская технология, позволяющая управлять новыми, недавно разработанными летательными аппаратами, не предназначенными для перевозки оленей»
+			'''
 	}
 
 	ShamanBiomeChest: {
@@ -2732,7 +2736,7 @@ Items: {
 
 	EnchantedRune: {
 		DisplayName: Зачарованная руна
-		Tooltip: Призывает защитные чазарованные искры
+		Tooltip: Призывает защитные зазарованные искры
 	}
 
 	LivingRune: {
@@ -3526,7 +3530,7 @@ Items: {
 
 	ThoriumLeafShield: {
 		DisplayName: Маскировочное укрытие
-		Tooltip: Распадается на острые листья при контакте
+		Tooltip: Распадается на бритвенные листья при контакте
 	}
 
 	BambooQuarterstaff: {
@@ -3676,6 +3680,7 @@ NPCs: {
 
 	Chemist: {
 		DisplayName: Химик
+		Bestiary: Химик любит делиться своей страстью и запасами с любым, кто пожелает изучить алхимию. На удивление, она не превращалась в слайма. Пока что.
 		
 		Names: {
 			1: Элоди
@@ -3753,6 +3758,21 @@ NPCs: {
 
 	Croupier: {
 		DisplayName: Croupier
+		Bestiary: The Croupier helps gamblers sustaining their unique way of life. He is purported so lucky, he once won by rolling a 7 on a six-sided die.
+		
+		Names: {
+			1: Capone
+			2: Cadillac
+			3: Tannenbaum
+			4: Alderman
+			5: Accardo
+			6: Angelini
+			7: Bonanno
+			8: Ambrosino
+			9: D'Amico
+			10: Attanasio
+			11: Manocchio
+		}
 
 		TownNPCMood: {
 			Content: Ey, that sure is a fine place to deal with.
@@ -3772,57 +3792,80 @@ NPCs: {
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
 		}
+		
+		UI: {
+			DeckBuilding: Состав колоды
+			NewDeck: Получить колоду
+			FunnyDialogue: КОГДА C6 ЭОЛА???
+			CanBeRemoved: Можно забрать
+			CannotBeRemoved: Нельзя забрать
+			MostExpensiveCard: "Самая ценная карта в колоде: "
+			Return: Назад
+		}
+
+		Dialogues: {
+			1: Cards turnin' your way?
+			2: I like them odds, chief. Always like them odds.
+			3: Got you covered on cards, chief. We got poker, solitaire... more poker...
+			4: Ey, chief, best bud! Since we're such great pals, could ya help with a little debt?
+			5: I'm your rear hand man.
+			6: Fate's face down. How do you wanna be dealt?
+			7: Pick a number between 1 and 86!
+			8: Not too fond of your odds, eh? Aight, go on.
+			9: You lost it already? Here chief, take your new deck.
+			10: My man, your pockets are full. You wouldn't let a brand new deck sitting on the ground, would ya?
+		}
 
 		Census.SpawnCondition: Have a gamber card ([i:8427][i:8409] etc.) in your deck
 	}
 
-	DownpourElemental.DisplayName: Downpour Elemental
+	DownpourElemental.DisplayName: Элементаль ливня
 }
 
 Prefixes: {
-	VoodooedPrefix.DisplayName: Voodooed
-	SpiritualPrefix.DisplayName: Spiritual
-	SpiritedPrefix.DisplayName: Spirited
-	PossessedPrefix.DisplayName: Possessed
-	OccultPrefix.DisplayName: Occult
-	LoadedPrefix.DisplayName: Loaded
-	JinxedPrefix.DisplayName: Jinxed
-	HexxedPrefix.DisplayName: Hexxed
-	FocusedPrefix.DisplayName: Focused
-	FerventPrefix.DisplayName: Fervent
-	EtherealPrefix.DisplayName: Ethereal
-	EffervescentPrefix.DisplayName: Effervescent
-	CursedPrefix.DisplayName: Cursed
-	BrewingPrefix.DisplayName: Brewing
-	BewitchedPrefix.DisplayName: Bewitched
-	BlockingPrefix.DisplayName: Blocking
-	UnyieldingPrefix.DisplayName: Unyielding
-	ToweringPrefix.DisplayName: Towering
-	SturdyPrefix.DisplayName: Sturdy
-	StoutPrefix.DisplayName: Stout
-	SteadfastPrefix.DisplayName: Steadfast
-	SpartanPrefix.DisplayName: Spartan
-	ResolutePrefix.DisplayName: Resolute
-	HulkingPrefix.DisplayName: Hulking
-	FragilePrefix.DisplayName: Fragile
-	FlimsyPrefix.DisplayName: Flimsy
-	FeeblePrefix.DisplayName: Feeble
-	EmpyreanPrefix.DisplayName: Empyrean
-	BestialPrefix.DisplayName: Bestial
-	BoarishPrefix.DisplayName: Boarish
-	BullishPrefix.DisplayName: Bullish
-	DivinePrefix.DisplayName: Divine
-	EnragedPrefix.DisplayName: Enraged
-	FeralPrefix.DisplayName: Feral
-	FiercePrefix.DisplayName: Fierce
-	MonstrousPrefix.DisplayName: Monstrous
-	PrimalPrefix.DisplayName: Primal
-	TimidPrefix.DisplayName: Timid
-	UntamedPrefix.DisplayName: Untamed
-	VoraciousPrefix.DisplayName: Voracious
-	AngelicPrefix.DisplayName: Angelic
-	ImpregnablePrefix.DisplayName: Impregnable
-	HaidexPrefix.DisplayName: Haidex
+	VoodooedPrefix.DisplayName: Вуду
+	SpiritualPrefix.DisplayName: Духовный
+	SpiritedPrefix.DisplayName: Одушевлённый
+	PossessedPrefix.DisplayName: Одержимый
+	OccultPrefix.DisplayName: Оккультный
+	LoadedPrefix.DisplayName: Груженный
+	JinxedPrefix.DisplayName: Обречённый
+	HexxedPrefix.DisplayName: Зачарованный
+	FocusedPrefix.DisplayName: Сосредоточенный
+	FerventPrefix.DisplayName: Пылкий
+	EtherealPrefix.DisplayName: Призрачный
+	EffervescentPrefix.DisplayName: Искромётный
+	CursedPrefix.DisplayName: Проклятый
+	BrewingPrefix.DisplayName: Сваренный
+	BewitchedPrefix.DisplayName: Заколдованный
+	BlockingPrefix.DisplayName: Блокирующий
+	UnyieldingPrefix.DisplayName: Неопколебимый
+	ToweringPrefix.DisplayName: Возвышенный
+	SturdyPrefix.DisplayName: Укреплённый
+	StoutPrefix.DisplayName: Прочный
+	SteadfastPrefix.DisplayName: Стойкий
+	SpartanPrefix.DisplayName: Спартанский
+	ResolutePrefix.DisplayName: Решительный
+	HulkingPrefix.DisplayName: Громадный
+	FragilePrefix.DisplayName: Хрупкий
+	FlimsyPrefix.DisplayName: Хлипкий
+	FeeblePrefix.DisplayName: Хилый
+	EmpyreanPrefix.DisplayName: Небесный
+	BestialPrefix.DisplayName: Звериный
+	BoarishPrefix.DisplayName: Кобанский
+	BullishPrefix.DisplayName: Бычий
+	DivinePrefix.DisplayName: Божественный
+	EnragedPrefix.DisplayName: Заряженный
+	FeralPrefix.DisplayName: Дикий
+	FiercePrefix.DisplayName: Свирепый
+	MonstrousPrefix.DisplayName: Монструозный
+	PrimalPrefix.DisplayName: Первобытный
+	TimidPrefix.DisplayName: Робкий
+	UntamedPrefix.DisplayName: Неукротимый
+	VoraciousPrefix.DisplayName: Прожорливый
+	AngelicPrefix.DisplayName: Ангельский
+	ImpregnablePrefix.DisplayName: Неприступный
+	HaidexPrefix.DisplayName: Непонятный
 }
 
 Projectiles: {
@@ -3838,14 +3881,14 @@ Projectiles: {
 	DownpourElementalCloud.DisplayName: Downpour Elemental Cloud
 	AbyssDrillProjectile.DisplayName: Abyss Drill Projectile
 	SearingOnslaughtProjectile.DisplayName: Searing Onslaught Projectile
-	RCRemoteProjectile.DisplayName: R C Remote Projectile
-	PrototypeSecrecyProjectile.DisplayName: Prototype Secrecy Projectile
-	PrototypeSecrecyHitProjectile.DisplayName: Prototype Secrecy Hit Projectile
+	RCRemoteProjectile.DisplayName: Радиоуправляемый вертолётик
+	PrototypeSecrecyProjectile.DisplayName: Секретный прототип
+	PrototypeSecrecyHitProjectile.DisplayName:  Секретный прототип
 	MineshaftHookProjectile.DisplayName: Mineshaft Hook Projectile
-	EnchantedPaviseProj.DisplayName: Enchanted Pavise
-	LivingRuneProj.DisplayName: Sap Bubble
-	EnchantedRuneProj.DisplayName: Enchanted Spark
-	GuardianShieldAnchor.DisplayName: Pavise
+	EnchantedPaviseProj.DisplayName: Зачарованная павеза
+	LivingRuneProj.DisplayName: Пузырь сока
+	EnchantedRuneProj.DisplayName: Зачарованная искра
+	GuardianShieldAnchor.DisplayName: Павеза
 	SnowCardProjAlt.DisplayName: Snow Card Proj Alt
 	SnowCardProj.DisplayName: Snow Card Proj
 	SnowCardBase.DisplayName: Snow Card Base
@@ -3934,7 +3977,7 @@ Projectiles: {
 	AlchemistSlime.DisplayName: Alchemist Slime
 	PoisonBubble.DisplayName: Poison Bubble
 	OilBubble.DisplayName: Oil Bubble
-	LivingSapBubble.DisplayName: Living Sap Bubble
+	LivingSapBubble.DisplayName: Живой пузырь сока
 	FlowerReactive.DisplayName: Flower Reactive
 	BloomingReactiveAlt.DisplayName: Blooming Reactive Alt
 	BloomingReactive.DisplayName: Blooming Reactive
@@ -4004,62 +4047,62 @@ Projectiles: {
 	FeatherScepterProjectile.DisplayName: Feather Scepter Projectile
 	FeatherScepterProjectileSplash.DisplayName: Feather Scepter Projectile Splash
 	DepthsWeaverBlast.DisplayName: Depths Weaver Blast
-	SkywareShieldProj.DisplayName: Skyware Bolt
-	NightShieldProj.DisplayName: Styx
-	NightShieldProjAlt.DisplayName: Styx
-	BijouShieldProj.DisplayName: Bijoungblast
-	HallowedShieldProj.DisplayName: Svalinn
-	SpectreShieldProj.DisplayName: Spectral Bolt
-	TempleWarhammerProj.DisplayName: Spark
-	BeeRuneProj.DisplayName: Bee
-	HellRuneProj.DisplayName: Sigil Fire
-	RuneRuneProj.DisplayName: Runefire
-	FrostRuneProj.DisplayName: Ornament
-	EmpressRuneProj.DisplayName: Constellation
-	WaterSpikeProj.DisplayName: Water Spike
-	WaterSpikeProjAlt.DisplayName: Water Spike
-	GoblinRuneProj.DisplayName: Chaos Fire
-	GuardianGauntletAnchor.DisplayName: Gauntlet
-	GauntletPunchProjectile.DisplayName: Gauntlet
-	SpiderGauntletProjectile.DisplayName: Fang
-	GuardianStandardAnchor.DisplayName: Standard
-	StandardAuraProjectile.DisplayName: Standard
-	PaladinGauntletProjectile.DisplayName: Crusader Strike
-	GuardianHammerAnchor.DisplayName: Warhammer
-	GuardianRuneAnchor.DisplayName: Rune
-	MechanicalGauntletProjectile.DisplayName: Rocket Punch
-	MoonLordRuneProj.DisplayName: Moon Rune
-	MoonLordRuneProjAlt.DisplayName: Moon Rune
-	HorizonShieldProj.DisplayName: Terminus
-	DesertStandardProj.DisplayName: Standard Lightning
-	ShapeshifterShapeshiftAnchor.DisplayName: Shapeshift
-	SageOwlProj.DisplayName: Feather
-	SageOwlProjAlt.DisplayName: Feather
-	WardenTortoiseProj.DisplayName: Chomp
-	PredatorIceFoxProj.DisplayName: Foxfire
-	PredatorIceFoxProjAlt.DisplayName: Foxfire
+	SkywareShieldProj.DisplayName: Звёздный всплеск
+	NightShieldProj.DisplayName: Стикс
+	NightShieldProjAlt.DisplayName: Стикс
+	BijouShieldProj.DisplayName: Украшенный заслон
+	HallowedShieldProj.DisplayName: Свалинн
+	SpectreShieldProj.DisplayName: Призрачный выстрел
+	TempleWarhammerProj.DisplayName: Искра
+	BeeRuneProj.DisplayName: Пчела
+	HellRuneProj.DisplayName: Символический огонь
+	RuneRuneProj.DisplayName: Рунический огонь
+	FrostRuneProj.DisplayName: Круг из украшений
+	EmpressRuneProj.DisplayName: Созвездие
+	WaterSpikeProj.DisplayName: Водяной шип
+	WaterSpikeProjAlt.DisplayName: Водяной шип
+	GoblinRuneProj.DisplayName: Огонь хаоса
+	GuardianGauntletAnchor.DisplayName: Перчатка
+	GauntletPunchProjectile.DisplayName: Перчатка
+	SpiderGauntletProjectile.DisplayName: Клык
+	GuardianStandardAnchor.DisplayName: Штандарт
+	StandardAuraProjectile.DisplayName: Штандарт
+	PaladinGauntletProjectile.DisplayName: Удар крестоносца
+	GuardianHammerAnchor.DisplayName: Боевой молот
+	GuardianRuneAnchor.DisplayName: Руна
+	MechanicalGauntletProjectile.DisplayName: Ракетный удар
+	MoonLordRuneProj.DisplayName: Лунная руна
+	MoonLordRuneProjAlt.DisplayName: Лунная руна
+	HorizonShieldProj.DisplayName: Завет
+	DesertStandardProj.DisplayName: Молния штандарта
+	ShapeshifterShapeshiftAnchor.DisplayName: Оборотень
+	SageOwlProj.DisplayName: Перо
+	SageOwlProjAlt.DisplayName: Перо
+	WardenTortoiseProj.DisplayName: Щёлканье
+	PredatorIceFoxProj.DisplayName: Лисиный огонь
+	PredatorIceFoxProjAlt.DisplayName: Лисиный огонь
 	GuardianHorizonLanceAnchor.DisplayName: Фрагмент горизонта
 	GuardianHorizonLanceProj.DisplayName: Фрагмент горизонта
 	GuardianHorizonLanceProjAlt.DisplayName: Фрагмент горизонта
 	GuardianHorizonLanceCounter.DisplayName: Фрагмент горизонта
-	PredatorHarpyProj.DisplayName: Feather
-	PredatorHarpyProjAlt.DisplayName: Feather
-	SageBeeProj.DisplayName: Stringer
-	HorizonDrillProjectile.DisplayName: Буд горизонта
+	PredatorHarpyProj.DisplayName: Перо
+	PredatorHarpyProjAlt.DisplayName: Перо
+	SageBeeProj.DisplayName: Жало
+	HorizonDrillProjectile.DisplayName: Бур горизонта
 	WardenSpiderProj.DisplayName: Warden Spider Proj
 	WardenSpiderWeb.DisplayName: Warden Spider Web
 	SageBatProj.DisplayName: Sage Bat Proj
 	SageBatProjAlt.DisplayName: Sage Bat Proj Alt
 	GuardianQuarterstaffAnchor.DisplayName: Guardian Quarterstaff Anchor
-	ThoriumLeafShieldProj.DisplayName: Razor Leaves
+	ThoriumLeafShieldProj.DisplayName: Бритвенные листья
 	DungeonQuarterstaffProjectile.DisplayName: Dungeon Quarterstaff Projectile
 	ShardQuarterstaffProjectile.DisplayName: Shard Quarterstaff Projectile
-	OrchidTitaniumShard.DisplayName: Titanium Shard
-	ThoriumGraniteGauntletProjectile.DisplayName: Chargeback
-	TempleSpikeProj.DisplayName: Deadly Sun Laser
-	MechSpikeProj.DisplayName: Death Laser
-	VerveineFart.DisplayName: Fart
-	ThoriumAquaiteQuarterstaffProjectile.DisplayName: Wave Swirl
+	OrchidTitaniumShard.DisplayName: Титановый осколок
+	ThoriumGraniteGauntletProjectile.DisplayName: Удар сдачи
+	TempleSpikeProj.DisplayName: Смертоносный солнечный лазер
+	MechSpikeProj.DisplayName: Смертельный лазер
+	VerveineFart.DisplayName: Пердёж
+	ThoriumAquaiteQuarterstaffProjectile.DisplayName: Вихревой взмах
 }
 
 Configs: {
@@ -4128,10 +4171,10 @@ Misc: {
 	ShapeshifterRightClick: "[c/AFFFAF:Навык: ]"
 	ShapeshifterJump: "[c/AFFFAF:Передвижение: ]"
 	ShapeshifterPassive: "[c/AFFFAF:Пассивный навык: ]"
-	ShapeshifterNone: Other wildshape
-	ShapeshifterSage: Sage wildshape
-	ShapeshifterPredator: Predator wildshape
-	ShapeshifterWarden: Warden wildshape
+	ShapeshifterNone: Другая дикая форма
+	ShapeshifterSage: Дикая форма мудрости
+	ShapeshifterPredator: Дикая форма охотника
+	ShapeshifterWarden: Дикая форма стража
 	NewHiddenReac: Найдена подсказка к новой секретной реакции!
 	NoHintsLeft: На этом уровне не осталось подсказок
 	FailedReaction: Неудачная реакция
@@ -4178,6 +4221,10 @@ UI: {
 		Set: Набор
 		UsesChips: Использует {0} {^0:фишку;фишки;фишек}
 		DieDuration: Длительность действия: {0} {^0:секунда;секунды;секунд}
+		SetBiome: «Биомы»
+		SetBoss: «Боссы»
+		SetElemental: «Элементы»
+		SetSlime: «Слизни»
 	}	
 	
 	GuardianItem: {
