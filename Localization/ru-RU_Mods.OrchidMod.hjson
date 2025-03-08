@@ -118,7 +118,7 @@ Buffs: {
 
 	ConquerorsPennantBuff: {
 		DisplayName: Трепет завоевателя
-		Description: Шанс картёжного критического удара и скорсоть предвижения увеличены на 10%
+		Description: Шанс картёжного критического удара и скорость передвижения увеличены на 10%
 	}
 
 	SlimeSlow: {
@@ -168,7 +168,7 @@ Buffs: {
 
 	ReactiveVialsBuff: {
 		DisplayName: Реактивные элементы
-		Description: Химический урон ващей следующй химической смести увеличен на 10%
+		Description: Урон вашей следующей химической смеси увеличен на 10%
 	}
 
 	QueenBeeFlaskBuff: {
@@ -197,13 +197,13 @@ Buffs: {
 	}
 
 	IceChestFlaskBuff: {
-		DisplayName: Мгновенная заморозка
+		DisplayName: Постоянная заморозка
 		Description: Замораживает алхимические снаряды вокруг вас и замедляет ближайших врагов
 	}
 
 	DemonBreathFlaskBuff: {
 		DisplayName: Демоническая вонь
-		Description: Дыхание дракона будет создавать больше снарядов
+		Description: Дыхание демона будет создавать больше снарядов
 	}
 
 	BloodMistFlaskBuff: {
@@ -283,7 +283,7 @@ Buffs: {
 
 	WardenSpiderBuff: {
 		DisplayName: Празднество паутинной оболочки
-		Description: Защита увеличена на 15%
+		Description: Защита увеличена на 15 ед.
 	}
 
 	SageBatDebuff: {
