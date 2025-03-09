@@ -3757,40 +3757,40 @@ NPCs: {
 	}
 
 	Croupier: {
-		DisplayName: Croupier
-		Bestiary: The Croupier helps gamblers sustaining their unique way of life. He is purported so lucky, he once won by rolling a 7 on a six-sided die.
+		DisplayName: Крупье
+		Bestiary: Крупье помогает игрокам поддерживать их уникальный образ жизни. Поговаривают, что он чертовски везуч, а однажды вообще выиграл, выбросив 7 на шестигранном кубике.
 		
 		Names: {
-			1: Capone
-			2: Cadillac
-			3: Tannenbaum
-			4: Alderman
-			5: Accardo
-			6: Angelini
-			7: Bonanno
-			8: Ambrosino
-			9: D'Amico
-			10: Attanasio
-			11: Manocchio
+			1: Капонэ
+			2: Кадиллак
+			3: Тэнненбаум
+			4: Альдерман
+			5: Аккардо
+			6: Ангелини
+			7: Бананно
+			8: Амброзий
+			9: Д'Амико
+			10: Аттаназий
+			11: Маночио
 		}
 
 		TownNPCMood: {
-			Content: Ey, that sure is a fine place to deal with.
-			NoHome: Being homeless reminds me of darker times...
-			FarFromHome: Chief, it's not that I don't like this place, but I'd like to go back?
-			LoveSpace: If i knew i'd end up is such a cool corner, I'd have arrived earlier!
-			DislikeCrowded: Neighbors are fine and all, but y'know, that's a bit much.
-			HateCrowded: So many bystanders! Can't even ... play an honest game without being seen!
-			LoveBiome: "{BiomeName} is perfect to keep pristine cards."
-			LikeBiome: "{BiomeName} is chill, I'm down to stay."
-			DislikeBiome: "{BiomeName} is fine with me, but my cards? Not much."
-			HateBiome: The moisture in {BiomeName} air is ruining my cards!
-			LoveNPC: "{NPCName} is an amazing buddy, we play every night around a nice beer!"
-			LikeNPC: "{NPCName} is a cool girl. Chemistry reminds me of that one game..."
-			DislikeNPC: I didn't believe it, but {NPCName} taught me that goblins really CAN'T play cards.
-			HateNPC: "{NPCName} keeps pestering me about gambling, and blah, blah. why is he so nosy?"
-			LikeNPC_Princess: I like {NPCName}.
-			Princess_LovesNPC: I like {NPCName}.
+			Content: Эй, неплохое место для моей работы.
+			NoHome: Отсутствие дома напоминает мне о тёмных временах...
+			FarFromHome: Шеф, не то что бы мне не нравилось это место, но нет ли возможности мне вернуться, а?
+			LoveSpace: Если бы я знал, что мне достанется такой клёвый уголок, я бы раньше сюда переехал!
+			DislikeCrowded: Соседи хорошие и всё такое, но, знаешь, многовато их.
+			HateCrowded:Так много прохожих! Не могу даже ... провести вполне честную игру без того, чтобы быть увиденным!
+			LoveBiome: "{BiomeName} идеально подходит для хранения карт в чистоте."
+			LikeBiome: В {BiomeName} прохладно, я не прочь остаться здесь.
+			DislikeBiome: "{BiomeName} не вызывает у меня неприязни, но вот мои карты видали лучшие места хранения."
+			HateBiome: "{BiomeName} своей влажностью уничтожит мои карты!"
+			LoveNPC: "{NPCName} отличный приятель, мы играем каждую ночь, потягивая пиво!"
+			LikeNPC: "{NPCName} крутая девочка. Химия напоминает мне об одной игре..."
+			DislikeNPC: Сначала я не верил, но {NPCName} доказал мне, что гоблины ДЕЙСТВИТЕЛЬНО не умеют играть в карты.
+			HateNPC: "{NPCName} продолжает приставать ко мне, расспрашивая о моих азартных играх и бла, бла, бла. Чего он так расшумелся?"
+			LikeNPC_Princess: Мне нравится {NPCName}.
+			Princess_LovesNPC: Мне нравится {NPCName}.
 		}
 		
 		UI: {
@@ -3804,19 +3804,19 @@ NPCs: {
 		}
 
 		Dialogues: {
-			1: Cards turnin' your way?
-			2: I like them odds, chief. Always like them odds.
-			3: Got you covered on cards, chief. We got poker, solitaire... more poker...
-			4: Ey, chief, best bud! Since we're such great pals, could ya help with a little debt?
-			5: I'm your rear hand man.
-			6: Fate's face down. How do you wanna be dealt?
-			7: Pick a number between 1 and 86!
-			8: Not too fond of your odds, eh? Aight, go on.
-			9: You lost it already? Here chief, take your new deck.
-			10: My man, your pockets are full. You wouldn't let a brand new deck sitting on the ground, would ya?
+			1: Карты изменили твой путь?
+			2: Мне нравятся их шансы, шеф. Всегда нравятся.
+			3: У меня тут полно карт, шеф. Можем сыграть в покер, в солитёр... ещё раз в покер...
+			4: А, шеф, мой добрый приятель! Раз уж мы больший друзья, не мог бы ты мне помочь с одним небольшим должком?
+			5: Я — твоя третья рука, товарищ.
+			6: Такая штука, как судьба, не существует. В какой игре сегодня испытаешь удачу?
+			7: Выбери число между 1 и 86!
+			8: Не слишком нравятся твои шансы, а? И так сойдёт.
+			9: Уже всё потерял? Вот, шеф, возьми-ка ещё одну колоду.
+			10: Дружище, у тебя все карманы забиты. Ты бы не позволил новенькой колоде рассыпаться по полу, не так ли?
 		}
 
-		Census.SpawnCondition: Have a gamber card ([i:8427][i:8409] etc.) in your deck
+		Census.SpawnCondition: В вашей колоде должна быть любоая карта ([i:8427][i:8409] и т.п.)
 	}
 
 	DownpourElemental.DisplayName: Элементаль ливня
