@@ -3519,7 +3519,7 @@ Items: {
 	}
 
 	Quarterstaff: {
-		DisplayName: Боевой посох
+		DisplayName: Боевой шест
 		Tooltip: ""
 	}
 
@@ -3534,7 +3534,7 @@ Items: {
 	}
 
 	BambooQuarterstaff: {
-		DisplayName: Бамбуковый шест
+		DisplayName: Бамбуковый боевой шест
 		Tooltip: ""
 	}
 
@@ -3592,7 +3592,7 @@ Items: {
 	}
 
 	HallowedQuarterstaff: {
-		DisplayName: Освящённый боевой посох
+		DisplayName: Освящённый боевой шест
 		Tooltip: ""
 	}
 
@@ -3670,7 +3670,7 @@ Items: {
 	}
 
 	ThoriumThoriumQuarterstaff: {
-		DisplayName: Ториевый боевой посох
+		DisplayName: Ториевый боевой шест
 		Tooltip: Выпускает искры при попадании
 	}
 }
@@ -4127,7 +4127,7 @@ Configs: {
 
 		SwapGauntletImputs: {
 			Label: Сменить клавишу предметов парирования
-			Tooltip: Меняет местами ЛКМ и ПКМ для предметов парирования хранителя (перчатки, боевые посохи и т.д.)
+			Tooltip: Меняет местами ЛКМ и ПКМ для предметов парирования хранителя (перчатки, боевые шесты и т.д.)
 		}
 
 		AltGuardianChargeSounds: {
