@@ -3701,12 +3701,12 @@ NPCs: {
 			FarFromHome: Надеюсь, лаборатория у меня дома в порядке...
 			LoveSpace:Химия в этом месте потрясающая! Понял?
 			DislikeCrowded: Вокруг так много людей, это отвлекает меня.
-			HateCrowded: Ну и как я должна эксперементировать в таком людном месте?
-			LoveBiome: "{BiomeName} — хорешее место для поиска ингредиентов."
-			LikeBiome: "{BiomeName} — замечательное место! Здесь так мново вещей, с которыми можно поиграть, в смысле, поэкспериментировать!"
-			DislikeBiome: "{BiomeName} жаркая и сухая. Хорошо, что я запаслась игнридиентами до этого."
+			HateCrowded: Ну и как я должна экспериментировать в таком людном месте?
+			LoveBiome: "{BiomeName} — хорошее место для поиска ингредиентов."
+			LikeBiome: "{BiomeName} — замечательное место! Здесь так много вещей, с которыми можно поиграть, в смысле, поэкспериментировать!"
+			DislikeBiome: "{BiomeName} жаркая и сухая. Хорошо, что я запаслась ингредиентами до этого."
 			HateBiome: "{BiomeName} напоминает мне о том, что я пережила до того, как была спасена тобой. Что за ужасный опыт..."
-			LoveNPC: "{NPCName} знает так много раегентов! Она много мне помогает."
+			LoveNPC: "{NPCName} знает так много реагентов! Она много мне помогает."
 			LikeNPC: "{NPCName} крутой чувак, не думала, что ему нравится химия."
 			DislikeNPC: Я очень надеюсь, что {NPCName} не взорвёт мою лабораторию снова...
 			HateNPC: "{NPCName} продолжает доставать меня, прося создать новое оружие, почему бы ему просто не оставить меня в покое?"
@@ -3839,7 +3839,7 @@ Prefixes: {
 	BrewingPrefix.DisplayName: Сваренный
 	BewitchedPrefix.DisplayName: Заколдованный
 	BlockingPrefix.DisplayName: Блокирующий
-	UnyieldingPrefix.DisplayName: Неопколебимый
+	UnyieldingPrefix.DisplayName: Непоколебимый
 	ToweringPrefix.DisplayName: Возвышенный
 	SturdyPrefix.DisplayName: Укреплённый
 	StoutPrefix.DisplayName: Прочный
@@ -3852,10 +3852,10 @@ Prefixes: {
 	FeeblePrefix.DisplayName: Хилый
 	EmpyreanPrefix.DisplayName: Небесный
 	BestialPrefix.DisplayName: Звериный
-	BoarishPrefix.DisplayName: Кобанский
+	BoarishPrefix.DisplayName: Кабанский
 	BullishPrefix.DisplayName: Бычий
 	DivinePrefix.DisplayName: Божественный
-	EnragedPrefix.DisplayName: Заряженный
+	EnragedPrefix.DisplayName: Разъярённый
 	FeralPrefix.DisplayName: Дикий
 	FiercePrefix.DisplayName: Свирепый
 	MonstrousPrefix.DisplayName: Монструозный
@@ -4111,38 +4111,38 @@ Configs: {
 		Headers.General: Основной раздел
 
 		ShowClassTags: {
-			Label: Показывать метки
-			Tooltip: Включает метки классов на предметах
+			Label: Показывать метки классов
+			Tooltip: Включает метки классов в подсказках предметов
 		}
 
 		UseOldGuardianHammerUi: {
 			Label: Старый интерфейс молота хранителя
-			Tooltip: Использовать старый интерфейс молота хранителя (стиль Paper Mario)
+			Tooltip: Использовать старый интерфейс молота хранителя (в стиле Paper Mario)
 		}
 
 		SwapPaviseImputs: {
-			Label: Сменить клавишу павезы
+			Label: Поменять клавишу павезы
 			Tooltip: Меняет местами ЛКМ и ПКМ для павезы хранителя
 		}
 
 		SwapGauntletImputs: {
-			Label: Сменить клавишу предметов парирования
+			Label: Поменять клавишу предметов парирования
 			Tooltip: Меняет местами ЛКМ и ПКМ для предметов парирования хранителя (перчатки, боевые шесты и т.д.)
 		}
 
 		AltGuardianChargeSounds: {
-			Label: Заменить звук заряда хранителя
+			Label: Использовать альтернативный звук заряда хранителя
 			Tooltip: Заменяет звук, проигрываемый при полном заряде предмета хранителя на альтернативный
 		}
 
 		BlockCancelChain: {
-			Label: Автоматическое использовать пассивный блок после отмены
+			Label: Автоматически использовать пассивный блок после отмены
 			Tooltip: По возможности, блокирование будет автоматически повторяться после отмены с помощью ПКМ
 		}
 
 		ShowModTags: {
-			Label: Показать метки мода
-			Tooltip: Включает метки у предметов кроссмод-контента (загрузка кроссмод-контента без требуемых модов должна быть включена в серверной конфигурации Orchid)
+			Label: Показать метки кроссмод-контента
+			Tooltip: Включает метки в подсказках кроссмод-предметов (загрузка кроссмод-контента без требуемых модов должна быть включена в серверной конфигурации Orchid)
 		}
 	}
 
@@ -4152,21 +4152,21 @@ Configs: {
 
 		LoadCrossmodContentWithoutRequiredMods: {
 			Label: Загружать кроссмод-контент без требуемых модов
-			Tooltip: Определяет, будут ли загружаться кроссмод-контент без загрузки требуемых модов
+			Tooltip: Включает загрузку кроссмод-контента без загрузки требуемых модов
 		}
 	}
 }
 
 Misc: {
-	GuardianGrantsGuard: Дарует {0} оч. обороны при полной зарядке
-	GuardianGrantsGuards: Дарует {0} оч. обороны при полной зарядке
-	GuardianGrantsSlam: Дарует {1} оч. удара рукой при полной зарядке
-	GuardianGrantsSlams: Дарует {1} оч. удара рукой при полной зарядке
-	GuardianGrantsGuardSlamSame: Дарует {0} оч. обороны и удара рукой при полной зарядке
-	GuardianGrantsGuardsSlamsSame: Дарует {0} оч. обороны и удара рукой при полной зарядке
-	GuardianGrantsGuardsSlam: Дарует {0} оч. обороны {1} оч. удара рукой при полной зарядке
-	GuardianGrantsGuardSlams: Дарует {0} оч. обороны {1} оч. удара рукой при полной зарядке
-	GuardianGrantsGuardsSlams: Дарует {0} оч. обороны {1} оч. удара рукой при полной зарядке
+	GuardianGrantsGuard: Даёт {0} оч. обороны при полной зарядке
+	GuardianGrantsGuards: Даёт {0} оч. обороны при полной зарядке
+	GuardianGrantsSlam: Даёт {1} оч. удара рукой при полной зарядке
+	GuardianGrantsSlams: Даёт {1} оч. удара рукой при полной зарядке
+	GuardianGrantsGuardSlamSame: Даёт {0} оч. обороны и удара рукой при полной зарядке
+	GuardianGrantsGuardsSlamsSame: Даёт {0} оч. обороны и удара рукой при полной зарядке
+	GuardianGrantsGuardsSlam: Даёт {0} оч. обороны {1} оч. удара рукой при полной зарядке
+	GuardianGrantsGuardSlams: Даёт {0} оч. обороны {1} оч. удара рукой при полной зарядке
+	GuardianGrantsGuardsSlams: Даёт {0} оч. обороны {1} оч. удара рукой при полной зарядке
 	ShapeshifterLeftClick: "[c/AFFFAF:Атака: ]"
 	ShapeshifterRightClick: "[c/AFFFAF:Навык: ]"
 	ShapeshifterJump: "[c/AFFFAF:Передвижение: ]"
@@ -4180,7 +4180,7 @@ Misc: {
 	FailedReaction: Неудачная реакция
 	EntryAdded: Запись {0} добавлена в рукопись о секретных реакциях!
 	CurrentСard: "Текущая карта: "
-	PlayingСard: "Разыграная карта: "
+	PlayingСard: "Разыгранная карта: "
 	Crossmod: "Это кроссмод предмет с "
 }
 
@@ -4191,7 +4191,7 @@ UI: {
 		PullOutPotion: Забрать отвар        – клавишой «Предметы 1-8» ({0}-{1})
 		PullOutPotions: Забрать отвары       – клавишой «Предмет 9» ({0})
 		PullOutDye: Забрать краситель    – клавишой «Предмет 10» ({0})
-		Dye: Использумый краситель: {0}
+		Dye: Используемый краситель: {0}
 		MoreInformation: Удерживайте клавишу «Автовыбор» ({0}) для большей информации
 		State: "Состояние: "
 		Active: активна
@@ -4213,10 +4213,10 @@ UI: {
 	
 	GamblerItem: {
 		Requires: Требует {0} {^0:карту;карты;карт} (в колоде: {1})
-		InDeck: Сейчас в вашей колоде
-		DeckIsFull: Колода заполнилась
+		InDeck: Сейчас в колоде
+		DeckIsFull: Колода заполнена
 		RequiresMore: Требуется ещё {0} {^0:карта;карты;карт}
-		AddToDeck: Используйте для добавления в колоду
+		AddToDeck: Используйте, чтобы добавить в колоду
 		Sets: Наборы
 		Set: Набор
 		UsesChips: Использует {0} {^0:фишку;фишки;фишек}
@@ -4237,9 +4237,9 @@ UI: {
 			'''
 		ParryDuration: Длительность парирования: {0} сек.
 		BlockDuration: Длительность блока: {0} сек.
-		Interrupted: Прерван
-		Charged: Заряжен
-		Reinforced: Усилен
+		Interrupted: Прервано
+		Charged: Заряжено
+		Reinforced: Усилено
 		Failed: Неудача
 		Guard: "{0} оч. {^0:обороны;обороны;обороны}"
 		Slam: "{0} оч. {^0:ударов рукой;ударов рукой;ударов рукой}"
@@ -4286,7 +4286,7 @@ DamageClasses: {
 
 		ThoriumMod_TerrariumArmorAddClassFocus: {
 			Name: Специализация противостояния
-			Description: Увеличивает максимальный запас очков обороны и ударов рукой, защиту и скосорость регенерации здоровья на 3 ед.
+			Description: Увеличивает максимальный запас очков обороны и ударов рукой, защиту и скорость регенерации здоровья на 3 ед.
 		}
 	}
 			
@@ -4301,5 +4301,5 @@ Conditions: {
 	GamblerSetBiome: Игрок имеет как минимум 2 «биомных» карты в колоде
 	GamblerSetElemental: Игрок имеет как минимум 2 «элементальные» карты в колоде
 	AlchemistKnownReactions4: Игроком изучено как минимум 4 секретных реакции
-	DisabledThorium: Мод Thorium отключён
+	DisabledThorium: Thorium мод отключён
 }
