@@ -103,16 +103,14 @@ namespace OrchidMod.Content.Guardian
 			int index = tooltips.FindIndex(ttip => ttip.Mod.Equals("Terraria") && ttip.Name.Equals("Knockback"));
 			if (GuardStacks > 0 || SlamStacks > 0)
 			{
-				string TooltipToGet = GetInstance<OrchidMod>().GetLocalizationKey("Misc.GuardianGrants");
-				switch(GuardStacks)
+				string TooltipToGet = ModContent.GetInstance<OrchidMod>().GetLocalizationKey("Misc.GuardianGrants");
+				switch (GuardStacks)
 				{
-					case 1: TooltipToGet += "Guard"; break;
-					case >1: TooltipToGet += "Guards"; break;
+					case > 0: TooltipToGet += "Guard"; break;
 				}
 				switch (SlamStacks)
 				{
-					case 1: TooltipToGet += "Slam"; break;
-					case >1: TooltipToGet += "Slams"; break;
+					case > 0: TooltipToGet += "Slam"; break;
 				}
 				if (GuardStacks == SlamStacks) TooltipToGet += "Same";
 
