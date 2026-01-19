@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using OrchidMod.Common;
@@ -17,6 +18,8 @@ namespace OrchidMod.Content.Guardian
 	public abstract class OrchidModGuardianShield : OrchidModGuardianItem
 	{
 		public virtual string ShieldTexture => Texture + "_Shield";
+		public int ShieldFrames = 1;
+		
 		public virtual void ExtraAIShield(Projectile projectile) { }
 		public virtual void PostDrawShield(SpriteBatch spriteBatch, Projectile projectile, Player player, Color lightColor) { }
 		public virtual bool PreDrawShield(SpriteBatch spriteBatch, Projectile projectile, Player player, ref Color lightColor) { return true; }
@@ -28,6 +31,8 @@ namespace OrchidMod.Content.Guardian
 		public virtual void SlamHit(Player player, Projectile shield, NPC npc) { }
 		/// <summary>Called on the first frame of a slam.</summary>
 		public virtual void Slam(Player player, Projectile shield) { }
+		/// <summary>Called on the last frame of a slam.</summary>
+		public virtual void SlamEnd(Player player, Projectile shield) { }
 		/// <summary>Called when an enemy collides with the shield during a block. Will be called once per frame per enemy colliding with it.</summary>
 		public virtual void Push(Player player, Projectile shield, NPC npc) { }
 		/// <summary>Called once per block when the first enemy or projectile is blocked. This is called after <c>Push</c> or <c>Block</c>, but before <c>Block</c> destroys the projectile.</summary>
@@ -49,6 +54,23 @@ namespace OrchidMod.Content.Guardian
 		/// <summary>Causes the shield's held sprite to flip when facing right.</summary>
 		public bool shouldFlip = false;
 		public bool slamAutoReuse = true;
+		/// <summary>
+		/// If true, the shield will be rotated in discrete steps, instead of a single continuous circle. Defaults to false.
+		/// </summary>
+		public bool useDiscreteAim = false;
+		/// <summary>
+		/// The amount of steps per half-rotation that the shield will snap to, if <c>useDiscreteAim</c> is true.
+		/// <br/> A value of <c>0</c> results in only a single possible angle, directly in front of the player. Otherwise, there will be twice as many snap points as this value.
+		/// </summary>
+		public int discreteAimIncrements;
+		/// <summary>
+		/// The angle, in pi/2 increments, that the base angle will be rotated by.
+		/// </summary>
+		public int discreteAimRotation;
+		/// <summary>
+		/// If true, slams performed with the shield will be locked to the rotation they started with, rather than being free to rotate mid-slam.
+		/// </summary>
+		public bool lockSlamRotation;
 
 		public sealed override void SetDefaults()
 		{
@@ -61,6 +83,11 @@ namespace OrchidMod.Content.Guardian
 			Item.useStyle = ItemUseStyleID.Thrust;
 			Item.useTime = 30;
 			Item.knockBack = 6f;
+			useDiscreteAim = false;
+			discreteAimIncrements = 2;
+			discreteAimRotation = 0;
+			lockSlamRotation = false;
+			ShieldFrames = 1;
 
 			OrchidGlobalItemPerEntity orchidItem = Item.GetGlobalItem<OrchidGlobalItemPerEntity>();
 			orchidItem.guardianWeapon = true;
@@ -242,6 +269,18 @@ namespace OrchidMod.Content.Guardian
 			{
 				OverrideColor = new Color(175, 255, 175)
 			});
+		}
+		
+		public static float GetSnappedAngle(OrchidModGuardianShield shield, Player player, float originalAngle)
+		{
+			if (!shield.useDiscreteAim) return originalAngle;
+			if (shield.discreteAimIncrements == 0) return -player.direction * MathHelper.PiOver2 * shield.discreteAimRotation + (player.direction == -1 ? MathHelper.Pi : 0f);
+			else
+			{
+				float angleIncrement = MathHelper.Pi / shield.discreteAimIncrements;
+				return (float)Math.Round((Vector2.Normalize(Main.MouseWorld - player.MountedCenter.Floor()).ToRotation() + MathHelper.PiOver2 * shield.discreteAimRotation) / angleIncrement) * angleIncrement - MathHelper.PiOver2 * shield.discreteAimRotation;
+			}
+
 		}
 	}
 }
