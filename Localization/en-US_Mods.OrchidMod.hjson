@@ -3156,6 +3156,21 @@ Items: {
 			[c/FF0000:Test Item]
 			'''
 	}
+
+	painQuarterstaff: {
+		Tooltip: ""
+		DisplayName: pain Quarterstaff
+	}
+
+	IceHammer: {
+		Tooltip: ""
+		DisplayName: Ice Hammer
+	}
+
+	IceGauntlet: {
+		Tooltip: ""
+		DisplayName: Ice Gauntlet
+	}
 }
 
 NPCs: {
@@ -3603,6 +3618,8 @@ Projectiles: {
 	PumpkingWarhammerProjectile.DisplayName: Harvesting Scythe
 	SurfaceFireShamanWeaponAnchor.DisplayName: Willow Wisp
 	SurfaceFireShamanProjectile.DisplayName: Willow Wisp
+	IceGauntletProjectile.DisplayName: Ice Gauntlet Projectile
+	IceGauntletProjectileShard.DisplayName: Ice Gauntlet Projectile Shard
 }
 
 Configs: {

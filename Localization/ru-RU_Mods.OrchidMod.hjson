@@ -3165,6 +3165,21 @@ Items: {
 			[c/FF0000:Тестовый предмет]
 			'''
 	}
+
+	painQuarterstaff: {
+		// Tooltip: ""
+		// DisplayName: pain Quarterstaff
+	}
+
+	IceHammer: {
+		// Tooltip: ""
+		// DisplayName: Ice Hammer
+	}
+
+	IceGauntlet: {
+		// Tooltip: ""
+		// DisplayName: Ice Gauntlet
+	}
 }
 
 NPCs: {
@@ -3612,6 +3627,8 @@ Projectiles: {
 	PumpkingWarhammerProjectile.DisplayName: Коса жатвы
 	SurfaceFireShamanWeaponAnchor.DisplayName: Ивовый огонёк
 	SurfaceFireShamanProjectile.DisplayName: Ивовый огонёк
+	// IceGauntletProjectile.DisplayName: Ice Gauntlet Projectile
+	// IceGauntletProjectileShard.DisplayName: Ice Gauntlet Projectile Shard
 }
 
 Configs: {
