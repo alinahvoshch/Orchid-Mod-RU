@@ -16,6 +16,8 @@ namespace OrchidMod.Content.Guardian
 	{
 		public int SelectedItem { get; set; } = -1;
 		public Item ShieldItem => Main.player[Projectile.owner].inventory[this.SelectedItem];
+		
+		public int ShieldAnimFrame = 0;
 
 		public bool shieldEffectReady = true;
 		public bool NeedNetUpdate = false;
@@ -124,9 +126,9 @@ namespace OrchidMod.Content.Guardian
 
 						if (IsLocalOwner)
 						{
-							var texture = ModContent.Request<Texture2D>((ShieldItem.ModItem as OrchidModGuardianShield).ShieldTexture).Value;
-							Projectile.width = (int)(texture.Height * guardian.GuardianWeaponScale);
-							Projectile.height = (int)(texture.Height * guardian.GuardianWeaponScale);
+							var texture = ModContent.Request<Texture2D>((ShieldItem.ModItem as OrchidModGuardianShield)?.ShieldTexture).Value;
+							Projectile.width = (int)(texture.Height * guardian.GuardianWeaponScale / guardianItem.ShieldFrames);
+							Projectile.height = (int)(texture.Height * guardian.GuardianWeaponScale / guardianItem.ShieldFrames);
 						}
 
 						if (owner.boneGloveItem != null && !owner.boneGloveItem.IsAir && owner.boneGloveTimer == 0)
@@ -159,9 +161,9 @@ namespace OrchidMod.Content.Guardian
 					{
 						Vector2 oldDimensions = new Vector2(Projectile.width, Projectile.height);
 						var texture = ModContent.Request<Texture2D>(guardianItem.ShieldTexture).Value;
-						Projectile.width = (int)(texture.Height * guardian.GuardianWeaponScale);
-						Projectile.height = (int)(texture.Height * guardian.GuardianWeaponScale);
-						aimedLocation += (oldDimensions * 0.5f - new Vector2(texture.Height * guardian.GuardianWeaponScale, texture.Height * guardian.GuardianWeaponScale) * 0.5f).Floor();
+						Projectile.width = (int)(texture.Height * guardian.GuardianWeaponScale / guardianItem.ShieldFrames);
+						Projectile.height = (int)(texture.Height * guardian.GuardianWeaponScale / guardianItem.ShieldFrames);
+						aimedLocation += (oldDimensions * 0.5f - new Vector2(texture.Height * guardian.GuardianWeaponScale / guardianItem.ShieldFrames, texture.Height * guardian.GuardianWeaponScale / guardianItem.ShieldFrames) * 0.5f).Floor();
 					}
 
 					aimedLocation += owner.Center.Floor() - oldOwnerPos.Floor();
@@ -402,12 +404,15 @@ namespace OrchidMod.Content.Guardian
 				SpriteEffects effect = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
 				float colorMult = (Projectile.ai[1] + Projectile.ai[0] > 0 ? 1f : (0.4f + Math.Abs((1f * Main.player[Main.myPlayer].GetModPlayer<OrchidPlayer>().Timer120 - 60) / 120f)));
 				float flippedRotation = Projectile.rotation + (Projectile.spriteDirection == 1 ? 0 : MathHelper.Pi);
-				spriteBatch.Draw(texture, drawPosition, null, color * colorMult, flippedRotation, texture.Size() * 0.5f, Projectile.scale, effect, 0f);
+				
+				Rectangle frame = texture.Frame(1, guardianItem.ShieldFrames, 0, ShieldAnimFrame % guardianItem.ShieldFrames);
+				
+				spriteBatch.Draw(texture, drawPosition, frame, color * colorMult, flippedRotation, frame.Size() * 0.5f, Projectile.scale, effect, 0f);
 
 				if (ModContent.RequestIfExists<Texture2D>(guardianItem.ShieldTexture + "_Glow", out Asset<Texture2D> assetglow))
 				{
 					Color glowColor = guardianItem.GetPaviseGlowmaskColor(player, guardian, Projectile, lightColor);
-					spriteBatch.Draw(assetglow.Value, drawPosition, null, glowColor, flippedRotation, texture.Size() * 0.5f, Projectile.scale, effect, 0f);
+					spriteBatch.Draw(assetglow.Value, drawPosition, frame, glowColor, flippedRotation, frame.Size() * 0.5f, Projectile.scale, effect, 0f);
 				}
 			}
 			guardianItem.PostDrawShield(spriteBatch, Projectile, player, color);

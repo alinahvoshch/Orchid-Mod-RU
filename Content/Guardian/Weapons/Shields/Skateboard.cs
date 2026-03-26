@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using OrchidMod.Assets;
 using System;
+using Microsoft.Xna.Framework.Input;
+using OrchidMod.Common.ModObjects;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
@@ -15,6 +17,7 @@ namespace OrchidMod.Content.Guardian.Weapons.Shields
 		public Texture2D TextureWheels;
 		public float playerVelocity;
 		public int TimeSpent = 0;
+		public int AirTime = 0;
 
 		public override void SafeSetDefaults()
 		{
@@ -30,6 +33,7 @@ namespace OrchidMod.Content.Guardian.Weapons.Shields
 			slamDistance = 50f;
 			blockDuration = 240;
 			TextureWheels ??= ModContent.Request<Texture2D>(Texture + "_Wheels", ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
+			ShieldFrames = 4;
 		}
 
 		public override void BlockStart(Player player, Projectile shield)
@@ -60,8 +64,13 @@ namespace OrchidMod.Content.Guardian.Weapons.Shields
 			var effect = projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
 			for (int i = -1; i < 2; i+= 2)
 			{
-				Vector2 drawPosition = projectile.Center - new Vector2(4f, 8f * i).RotatedBy(projectile.rotation) - Main.screenPosition;
-				spriteBatch.Draw(TextureWheels, drawPosition, null, lightColor * (projectile.ai[0] > 0f ? 1f : 0.5f), projectile.rotation + TimeSpent * 0.05f, TextureWheels.Size() * 0.5f, projectile.scale, effect, 0f);
+				GuardianShieldAnchor anchor = projectile.ModProjectile as GuardianShieldAnchor;
+				if (anchor != null && anchor.ShieldAnimFrame % 2 == 0)
+				{
+					Vector2 drawPosition = projectile.Center - new Vector2(4f, 8f * i).RotatedBy(projectile.rotation) * (anchor.ShieldAnimFrame == 2 ? -1f : 1f) - Main.screenPosition;
+					spriteBatch.Draw(TextureWheels, drawPosition, null, lightColor * (projectile.ai[0] > 0f ? 1f : 0.5f), projectile.rotation + TimeSpent * 0.05f, TextureWheels.Size() * 0.5f, projectile.scale, effect, 0f);
+				}
+				
 			}
 		}
 
@@ -84,7 +93,7 @@ namespace OrchidMod.Content.Guardian.Weapons.Shields
 					projectile.rotation = -MathHelper.PiOver2;
 
 					// Collision with the ground, do skating stuff
-					Vector2 collision = Collision.TileCollision(owner.position + new Vector2((owner.width - Item.width) * 0.5f, owner.height), Vector2.UnitY * 12f, Item.width, 14, false, false, (int)owner.gravDir);
+					Vector2 collision = Collision.TileCollision(owner.position + new Vector2((owner.width - Item.width) * 0.5f, owner.height), Vector2.UnitY * 12f, Item.width, 14, false, owner.controlDown, (int)owner.gravDir);
 					if (collision != Vector2.UnitY * 12f)
 					{
 						owner.fallStart = (int)(owner.position.Y / 16f);
@@ -93,26 +102,46 @@ namespace OrchidMod.Content.Guardian.Weapons.Shields
 						owner.velocity.X = playerVelocity;
 						owner.velocity.Y = 0.1f;
 
-						if (playerVelocity < 0)
-						{
-							TimeSpent -= 10;
-						}
-						else if (playerVelocity > 0)
-						{
-							TimeSpent += 9;
-						}
+						if (playerVelocity < 0) TimeSpent -= 10;
+						else if (playerVelocity > 0) TimeSpent += 9;
+						
+						// owner.eocDash = 0;
+
+						AirTime = 0;
+						anchor.ShieldAnimFrame = 0;
+						
 
 						if (Main.rand.NextBool(4)) SoundEngine.PlaySound(SoundID.Item55, projectile.Center);
+						//
+						// if (AirTime == 0 && Main.keyState.IsKeyDown(Keys.Space))
+						// {
+						// 	owner.velocity.Y = -8f;
+						// 	owner.position.Y -= collision.Y + 1.7f;
+						// 	owner.wingTime = 0f;
+						// 	owner.eocDash = 0;
+						// 	SoundEngine.PlaySound(SoundID.Item32);
+						// }
 					}
 					else
 					{
+						AirTime++;
+						if (AirTime % 4 == 0) anchor.ShieldAnimFrame++;
+						if (anchor.ShieldAnimFrame > 3) anchor.ShieldAnimFrame = 0;
+						
 						if (playerVelocity == 0) SoundEngine.PlaySound(SoundID.Item53, projectile.Center);
 						playerVelocity = owner.velocity.X;
 						if (playerVelocity < 1f) playerVelocity = 8f * owner.direction;
 						if (Math.Abs(playerVelocity) < 8f) playerVelocity = 8f * Math.Sign(playerVelocity);
 						owner.velocity.X = playerVelocity;
+						
+						projectile.ai[0]++;
 					}
 				}
+			}
+			else
+			{
+				AirTime = 0;
+				((GuardianShieldAnchor)projectile.ModProjectile).ShieldAnimFrame = 0;
 			}
 		}
 	}

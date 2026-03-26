@@ -32,6 +32,7 @@ namespace OrchidMod.Content.Guardian
 		public Item QuarterstaffItem => Main.player[Projectile.owner].inventory[SelectedItem];
 		public Texture2D QuarterstaffTexture;
 		public Texture2D QuarterstaffTextureGlow;
+		public int QuarterstaffAnimFrame = 0;
 
 		public override void SendExtraAI(BinaryWriter writer)
 		{
@@ -762,6 +763,8 @@ namespace OrchidMod.Content.Guardian
 
 			if (guardianItem.PreDrawQuarterstaff(spriteBatch, Projectile, player, ref lightColor))
 			{
+				Rectangle frame = QuarterstaffTexture.Frame(1, guardianItem.QuarterstaffFrames, 0, QuarterstaffAnimFrame % guardianItem.QuarterstaffFrames);
+				
 				if (Projectile.ai[0] > 1f || Projectile.ai[0] < 0f || Projectile.ai[2] < 0f)
 				{ // attacking = draw trail
 					spriteBatch.End(out SpriteBatchSnapshot spriteBatchSnapshot);
@@ -770,7 +773,7 @@ namespace OrchidMod.Content.Guardian
 					for (int i = 0; i < OldPosition.Count; i++)
 					{
 						Vector2 drawPositionTrail = OldPosition[i] - Main.screenPosition + Vector2.UnitY * player.gfxOffY;
-						spriteBatch.Draw(QuarterstaffTexture, drawPositionTrail, null, lightColor * 0.05f * (i + 1), OldRotation[i] + rotationoffset, QuarterstaffTexture.Size() * 0.5f, Projectile.scale, effect, 0f);
+						spriteBatch.Draw(QuarterstaffTexture, drawPositionTrail, frame, lightColor * 0.05f * (i + 1), OldRotation[i] + rotationoffset, QuarterstaffTexture.Size() * 0.5f, Projectile.scale, effect, 0f);
 					}
 
 					spriteBatch.End();
@@ -778,12 +781,12 @@ namespace OrchidMod.Content.Guardian
 				}
 
 				Vector2 drawPosition = Projectile.Center - Main.screenPosition + Vector2.UnitY * player.gfxOffY;
-				spriteBatch.Draw(QuarterstaffTexture, drawPosition, null, lightColor, Projectile.rotation + rotationoffset, QuarterstaffTexture.Size() * 0.5f, Projectile.scale, effect, 0f);
+				spriteBatch.Draw(QuarterstaffTexture, drawPosition, frame, lightColor, Projectile.rotation + rotationoffset, QuarterstaffTexture.Size() * 0.5f, Projectile.scale, effect, 0f);
 
 				if (QuarterstaffTextureGlow != null)
 				{
 					Color glowColor = guardianItem.GetQuarterstaffGlowmaskColor(player, guardian, Projectile, lightColor);
-					spriteBatch.Draw(QuarterstaffTextureGlow, drawPosition, null, glowColor, Projectile.rotation + rotationoffset, QuarterstaffTextureGlow.Size() * 0.5f, Projectile.scale, effect, 0f);
+					spriteBatch.Draw(QuarterstaffTextureGlow, drawPosition, frame, glowColor, Projectile.rotation + rotationoffset, QuarterstaffTextureGlow.Size() * 0.5f, Projectile.scale, effect, 0f);
 				}
 			}
 			guardianItem.PostDrawQuarterstaff(spriteBatch, Projectile, player, lightColor);

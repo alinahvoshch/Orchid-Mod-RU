@@ -66,6 +66,11 @@ namespace OrchidMod.Content.Guardian
 		//public bool SingleSwing = false; // allows a special swing behaviour
 		/// <summary>Multiplier for the amount of bonus charge gained from hitting with a jab.</summary>
 		public float JabChargeGain = 1;
+		/// <summary>
+		/// The amount of animation frames of the quarterstaff texture.
+		/// <br/> The animation frame must be set manually using <c>GuardianQuarterstaffAnchor.QuarterstaffAnimFrame</c>.
+		/// </summary>
+		public int QuarterstaffFrames = 1;
 
 		public sealed override void SetDefaults()
 		{
@@ -78,6 +83,8 @@ namespace OrchidMod.Content.Guardian
 			Item.useStyle = ItemUseStyleID.Thrust;
 			Item.useTime = 30;
 			Item.knockBack = 5f;
+			
+			QuarterstaffFrames = 1;
 
 			OrchidGlobalItemPerEntity orchidItem = Item.GetGlobalItem<OrchidGlobalItemPerEntity>();
 			orchidItem.guardianWeapon = true;

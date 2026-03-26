@@ -39,6 +39,7 @@ namespace OrchidMod.Content.Guardian
 		/// <summary>If true, the anchor will load and use ItemName_Hammer.png as its texture.</summary>
 		public bool hasSpecialHammerTexture = false;
 		public virtual string HammerTexture => Texture + "_Hammer";
+		public int HammerFrames = 1;
 
 		public virtual void OnBlockContact(Player player, OrchidGuardian guardian, NPC target, Projectile projectile) { } // Called upon pushing an enemy with a throw (can happen repeatedly)
 		public virtual void OnBlockNPC(Player player, OrchidGuardian guardian, NPC target, Projectile projectile) { } // Called upon blocking an enemy (1 time per throw per enemy)
@@ -92,6 +93,8 @@ namespace OrchidMod.Content.Guardian
 			BlockDamage = 0.33f;
 			BlockDuration = 180;
 			BlockVelocityMult = 1f;
+			
+			HammerFrames = 1;
 
 			OrchidGlobalItemPerEntity orchidItem = Item.GetGlobalItem<OrchidGlobalItemPerEntity>();
 			orchidItem.guardianWeapon = true;

@@ -38,6 +38,8 @@ namespace OrchidMod.Content.Guardian
 		public int BlockDuration = 0;
 
 		public bool Ding = false;
+		
+		public int HammerAnimFrame = 0;
 
 		public bool WeakThrow => Projectile.ai[0] == 1;
 
@@ -685,7 +687,7 @@ namespace OrchidMod.Content.Guardian
 			if (HammerTexture == null) return false;
 			Player player = Main.player[Projectile.owner];
 			OrchidGuardian guardian = player.GetModPlayer<OrchidGuardian>();
-			Rectangle drawRectangle = HammerTexture.Bounds;
+			Rectangle drawRectangle = HammerTexture.Frame(1, HammerItem.HammerFrames, 0, HammerAnimFrame % HammerItem.HammerFrames);
 
 			if (HammerItem.PreDrawHammer(player, guardian, Projectile, spriteBatch, ref lightColor, ref HammerTexture, ref drawRectangle))
 			{

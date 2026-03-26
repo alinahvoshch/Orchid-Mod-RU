@@ -18,6 +18,8 @@ namespace OrchidMod.Content.Guardian
 	public abstract class OrchidModGuardianShield : OrchidModGuardianItem
 	{
 		public virtual string ShieldTexture => Texture + "_Shield";
+		public int ShieldFrames = 1;
+		
 		public virtual void ExtraAIShield(Projectile projectile) { }
 		public virtual void PostDrawShield(SpriteBatch spriteBatch, Projectile projectile, Player player, Color lightColor) { }
 		public virtual bool PreDrawShield(SpriteBatch spriteBatch, Projectile projectile, Player player, ref Color lightColor) { return true; }
@@ -85,6 +87,7 @@ namespace OrchidMod.Content.Guardian
 			discreteAimIncrements = 2;
 			discreteAimRotation = 0;
 			lockSlamRotation = false;
+			ShieldFrames = 1;
 
 			OrchidGlobalItemPerEntity orchidItem = Item.GetGlobalItem<OrchidGlobalItemPerEntity>();
 			orchidItem.guardianWeapon = true;
