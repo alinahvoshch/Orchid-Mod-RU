@@ -3137,7 +3137,7 @@ Items: {
 		DisplayName: Grim Harvester
 		Tooltip:
 			'''
-			Blocking costs 3 slams, and the scythe logdes itself in the first enemy hit
+			Upon blocking, the scythe logdes itself in the first enemy hit
 			Grants guards after a delay, or when the afflicted enemy dies
 			Charged throw hits increase the amount of guards granted by the effect
 			'''
@@ -3815,10 +3815,15 @@ UI: {
 		Slam: "{0} {^0:slam;slams}"
 		Parry: "{0} click to parry"
 		ParryDash: "{0} click to parry, dashing downwards"
-		ChargeToThrow: Charge to throw, right click to swing while charging
+		ChargeToThrow: Charge to throw
+		SwingWhileCharging: ", right click to swing while charging"
 		UsesUpTo: Uses up to {0} slams
 		RuneDuration: "{0} second rune duration"
 		Block: "{0} click to block"
+		BlockGuard: "{0} click to block, costing {1} {^1:guard;guards}"
+		BlockSlam: "{0} click to block, costing {1} {^1:slam;slams}"
+		BlockGuardSlamSame: "{0} click to block, costing {1} {^1:guard;guards} and {^1:slam;slams}"
+		BlockGuardSlam: "{0} click to block, costing {1} {^1:guard;guards} and {2} {^2:slam;slams}"
 		BuffDuration: "{0} second buff duration"
 		HorizonLaceShieldStacks: Grants 3 guards when fully charged
 		DamageOfDefense: Deals {0}% of defense as opposing damage

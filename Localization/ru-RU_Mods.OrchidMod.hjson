@@ -3857,9 +3857,14 @@ UI: {
 			Зарядите, чтобы бросить
 			Нажмите ПКМ, сделать взмах во время зарядки
 			'''
+		// SwingWhileCharging: ", right click to swing while charging"
 		UsesUpTo: Использует до {0} оч. нападения
 		RuneDuration: Время действия руны: {0} сек.
 		Block: Нажмите {0}, чтобы сделать блок
+		// BlockGuard: "{0} click to block, costing {1} {^1:guard;guards}"
+		// BlockSlam: "{0} click to block, costing {1} {^1:slam;slams}"
+		// BlockGuardSlamSame: "{0} click to block, costing {1} {^1:guard;guards} and {^1:slam;slams}"
+		// BlockGuardSlam: "{0} click to block, costing {1} {^1:guard;guards} and {2} {^2:slam;slams}"
 		BuffDuration: Длительность эффекта: {0} сек.
 		HorizonLaceShieldStacks: Даёт 3 оч. обороны при полном заряде
 		DamageOfDefense: Наносит противостоящий урон, равный {0}% от вашей защиты
