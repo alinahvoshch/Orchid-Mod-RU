@@ -13,7 +13,11 @@ namespace OrchidMod.Content.Guardian.Weapons.Warhammers
 {
 	public class PumpkingWarhammer : OrchidModGuardianHammer
 	{
-		public SpriteBatchSnapshot? LocalSpriteBatchSnapshot;
+		// public SpriteBatchSnapshot? LocalSpriteBatchSnapshot;
+		public Projectile ScytheProjectile;
+		/// <summary> 
+		/// Whether the scythe is currently embedded into an enemy 
+		/// </summary>
 		public bool EmbeddedScythe;
 
 		public override void SafeSetDefaults()
@@ -38,16 +42,22 @@ namespace OrchidMod.Content.Guardian.Weapons.Warhammers
 			HitCooldown = 20;
 			BlockVelocityMult = 2f;
 			hasSpecialHammerTexture = true;
-			EmbeddedScythe = true;
+			HammerFrames = 2;
+			SlamBlockCost = 3;
+			GuardBlockCost = 0;
+
+			EmbeddedScythe = false;
 		}
 
 		public override void ExtraAI(Player player, OrchidGuardian guardian, Projectile projectile)
 		{
 
-			int projType = ModContent.ProjectileType<PumpkingWarhammerProjectile>();
-			foreach (Projectile proj in Main.projectile)
-			{
-				if (proj.type == projType && proj.active && proj.owner == player.whoAmI)
+			if (projectile.ModProjectile is GuardianHammerAnchor anchor) {
+				
+				anchor.HammerAnimFrame = 1;
+
+				int projType = ModContent.ProjectileType<PumpkingWarhammerProjectile>();
+				if (ScytheProjectile != null && ScytheProjectile.active && ScytheProjectile.type == projType && ScytheProjectile.owner == player.whoAmI)
 				{
 					EmbeddedScythe = true;
 					if (Main.rand.NextBool())
@@ -59,36 +69,35 @@ namespace OrchidMod.Content.Guardian.Weapons.Warhammers
 					}
 					return;
 				}
-			}
+				
 
-			EmbeddedScythe = false;
-			if (Main.rand.NextBool())
-			{
-				Dust dust = Dust.NewDustDirect(projectile.position, projectile.width, projectile.height, DustID.Wraith);
-				dust.scale *= Main.rand.NextFloat(1f, 1.5f);
-				dust.noGravity = true;
-
-				if (Main.rand.NextBool(10))
+				anchor.HammerAnimFrame = 0;
+				EmbeddedScythe = false;
+				if (Main.rand.NextBool())
 				{
-					Gore gore = Gore.NewGoreDirect(projectile.GetSource_FromAI(), projectile.Center + new Vector2(Main.rand.NextFloat(-8f, 0f), Main.rand.NextFloat(-8f, 0f)), Vector2.UnitY.RotatedByRandom(MathHelper.Pi), 99);
-					gore.rotation = Main.rand.NextFloat(MathHelper.Pi);
-					gore.scale *= Main.rand.NextFloat(0.4f, 0.7f);
+					Dust dust = Dust.NewDustDirect(projectile.position, projectile.width, projectile.height, DustID.Wraith);
+					dust.scale *= Main.rand.NextFloat(1f, 1.5f);
+					dust.noGravity = true;
+
+					if (Main.rand.NextBool(10))
+					{
+						Gore gore = Gore.NewGoreDirect(projectile.GetSource_FromAI(), projectile.Center + new Vector2(Main.rand.NextFloat(-8f, 0f), Main.rand.NextFloat(-8f, 0f)), Vector2.UnitY.RotatedByRandom(MathHelper.Pi), 99);
+						gore.rotation = Main.rand.NextFloat(MathHelper.Pi);
+						gore.scale *= Main.rand.NextFloat(0.4f, 0.7f);
+					}
 				}
 			}
+			
 		}
 
 		public override void OnBlockThrow(Player player, OrchidGuardian guardian, Projectile projectile)
 		{
-			if (EmbeddedScythe)
+			if (EmbeddedScythe) 
 			{
 				int projType = ModContent.ProjectileType<PumpkingWarhammerProjectile>();
-				foreach (Projectile proj in Main.projectile)
-				{
-					if (proj.type == projType && proj.active && proj.owner == player.whoAmI)
-					{
-						proj.friendly = false;
-						proj.localAI[1] = 1f;
-					}
+				if (ScytheProjectile != null && ScytheProjectile.active && ScytheProjectile.type == projType && ScytheProjectile.owner == player.whoAmI) {
+					ScytheProjectile.friendly = false;
+					ScytheProjectile.localAI[1] = 1f;
 				}
 			}
 		}
@@ -117,24 +126,17 @@ namespace OrchidMod.Content.Guardian.Weapons.Warhammers
 				projectile.Kill();
 				return false;
 			}
-
 			return true;
 		}
 
 		public override void OnThrowHitFirst(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, float knockback, bool crit, bool Weak)
 		{
-			if (EmbeddedScythe)
+
+			if (EmbeddedScythe && ScytheProjectile != null && ScytheProjectile.active && ScytheProjectile.owner == player.whoAmI)
 			{
-				int projType = ModContent.ProjectileType<PumpkingWarhammerProjectile>();
-				foreach (Projectile proj in Main.projectile)
-				{
-					if (proj.type == projType && proj.active && proj.owner == player.whoAmI && proj.localAI[1] == 0)
-					{
-						proj.localAI[2] += 2;
-						SoundEngine.PlaySound(SoundID.DD2_EtherianPortalSpawnEnemy.WithPitchOffset(proj.localAI[2] * 0.2f));
-						CombatText.NewText(player.Hitbox, Color.IndianRed, (int)(proj.localAI[2] / 2f), false, true);
-					}
-				}
+				ScytheProjectile.localAI[2] += 2;
+				SoundEngine.PlaySound(SoundID.DD2_EtherianPortalSpawnEnemy.WithPitchOffset(ScytheProjectile.localAI[2] * 0.2f));
+				CombatText.NewText(player.Hitbox, Color.IndianRed, (int)(ScytheProjectile.localAI[2] / 2f), false, true);
 			}
 		}
 
@@ -154,56 +156,56 @@ namespace OrchidMod.Content.Guardian.Weapons.Warhammers
 			}
 		}
 
-		public override bool PreDrawHammer(Player player, OrchidGuardian guardian, Projectile projectile, SpriteBatch spriteBatch, ref Color lightColor, ref Texture2D hammerTexture, ref Rectangle drawRectangle)
-		{
-			drawRectangle.Height /= 2;
+		// public override bool PreDrawHammer(Player player, OrchidGuardian guardian, Projectile projectile, SpriteBatch spriteBatch, ref Color lightColor, ref Texture2D hammerTexture, ref Rectangle drawRectangle)
+		// {
+		// 	drawRectangle.Height /= 2;
 
-			if (EmbeddedScythe && projectile.ModProjectile is GuardianHammerAnchor anchor && anchor.BlockDuration <= 0)
-			{ // adjusts the draw rectangle to the next frame if the parry scythe is active
-				spriteBatch.End(out SpriteBatchSnapshot spriteBatchSnapshot);
-				spriteBatch.Begin(spriteBatchSnapshot with { BlendState = BlendState.Additive });
-				LocalSpriteBatchSnapshot = spriteBatchSnapshot;
-				drawRectangle.Y += drawRectangle.Height;
-				return true;
-			}
+		// 	if (EmbeddedScythe && projectile.ModProjectile is GuardianHammerAnchor anchor && anchor.BlockDuration <= 0)
+		// 	{ // adjusts the draw rectangle to the next frame if the parry scythe is active
+		// 		spriteBatch.End(out SpriteBatchSnapshot spriteBatchSnapshot);
+		// 		spriteBatch.Begin(spriteBatchSnapshot with { BlendState = BlendState.Additive });
+		// 		LocalSpriteBatchSnapshot = spriteBatchSnapshot;
+		// 		drawRectangle.Y += drawRectangle.Height;
+		// 		return true;
+		// 	}
 
-			LocalSpriteBatchSnapshot = null;
+		// 	LocalSpriteBatchSnapshot = null;
 
-			return true;
-		}
+		// 	return true;
+		// }
 
-		public override void PostDrawHammer(Player player, OrchidGuardian guardian, Projectile projectile, SpriteBatch spriteBatch, Color lightColor, Texture2D hammerTexture, Rectangle drawRectangle)
-		{
-			if (LocalSpriteBatchSnapshot != null)
-			{
-				spriteBatch.End();
-				spriteBatch.Begin((SpriteBatchSnapshot)LocalSpriteBatchSnapshot);
-			}
-		}
+		// public override void PostDrawHammer(Player player, OrchidGuardian guardian, Projectile projectile, SpriteBatch spriteBatch, Color lightColor, Texture2D hammerTexture, Rectangle drawRectangle)
+		// {
+		// 	if (LocalSpriteBatchSnapshot != null)
+		// 	{
+		// 		spriteBatch.End();
+		// 		spriteBatch.Begin((SpriteBatchSnapshot)LocalSpriteBatchSnapshot);
+		// 	}
+		// }
 
-		public override bool? UseItem(Player player)
-		{ // Copied from the main Warhammer class to edit block guard cost - probably worth making the cost a field if this happens again
-			var guardian = player.GetModPlayer<OrchidGuardian>();
-			int projType = ModContent.ProjectileType<GuardianHammerAnchor>();
-			int damage = guardian.GetGuardianDamage(Item.damage);
-			Projectile projectile = Projectile.NewProjectileDirect(Item.GetSource_FromThis(), player.Center, Vector2.Zero, projType, damage, Item.knockBack, player.whoAmI);
-			projectile.CritChance = (int)(player.GetCritChance<GuardianDamageClass>() + player.GetCritChance<GenericDamageClass>() + Item.crit);
+		// public override bool? UseItem(Player player)
+		// { // Copied from the main Warhammer class to edit block guard cost - probably worth making the cost a field if this happens again
+		// 	var guardian = player.GetModPlayer<OrchidGuardian>();
+		// 	int projType = ModContent.ProjectileType<GuardianHammerAnchor>();
+		// 	int damage = guardian.GetGuardianDamage(Item.damage);
+		// 	Projectile projectile = Projectile.NewProjectileDirect(Item.GetSource_FromThis(), player.Center, Vector2.Zero, projType, damage, Item.knockBack, player.whoAmI);
+		// 	projectile.CritChance = (int)(player.GetCritChance<GuardianDamageClass>() + player.GetCritChance<GenericDamageClass>() + Item.crit);
 
-			if (Main.mouseRight && Main.mouseRightRelease && projectile.ModProjectile is GuardianHammerAnchor anchor && guardian.UseSlam(3, true))
-			{
-				projectile.velocity = Vector2.Normalize(Main.MouseWorld - player.Center) * (10f + (Item.shootSpeed - 10f) * 0.35f * BlockVelocityMult);
-				projectile.friendly = true;
-				projectile.knockBack = 0f;
-				projectile.tileCollide = true;
+		// 	if (Main.mouseRight && Main.mouseRightRelease && projectile.ModProjectile is GuardianHammerAnchor anchor && guardian.UseSlam(3, true))
+		// 	{
+		// 		projectile.velocity = Vector2.Normalize(Main.MouseWorld - player.Center) * (10f + (Item.shootSpeed - 10f) * 0.35f * BlockVelocityMult);
+		// 		projectile.friendly = true;
+		// 		projectile.knockBack = 0f;
+		// 		projectile.tileCollide = true;
 
-				anchor.BlockDuration = (int)(BlockDuration * Item.GetGlobalItem<GuardianPrefixItem>().GetBlockDuration() * guardian.GuardianBlockDuration + 10);
-				anchor.NeedNetUpdate = true;
-				guardian.UseSlam(3);
-			}
+		// 		anchor.BlockDuration = (int)(BlockDuration * Item.GetGlobalItem<GuardianPrefixItem>().GetBlockDuration() * guardian.GuardianBlockDuration + 10);
+		// 		anchor.NeedNetUpdate = true;
+		// 		guardian.UseSlam(3);
+		// 	}
 
-			guardian.GuardianItemCharge = 0f;
-			return true;
-		}
+		// 	guardian.GuardianItemCharge = 0f;
+		// 	return true;
+		// }
 
 		public override void OnBlockHitFirst(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, float knockback, bool crit)
 		{
@@ -213,6 +215,8 @@ namespace OrchidMod.Content.Guardian.Weapons.Warhammers
 			Vector2 offSet = target.Center - position;
 			Projectile newProjectile = Projectile.NewProjectileDirect(player.GetSource_ItemUse(Item), position, Vector2.Zero, projectileType, latchDamage, 0f, player.whoAmI, target.whoAmI, offSet.X, offSet.Y);
 			newProjectile.CritChance = (int)(player.GetCritChance<GuardianDamageClass>() + player.GetCritChance<GenericDamageClass>() + Item.crit);
+			EmbeddedScythe = true;
+			ScytheProjectile = newProjectile;
 			projectile.Kill();
 		}
 	}

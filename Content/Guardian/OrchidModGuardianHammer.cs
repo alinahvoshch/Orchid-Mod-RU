@@ -39,6 +39,8 @@ namespace OrchidMod.Content.Guardian
 		/// <summary>If true, the anchor will load and use ItemName_Hammer.png as its texture.</summary>
 		public bool hasSpecialHammerTexture = false;
 		public virtual string HammerTexture => Texture + "_Hammer";
+		public int SlamBlockCost;
+		public int GuardBlockCost;
 		public int HammerFrames = 1;
 
 		public virtual void OnBlockContact(Player player, OrchidGuardian guardian, NPC target, Projectile projectile) { } // Called upon pushing an enemy with a throw (can happen repeatedly)
@@ -93,6 +95,9 @@ namespace OrchidMod.Content.Guardian
 			BlockDamage = 0.33f;
 			BlockDuration = 180;
 			BlockVelocityMult = 1f;
+
+			SlamBlockCost = 0;
+			GuardBlockCost = 1;
 			
 			HammerFrames = 1;
 
@@ -125,9 +130,10 @@ namespace OrchidMod.Content.Guardian
 			Projectile projectile = Projectile.NewProjectileDirect(Item.GetSource_FromThis(), player.Center, Vector2.Zero, projType, damage, Item.knockBack, player.whoAmI);
 			projectile.CritChance = (int)(player.GetCritChance<GuardianDamageClass>() + player.GetCritChance<GenericDamageClass>() + Item.crit);
 
-			if (Main.mouseRight && Main.mouseRightRelease && projectile.ModProjectile is GuardianHammerAnchor anchor && guardian.UseGuard(1, true))
+			if (Main.mouseRight && Main.mouseRightRelease && projectile.ModProjectile is GuardianHammerAnchor anchor && ((SlamBlockCost > 0 && guardian.UseSlam(SlamBlockCost, true)) || (GuardBlockCost > 0 && guardian.UseGuard(GuardBlockCost, true))))
 			{
-				guardian.UseGuard(1);
+				if (SlamBlockCost > 0) guardian.UseSlam(SlamBlockCost);
+				if (GuardBlockCost > 0) guardian.UseGuard(GuardBlockCost);
 				projectile.velocity = Vector2.Normalize(Main.MouseWorld - player.Center) * (10f + (Item.shootSpeed - 10f) * 0.35f * BlockVelocityMult);
 				projectile.friendly = true;
 				projectile.knockBack = 0f;
@@ -175,12 +181,20 @@ namespace OrchidMod.Content.Guardian
 			tooltips.Insert(index + 1, new TooltipLine(Mod, "BlockDuration", Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.BlockDuration", OrchidUtils.FramesToSeconds((int)(BlockDuration * Item.GetGlobalItem<GuardianPrefixItem>().GetBlockDuration() * guardian.GuardianBlockDuration)))));
 
 			string click = Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.RightClick");
-			tooltips.Insert(index + 2, new TooltipLine(Mod, "ClickInfo", Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.Block", click))
+			string block = "Mods.OrchidMod.UI.GuardianItem.Block";
+			if (!(GuardBlockCost == 1 && SlamBlockCost == 0)) {
+				if (GuardBlockCost > 0) block += "Guard";
+				if (SlamBlockCost > 0) block += "Slam";
+				if (GuardBlockCost == SlamBlockCost) block += "Same";
+			}
+			tooltips.Insert(index + 2, new TooltipLine(Mod, "ClickInfo", Language.GetText(block).Format(click, GuardBlockCost, SlamBlockCost))
 			{
 				OverrideColor = new Color(175, 255, 175)
 			});
 
-			tooltips.Insert(index + 3, new TooltipLine(Mod, "Swing", Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.ChargeToThrow"))
+			string ChargeToThrow = Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.ChargeToThrow");
+			if (!CannotSwing) ChargeToThrow += Language.GetTextValue("Mods.OrchidMod.UI.GuardianItem.SwingWhileCharging");
+			tooltips.Insert(index + 3, new TooltipLine(Mod, "Swing", ChargeToThrow)
 			{
 				OverrideColor = new Color(175, 255, 175)
 			});

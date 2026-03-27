@@ -41,6 +41,8 @@ namespace OrchidMod.Content.Guardian
 		
 		public int HammerAnimFrame = 0;
 
+		public int HammerAnimFrame = 0;
+
 		public bool WeakThrow => Projectile.ai[0] == 1;
 
 		public override void DrawBehind(int index, List<int> behindNPCsAndTiles, List<int> behindNPCs, List<int> behindProjectiles, List<int> overPlayers, List<int> overWiresUI) => overPlayers.Add(index);
@@ -73,25 +75,18 @@ namespace OrchidMod.Content.Guardian
 
 			if (item == null || !(item.ModItem is OrchidModGuardianHammer hammerItem))
 			{
-				if (Projectile.owner == Main.myPlayer)
-				{
-					Projectile.Kill();
-				}
+				if (Projectile.owner == Main.myPlayer) Projectile.Kill();
 				return;
 			}
 			else
 			{
 				HammerItem = hammerItem;
-				HammerTexture = TextureAssets.Item[hammerItem.Item.type].Value;
+				string TexturePath = HammerItem.hasSpecialHammerTexture ? HammerItem.HammerTexture : HammerItem.Texture;
+				HammerTexture = ModContent.Request<Texture2D>(TexturePath, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
 				//Projectile.width = (int)(HammerTexture.Width * hammerItem.Item.scale);
 				//Projectile.height = (int)(HammerTexture.Height * hammerItem.Item.scale);
 				hitboxOffset = (int)(HammerTexture.Width * guardian.GuardianWeaponScale * hammerItem.Item.scale / 2f);
 				DrawOriginOffsetX = DrawOriginOffsetY = hitboxOffset;
-
-				if (HammerItem.hasSpecialHammerTexture)
-				{
-					HammerTexture = ModContent.Request<Texture2D>(HammerItem.HammerTexture, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
-				}
 
 				if (ModContent.RequestIfExists<Texture2D>(hammerItem.Texture + "_Glow", out Asset<Texture2D> assetglow, AssetRequestMode.ImmediateLoad))
 				{
@@ -381,6 +376,7 @@ namespace OrchidMod.Content.Guardian
 							{ // First frame of the swing
 								SoundEngine.PlaySound(SoundID.DD2_MonkStaffSwing, Projectile.Center);
 								Projectile.friendly = true;
+								Projectile.netUpdate = true;
 								ResetHitStatus(false);
 								HammerItem.OnSwing(owner, guardian, Projectile, guardian.GuardianItemCharge >= 180f);
 								Projectile.ResetLocalNPCHitImmunity();
@@ -411,12 +407,14 @@ namespace OrchidMod.Content.Guardian
 							{
 								Projectile.ai[1] += toAdd * 0.66f;
 								Projectile.friendly = false;
+								Projectile.netUpdate = true;
 							}
 
 							if (Projectile.ai[1] >= 0f)
 							{
 								Projectile.ai[1] = 0f;
 								Projectile.friendly = false;
+								Projectile.netUpdate = true;
 							}
 						}
 
@@ -435,6 +433,7 @@ namespace OrchidMod.Content.Guardian
 							SoundEngine.PlaySound(HammerItem.Item.UseSound, owner.Center);
 							ResetHitStatus(!WeakThrow);
 							Projectile.friendly = true;
+							Projectile.netUpdate = true;
 							HammerItem.OnThrow(owner, guardian, Projectile, WeakThrow);
 							Projectile.ResetLocalNPCHitImmunity();
 							if (!HammerItem.Penetrate) Projectile.localNPCHitCooldown = -1;
@@ -465,14 +464,12 @@ namespace OrchidMod.Content.Guardian
 								Projectile.velocity += vel;
 							}
 
-							if (dist < 30f && owner.whoAmI == Main.myPlayer)
-							{
-								Projectile.Kill();
-							}
+							if (dist < 30f && owner.whoAmI == Main.myPlayer) Projectile.Kill();
 
 							if (range < -60)
 							{
 								Projectile.friendly = false;
+								Projectile.netUpdate = true;
 							}
 						}
 
@@ -659,16 +656,11 @@ namespace OrchidMod.Content.Guardian
 
 					if (Main.netMode != NetmodeID.Server)
 					{
-						HammerTexture = TextureAssets.Item[hammerItem.Item.type].Value;
+						HammerTexture = HammerItem.hasSpecialHammerTexture ? ModContent.Request<Texture2D>(HammerItem.HammerTexture, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value : TextureAssets.Item[hammerItem.Item.type].Value;
 						hitboxOffset = (int)(HammerTexture.Width * hammerItem.Item.scale / 2f);
 						DrawOriginOffsetX = DrawOriginOffsetY = hitboxOffset;
 						//Projectile.width = (int)(HammerTexture.Width * hammerItem.Item.scale);
 						//Projectile.height = (int)(HammerTexture.Height * hammerItem.Item.scale);
-
-						if (HammerItem.hasSpecialHammerTexture)
-						{
-							HammerTexture = ModContent.Request<Texture2D>(HammerItem.HammerTexture, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
-						}
 					}
 
 					Projectile.scale = hammerItem.Item.scale * guardian.GuardianWeaponScale;
