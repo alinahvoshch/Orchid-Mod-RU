@@ -6,6 +6,7 @@ using OrchidMod.Content.Guardian.Projectiles.Misc;
 using OrchidMod.Content.Guardian.Projectiles.Standards;
 using OrchidMod.Content.Guardian.Weapons.Gauntlets;
 using System;
+using System.Reflection;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Localization;
@@ -18,6 +19,9 @@ namespace OrchidMod
 {
 	public class OrchidGuardian : ModPlayer
 	{
+
+		public bool CrossModGodMode;
+
 		// Misc & Static fields
 
 		/// <summary> Current timer for slam stack regen or degen. Increments slams at 1 or higher, decrements at -1 or lower.</summary>
@@ -215,6 +219,29 @@ namespace OrchidMod
 				DoParryItemParry(null);
 			}
 
+			if ((Player.creativeGodMode || CrossModGodMode) && GuardianGauntletParry) {
+				bool colliding = false;
+				Entity entity = null;
+				foreach (Projectile proj in Main.projectile) {
+					if (proj.active && proj.hostile && proj.damage > 0 && Collision.CheckAABBvAABBCollision(Player.Center, Player.Hitbox.Size(), proj.Center, proj.Hitbox.Size())) {
+						colliding = true;
+						entity = proj;
+						break;
+					}
+				}
+				foreach (NPC npc in Main.npc) {
+					if (npc.active && !npc.friendly && npc.damage > 0 && Collision.CheckAABBvAABBCollision(Player.Center, Player.Hitbox.Size(), npc.Center, npc.Hitbox.Size())) {
+						colliding = true;
+						entity = npc;
+						break;
+					}
+				}
+
+				if (colliding) DoParryItemParry(entity);
+
+			}
+				
+
 			if (GauntletPunchCooldown > -10) GauntletPunchCooldown--;
 		}
 
@@ -225,6 +252,16 @@ namespace OrchidMod
 
 		public override void ResetEffects()
 		{
+			if (
+				(ModLoader.TryGetMod("CheatSheet", out Mod CheatSheet) && (bool)(CheatSheet.Code.GetType("CheatSheet.Menus.GodMode")?.GetField("Enabled", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)?.GetValue(null)))
+				|| 
+				(ModLoader.TryGetMod("HEROsMod", out Mod HerosMod) && (bool)(HerosMod.Code.GetType("HEROsMod.HEROsModServices.GodModeService")?.GetField("Enabled", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)?.GetValue(null)))
+				|| 
+				(ModLoader.TryGetMod("DragonLens", out Mod DragonLens) && (bool)(DragonLens.Code.GetType("DragonLens.Content.Tools.Gameplay.Godmode")?.GetField("godMode", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)?.GetValue(null)))
+			)
+			CrossModGodMode = true;
+			else CrossModGodMode = false;
+
 			// Resetting Core guardian fields
 			if (Player.itemTime > 0 && Player.HeldItem.damage > 0 && Player.HeldItem.ModItem is not OrchidModGuardianItem && Player.HeldItem.pick + Player.HeldItem.hammer + Player.HeldItem.axe == 0)
 				GuardianRegenThreshold = 0;
@@ -369,7 +406,7 @@ namespace OrchidMod
 			GuardianHoneyPotion = false;
 			GuardianWormTooth = false;
 			GuardianMonsterFang = false;
-			GuardianInfiniteResources = false;
+			GuardianInfiniteResources = (Player.creativeGodMode || CrossModGodMode);
 			GuardianShowDebugVisuals = false;
 			GuardianBronzeShieldBuff = false;
 			GuardianBronzeShieldProtection = false;
