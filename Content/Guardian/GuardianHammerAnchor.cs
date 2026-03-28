@@ -60,6 +60,8 @@ namespace OrchidMod.Content.Guardian
 			Projectile.localNPCHitCooldown = -1;
 			FirstBlock = false;
 
+			HammerAnimFrame = 0;
+
 			OldPosition = new List<Vector2>();
 			OldRotation = new List<float>();
 			BlockedNPCs = new List<int>();
@@ -79,12 +81,13 @@ namespace OrchidMod.Content.Guardian
 			else
 			{
 				HammerItem = hammerItem;
-				string TexturePath = HammerItem.hasSpecialHammerTexture ? HammerItem.HammerTexture : HammerItem.Texture;
-				HammerTexture = ModContent.Request<Texture2D>(TexturePath, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
+				HammerTexture = TextureAssets.Item[hammerItem.Item.type].Value;
 				//Projectile.width = (int)(HammerTexture.Width * hammerItem.Item.scale);
 				//Projectile.height = (int)(HammerTexture.Height * hammerItem.Item.scale);
 				hitboxOffset = (int)(HammerTexture.Width * guardian.GuardianWeaponScale * hammerItem.Item.scale / 2f);
 				DrawOriginOffsetX = DrawOriginOffsetY = hitboxOffset;
+
+				if (HammerItem.hasSpecialHammerTexture) HammerTexture = ModContent.Request<Texture2D>(hammerItem.HammerTexture, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
 
 				if (ModContent.RequestIfExists<Texture2D>(hammerItem.Texture + "_Glow", out Asset<Texture2D> assetglow, AssetRequestMode.ImmediateLoad))
 				{
@@ -654,11 +657,13 @@ namespace OrchidMod.Content.Guardian
 
 					if (Main.netMode != NetmodeID.Server)
 					{
-						HammerTexture = HammerItem.hasSpecialHammerTexture ? ModContent.Request<Texture2D>(HammerItem.HammerTexture, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value : TextureAssets.Item[hammerItem.Item.type].Value;
+						HammerTexture = TextureAssets.Item[hammerItem.Item.type].Value;
 						hitboxOffset = (int)(HammerTexture.Width * hammerItem.Item.scale / 2f);
 						DrawOriginOffsetX = DrawOriginOffsetY = hitboxOffset;
 						//Projectile.width = (int)(HammerTexture.Width * hammerItem.Item.scale);
 						//Projectile.height = (int)(HammerTexture.Height * hammerItem.Item.scale);
+						
+						if (HammerItem.hasSpecialHammerTexture) HammerTexture =  ModContent.Request<Texture2D>(hammerItem.HammerTexture, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
 					}
 
 					Projectile.scale = hammerItem.Item.scale * guardian.GuardianWeaponScale;
@@ -746,7 +751,7 @@ namespace OrchidMod.Content.Guardian
 
 					while (chainOffset > 0f)
 					{
-						Vector2 chainPos = position - chainDirection * (chainOffset + HammerTexture.Height * 0.3f);
+						Vector2 chainPos = position - chainDirection * (chainOffset + (HammerTexture.Height / HammerItem.HammerFrames) * 0.3f);
 						chainOffset -= chainTexture.Height * 0.66f;
 						spriteBatch.Draw(chainTexture, chainPos, null, color, 0f, chainTexture.Size() * 0.5f, 1f, effect, 0f);
 					}
@@ -756,7 +761,7 @@ namespace OrchidMod.Content.Guardian
 				{
 					for (int i = 0; i < OldPosition.Count; i++)
 					{
-						color = Lighting.GetColor((int)(OldPosition[i].X / 16f), (int)(OldPosition[i].Y / 16f), Color.White) * (((WeakThrow ? 0.05f : 0.15f) * i));
+						color = Lighting.GetColor((int)(OldPosition[i].X / 16f), (int)(OldPosition[i].Y / 16f), Color.White) * (WeakThrow ? (0.05f * i) + 0.75f : (0.15f * i));
 						position = OldPosition[i] - Main.screenPosition + Vector2.UnitY * player.gfxOffY;
 
 						spriteBatch.Draw(HammerTexture, position, drawRectangle, color, OldRotation[i] + rotationBonus, drawRectangle.Size() * 0.5f, Projectile.scale, effect, 0f);
