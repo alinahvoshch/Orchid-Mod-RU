@@ -55,6 +55,7 @@ namespace OrchidMod.Content.Guardian
 		public bool hasSpecialPunchTexture = false;
 		public virtual string PunchTexture(Player player, OrchidGuardian guardian, Projectile anchor, bool offHandGauntlet) => "OrchidMod/Content/Guardian/GuardianPunchProjectile";
 
+		public int GauntletFrames = 1;
 
 		public float StrikeVelocity = 10f; // Initial speed of the punches
 		/// <summary> Jab and slam animation speed multiplier. Also affected by melee speed, but not by usetime. </summary>
@@ -356,17 +357,13 @@ namespace OrchidMod.Content.Guardian
 			SafeModifyTooltips(tooltips);
 		}
 
-		public virtual Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle)
+		public virtual Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle, int frame = 0)
 		{
 			drawRectangle = null;
-			if (hasBackGauntlet && OffHandGauntlet)
-			{
-				return(ModContent.Request<Texture2D>(GauntletBackTexture).Value);
-			}
-			else
-			{
-				return (ModContent.Request<Texture2D>(GauntletTexture).Value);
-			}
+			Texture2D texture = (hasBackGauntlet && OffHandGauntlet) ? ModContent.Request<Texture2D>(GauntletBackTexture).Value : ModContent.Request<Texture2D>(GauntletTexture).Value;
+			if (GauntletFrames > 1)	drawRectangle = texture.Frame(1, GauntletFrames, 0, frame % GauntletFrames);
+
+			return texture;
 		}
 
 		public virtual Texture2D GetArmTexture(out Rectangle? drawRectangle)

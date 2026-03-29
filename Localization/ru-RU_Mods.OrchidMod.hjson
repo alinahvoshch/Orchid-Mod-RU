@@ -3862,7 +3862,7 @@ UI: {
 		RuneDuration: Время действия руны: {0} сек.
 		Block: Нажмите {0}, чтобы сделать блок
 		// BlockGuard: "{0} click to block, costing {1} {^1:guard;guards}"
-		// BlockSlam: "{0} click to block, costing {1} {^1:slam;slams}"
+		// BlockSlam: "{0} click to block, costing {2} {^2:slam;slams}"
 		// BlockGuardSlamSame: "{0} click to block, costing {1} {^1:guard;guards} and {^1:slam;slams}"
 		// BlockGuardSlam: "{0} click to block, costing {1} {^1:guard;guards} and {2} {^2:slam;slams}"
 		BuffDuration: Длительность эффекта: {0} сек.

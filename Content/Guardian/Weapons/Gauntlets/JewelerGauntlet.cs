@@ -40,6 +40,7 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 			Item.useTime = 35;
 			StrikeVelocity = 16f;
 			ParryDuration = 60;
+			GauntletFrames = 10;
 			GemType = 0;
 		}
 
@@ -139,6 +140,11 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 			}
 		}
 
+		public override void ExtraAIGauntlet(Player player, OrchidGuardian guardian, Projectile anchor, bool offHandGauntlet)
+		{
+			if (anchor.ModProjectile is GuardianGauntletAnchor gauntlet) gauntlet.GauntletAnimFrame = (byte)GemType;
+		}
+
 		public override void OnParryGauntlet(Player player, OrchidGuardian guardian, Entity aggressor, Projectile anchor)
 		{
 			if (GemType == JewelerGauntletGem.RUBY)
@@ -163,15 +169,15 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 			}
 		}
 
-		public override Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle)
-		{
-			Texture2D texture = ModContent.Request<Texture2D>(GauntletTexture).Value;
-			Rectangle rectangle = texture.Bounds;
-			rectangle.Height = rectangle.Height / 10;
-			rectangle.Y += (byte)GemType * rectangle.Height;
-			drawRectangle = rectangle;
-			return texture;
-		}
+		// public override Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle)
+		// {
+		// 	Texture2D texture = ModContent.Request<Texture2D>(GauntletTexture).Value;
+		// 	Rectangle rectangle = texture.Bounds;
+		// 	rectangle.Height = rectangle.Height / 10;
+		// 	rectangle.Y += (byte)GemType * rectangle.Height;
+		// 	drawRectangle = rectangle;
+		// 	return texture;
+		// }
 
 		public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
 		{

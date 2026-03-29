@@ -24,6 +24,7 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 			Item.useTime = 20;
 			StrikeVelocity = 20f;
 			ParryDuration = 30;
+			GauntletFrames = 2;
 		}
 
 		public override bool OnPunch(Player player, OrchidGuardian guardian, Projectile projectile, bool offHandGauntlet, bool fullyManuallyCharged, ref bool charged, ref int damage)
@@ -124,6 +125,9 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 					player.fallStart = (int)(player.position.Y / 16);
 					bool fastFalling = player.controlDown;
 					if (player.gravDir == -1) fastFalling = player.controlUp;
+								
+					(anchor.ModProjectile as GuardianGauntletAnchor).GauntletAnimFrame = (FlightAnimation > 2) ? 1 : 0; 
+
 
 					if (!fastFalling && player.velocity.Y * player.gravDir > player.maxFallSpeed / 6)
 					{
@@ -137,20 +141,20 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 			}
 		}
 
-		public override Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle)
-		{
-			Texture2D texture = ModContent.Request<Texture2D>(GauntletTexture).Value;
-			Rectangle rectangle = texture.Bounds;
-			rectangle.Height = rectangle.Height / 2;
+		// public override Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle)
+		// {
+		// 	Texture2D texture = ModContent.Request<Texture2D>(GauntletTexture).Value;
+		// 	Rectangle rectangle = texture.Bounds;
+		// 	rectangle.Height = rectangle.Height / 2;
 
-			if (FlightAnimation > 2)
-			{ // bzzz
-				rectangle.Y = rectangle.Height;
-			}
+		// 	if (FlightAnimation > 2)
+		// 	{ // bzzz
+		// 		rectangle.Y = rectangle.Height;
+		// 	}
 
-			drawRectangle = rectangle;
-			return texture;
-		}
+		// 	drawRectangle = rectangle;
+		// 	return texture;
+		// }
 
 		public override Color GetColor(bool offHand)
 		{
