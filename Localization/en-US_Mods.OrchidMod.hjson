@@ -3077,11 +3077,7 @@ Items: {
 
 	ThoriumYewGauntlet: {
 		DisplayName: Goblin War Claw
-		Tooltip:
-			'''
-			Fully charge to fire a grappling claw
-			{0}
-			'''
+		Tooltip: Fully charge to fire a grappling claw
 		PullOnKill:
 			'''
 			Pulls to enemies upon kill
