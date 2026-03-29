@@ -761,7 +761,7 @@ namespace OrchidMod.Content.Guardian
 				{
 					for (int i = 0; i < OldPosition.Count; i++)
 					{
-						color = Lighting.GetColor((int)(OldPosition[i].X / 16f), (int)(OldPosition[i].Y / 16f), Color.White) * (WeakThrow ? (0.05f * i) + 0.75f : (0.15f * i));
+						color = Lighting.GetColor((int)(OldPosition[i].X / 16f), (int)(OldPosition[i].Y / 16f), Color.White) * (WeakThrow ? (0.35f * i) - 0.65f : (0.15f * i));
 						position = OldPosition[i] - Main.screenPosition + Vector2.UnitY * player.gfxOffY;
 
 						spriteBatch.Draw(HammerTexture, position, drawRectangle, color, OldRotation[i] + rotationBonus, drawRectangle.Size() * 0.5f, Projectile.scale, effect, 0f);
