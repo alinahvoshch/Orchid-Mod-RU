@@ -52,9 +52,6 @@ namespace OrchidMod.Content.Guardian
 		public virtual void SafeHoldItem(Player player) { }
 		public virtual Color GetGauntletGlowmaskColor(Player player, OrchidGuardian guardian, Projectile projectile, Color lightColor) => Color.White;
 
-		public bool hasSpecialPunchTexture = false;
-		public virtual string PunchTexture(Player player, OrchidGuardian guardian, Projectile anchor, bool offHandGauntlet) => "OrchidMod/Content/Guardian/GuardianPunchProjectile";
-
 		public int GauntletFrames = 1;
 
 		public float StrikeVelocity = 10f; // Initial speed of the punches
