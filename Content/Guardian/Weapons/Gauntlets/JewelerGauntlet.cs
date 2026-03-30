@@ -153,7 +153,7 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 			}
 		}
 
-		public override void ModifyHitNPCGauntlet(Player player, NPC target, Projectile projectile, ref NPC.HitModifiers modifiers, bool charged)
+		public override void GauntletModifyHitNPC(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, ref NPC.HitModifiers modifiers, bool charged)
 		{
 			if (GemType == JewelerGauntletGem.AMETHYST)
 			{

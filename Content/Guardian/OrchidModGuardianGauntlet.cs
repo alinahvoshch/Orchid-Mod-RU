@@ -29,7 +29,7 @@ namespace OrchidMod.Content.Guardian
 		public virtual string ShoulderTexture => Texture + "_Shoulder";
 		public virtual void OnHit(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, HitInfo hit, bool charged) { }
 		public virtual void OnHitFirst(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, HitInfo hit, bool charged) { }
-		public virtual void ModifyHitNPCGauntlet(Player player, NPC target, Projectile projectile, ref HitModifiers modifiers, bool charged) { }
+		public virtual void GauntletModifyHitNPC(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, ref HitModifiers modifiers, bool charged) { }
 		/// <summary> Called right before a punch projectile is spawned. Return false to prevent normal punch projectiles from spawning. </summary>
 		public virtual bool OnPunch(Player player, OrchidGuardian guardian, Projectile projectile, bool offHandGauntlet, bool manuallyFullyCharged, ref bool charged, ref int damage) => true;
 		/// <summary> Called after the player parries damage. </summary>

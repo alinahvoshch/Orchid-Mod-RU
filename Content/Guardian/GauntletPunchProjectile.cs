@@ -93,7 +93,7 @@ namespace OrchidMod.Content.Guardian
 		public override void SafeModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
 		{
 			var owner = Main.player[Projectile.owner];
-			GauntletItem.ModifyHitNPCGauntlet(owner, target, Projectile, ref modifiers, ChargedHit);
+			GauntletItem.GauntletModifyHitNPC(owner, owner.GetModPlayer<OrchidGuardian>(), target, Projectile, ref modifiers, ChargedHit);
 		}
 
 		public override void SafeOnHitNPC(NPC target, NPC.HitInfo hit, int damageDone, Player player, OrchidGuardian guardian)

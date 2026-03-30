@@ -524,6 +524,8 @@ namespace OrchidMod.Content.Guardian
 						modifiers.FinalDamage *= HammerItem.ThrowDamage;
 					}
 				}
+				OrchidGuardian guardian = Main.LocalPlayer.GetModPlayer<OrchidGuardian>();
+				HammerItem.WarhammerModifyHitNPC(Owner, guardian, target, Projectile, ref modifiers, (Projectile.ai[1] < 0 ? guardian.GuardianItemCharge >= 180f : WeakThrow), Projectile.ai[1] < 0, BlockDuration != 0, FirstHit);
 			}
 		}
 
