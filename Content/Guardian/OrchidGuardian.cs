@@ -6,6 +6,7 @@ using OrchidMod.Content.Guardian.Projectiles.Misc;
 using OrchidMod.Content.Guardian.Projectiles.Standards;
 using OrchidMod.Content.Guardian.Weapons.Gauntlets;
 using System;
+using System.Reflection;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Localization;
@@ -13,11 +14,15 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Linq;
 
 namespace OrchidMod
 {
 	public class OrchidGuardian : ModPlayer
 	{
+
+		public bool CrossModGodMode;
+
 		// Misc & Static fields
 
 		/// <summary> Current timer for slam stack regen or degen. Increments slams at 1 or higher, decrements at -1 or lower.</summary>
@@ -210,9 +215,31 @@ namespace OrchidMod
 				GuardianJewelerGauntlet = 0;
 			}
 			
-			if (GuardianCrystalNinja && GuardianGauntletParry && Player.dashDelay < 0)
-			{
-				DoParryItemParry(null);
+			if (GuardianGauntletParry) {
+				if (GuardianCrystalNinja && Player.dashDelay < 0) DoParryItemParry(null);
+
+				// Condition for when the player is in God Mode (intangible otherwise)
+				if (Player.creativeGodMode || CrossModGodMode) {
+				
+					Entity entity = (Entity)Main.projectile?.FirstOrDefault(proj => proj.active && proj.hostile && proj.damage > 0 && Collision.CheckAABBvAABBCollision(Player.Center, Player.Hitbox.Size(), proj.Center, proj.Hitbox.Size()), null)
+					?? (Entity)Main.npc?.FirstOrDefault(npc => npc.active && (!npc.friendly && npc.damage > 0) && Collision.CheckAABBvAABBCollision(Player.Center, Player.Hitbox.Size(), npc.Center, npc.Hitbox.Size()));
+
+					if (entity != null) DoParryItemParry(entity);
+					}
+
+				// Condition for parrying an Aggro Dummy or Boss Dummy from Thorium 
+				// (only if the player is either in godmode, or if there aren't any enemies/bosses within 45 tiles)
+				if (OrchidMod.ThoriumMod != null && Main.npc.Any(npc => {
+					int aggroDummy = OrchidMod.ThoriumMod.Find<ModNPC>("AggroDummy").Type;
+					int bossDummy = OrchidMod.ThoriumMod.Find<ModNPC>("BossDummy").Type;
+					if ((npc.type == aggroDummy || npc.type == bossDummy) && Collision.CheckAABBvAABBCollision(Player.Center, Player.Hitbox.Size(), npc.Center, npc.Hitbox.Size())) 
+					{
+						if (Player.creativeGodMode || CrossModGodMode) return true;
+						else return !Main.npc.Any(n => n.active && (!n.friendly || n.boss) && !(npc.type == aggroDummy || npc.type == bossDummy) && n.Center.DistanceSQ(Player.Center) <= 1638400f);
+					}
+					return false;
+				})
+				) DoParryItemParry(null);
 			}
 
 			if (GauntletPunchCooldown > -10) GauntletPunchCooldown--;
@@ -225,6 +252,16 @@ namespace OrchidMod
 
 		public override void ResetEffects()
 		{
+			if (
+				(ModLoader.TryGetMod("CheatSheet", out Mod CheatSheet) && (bool)(CheatSheet.Code.GetType("CheatSheet.Menus.GodMode")?.GetField("Enabled", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)?.GetValue(null)))
+				|| 
+				(ModLoader.TryGetMod("HEROsMod", out Mod HerosMod) && (bool)(HerosMod.Code.GetType("HEROsMod.HEROsModServices.GodModeService")?.GetField("Enabled", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)?.GetValue(null)))
+				|| 
+				(ModLoader.TryGetMod("DragonLens", out Mod DragonLens) && (bool)(DragonLens.Code.GetType("DragonLens.Content.Tools.Gameplay.Godmode")?.GetField("godMode", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)?.GetValue(null)))
+			)
+			CrossModGodMode = true;
+			else CrossModGodMode = false;
+
 			// Resetting Core guardian fields
 			if (Player.itemTime > 0 && Player.HeldItem.damage > 0 && Player.HeldItem.ModItem is not OrchidModGuardianItem && Player.HeldItem.pick + Player.HeldItem.hammer + Player.HeldItem.axe == 0)
 				GuardianRegenThreshold = 0;
@@ -369,7 +406,7 @@ namespace OrchidMod
 			GuardianHoneyPotion = false;
 			GuardianWormTooth = false;
 			GuardianMonsterFang = false;
-			GuardianInfiniteResources = false;
+			GuardianInfiniteResources = (Player.creativeGodMode || CrossModGodMode);
 			GuardianShowDebugVisuals = false;
 			GuardianBronzeShieldBuff = false;
 			GuardianBronzeShieldProtection = false;

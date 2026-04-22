@@ -24,6 +24,8 @@ namespace OrchidMod.Content.Guardian
 		public int GauntletDashTimer = 0;
 		public float SlamTime = 0;
 
+		public int GauntletAnimFrame = 0;
+
 		public int SelectedItem { get; set; } = -1;
 		public Item GauntletItem => Main.player[Projectile.owner].inventory[SelectedItem];
 		public bool Blocking => Projectile.ai[0] > 0 && !Charging;
@@ -396,7 +398,7 @@ namespace OrchidMod.Content.Guardian
 					spriteBatch.Draw(textureShoulder, shouldePosition, drawRectangleShoulder, color, 0f, originShoulder, Projectile.scale, effectShoulder, 0f);
 				}
 
-				Texture2D texture = guardianItem.GetGauntletTexture(player, Projectile, OffHandGauntlet, out Rectangle? drawRectangle);
+				Texture2D texture = guardianItem.GetGauntletTexture(player, Projectile, OffHandGauntlet, out Rectangle? drawRectangle, GauntletAnimFrame);
 
 				var effect = SpriteEffects.None;
 				if (player.direction != 1)

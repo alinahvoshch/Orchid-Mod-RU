@@ -12,6 +12,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using static Terraria.NPC;
 
 namespace OrchidMod.Content.Guardian
 {
@@ -46,6 +47,7 @@ namespace OrchidMod.Content.Guardian
 		public virtual void BlockStart(Player player, Projectile shield) { }
 		/// <summary>Called on the last frame of a block. Will spawn dust at the end of a block if it returns true</summary>
 		public virtual bool BlockEnd(Player player, Projectile shield) => true;
+		public virtual void PaviseModifyHitNPC(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, ref HitModifiers modifiers, bool firstHit) { }
 		public virtual Color GetPaviseGlowmaskColor(Player player, OrchidGuardian guardian, Projectile projectile, Color lightColor) => Color.White;
 
 		public float distance = 100f;

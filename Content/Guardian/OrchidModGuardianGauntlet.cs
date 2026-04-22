@@ -29,7 +29,7 @@ namespace OrchidMod.Content.Guardian
 		public virtual string ShoulderTexture => Texture + "_Shoulder";
 		public virtual void OnHit(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, HitInfo hit, bool charged) { }
 		public virtual void OnHitFirst(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, HitInfo hit, bool charged) { }
-		public virtual void ModifyHitNPCGauntlet(Player player, NPC target, Projectile projectile, ref HitModifiers modifiers, bool charged) { }
+		public virtual void GauntletModifyHitNPC(Player player, OrchidGuardian guardian, NPC target, Projectile projectile, ref HitModifiers modifiers, bool charged) { }
 		/// <summary> Called right before a punch projectile is spawned. Return false to prevent normal punch projectiles from spawning. </summary>
 		public virtual bool OnPunch(Player player, OrchidGuardian guardian, Projectile projectile, bool offHandGauntlet, bool manuallyFullyCharged, ref bool charged, ref int damage) => true;
 		/// <summary> Called after the player parries damage. </summary>
@@ -51,6 +51,8 @@ namespace OrchidMod.Content.Guardian
 
 		public virtual void SafeHoldItem(Player player) { }
 		public virtual Color GetGauntletGlowmaskColor(Player player, OrchidGuardian guardian, Projectile projectile, Color lightColor) => Color.White;
+
+		public int GauntletFrames = 1;
 
 		public float StrikeVelocity = 10f; // Initial speed of the punches
 		/// <summary> Jab and slam animation speed multiplier. Also affected by melee speed, but not by usetime. </summary>
@@ -352,17 +354,13 @@ namespace OrchidMod.Content.Guardian
 			SafeModifyTooltips(tooltips);
 		}
 
-		public virtual Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle)
+		public virtual Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle, int frame = 0)
 		{
 			drawRectangle = null;
-			if (hasBackGauntlet && OffHandGauntlet)
-			{
-				return(ModContent.Request<Texture2D>(GauntletBackTexture).Value);
-			}
-			else
-			{
-				return (ModContent.Request<Texture2D>(GauntletTexture).Value);
-			}
+			Texture2D texture = (hasBackGauntlet && OffHandGauntlet) ? ModContent.Request<Texture2D>(GauntletBackTexture).Value : ModContent.Request<Texture2D>(GauntletTexture).Value;
+			if (GauntletFrames > 1)	drawRectangle = texture.Frame(1, GauntletFrames, 0, frame % GauntletFrames);
+
+			return texture;
 		}
 
 		public virtual Texture2D GetArmTexture(out Rectangle? drawRectangle)

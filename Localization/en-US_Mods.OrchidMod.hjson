@@ -3078,8 +3078,16 @@ Items: {
 	ThoriumYewGauntlet: {
 		DisplayName: Goblin War Claw
 		Tooltip: Fully charge to fire a grappling claw
-		PullOnKill: Pulls on kill, Right click to deactivate
-		NoPullOnKill: Does not pull on kill, Right click to activate
+		PullOnKill:
+			'''
+			Pulls to enemies upon kill
+			Right Click item to deactivate
+			'''
+		NoPullOnKill:
+			'''
+			Does not pull to enemies upon kill
+			Right Click item to activate
+			'''
 	}
 
 	ThoriumEvergreenWoodQuarterstaff: {
@@ -3816,7 +3824,7 @@ UI: {
 		RuneDuration: "{0} second rune duration"
 		Block: "{0} click to block"
 		BlockGuard: "{0} click to block, costing {1} {^1:guard;guards}"
-		BlockSlam: "{0} click to block, costing {1} {^1:slam;slams}"
+		BlockSlam: "{0} click to block, costing {2} {^2:slam;slams}"
 		BlockGuardSlamSame: "{0} click to block, costing {1} {^1:guard;guards} and {^1:slam;slams}"
 		BlockGuardSlam: "{0} click to block, costing {1} {^1:guard;guards} and {2} {^2:slam;slams}"
 		BuffDuration: "{0} second buff duration"

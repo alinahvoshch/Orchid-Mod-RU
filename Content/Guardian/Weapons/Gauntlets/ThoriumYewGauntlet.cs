@@ -21,6 +21,8 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 	{
 		public bool PullOnKill;
 
+		public Projectile HookProjectile;
+
 		public override void SafeSetDefaults()
 		{
 			Item.width = 30;
@@ -30,10 +32,13 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 			Item.value = Item.sellPrice(0, 1, 30, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.useTime = 30;
+			Item.shootSpeed = 15f;
 			StrikeVelocity = 15f;
 			ParryDuration = 80;
 			ChargeSpeedMultiplier = 2.5f;
+			GauntletFrames = 2;
 			PullOnKill = true;
+
 		}
 
 		public override Color GetColor(bool offHand)
@@ -41,41 +46,53 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 			return new Color(137, 175, 133);
 		}
 
-		public override Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle)
+		public override void ExtraAIGauntlet(Player player, OrchidGuardian guardian, Projectile anchor, bool offHandGauntlet) 
 		{
-			Texture2D texture = ModContent.Request<Texture2D>(GauntletTexture).Value;
-			Rectangle rectangle = texture.Bounds;
-			rectangle.Height = rectangle.Height / 2;
-
-			int projType = ModContent.ProjectileType<ThoriumYewGauntletProjectile>();
-			foreach(Projectile projectile in Main.projectile)
-			{
-				if (projectile.type == projType && projectile.active && projectile.owner == player.whoAmI && ((projectile.ai[0] == 1f && !OffHandGauntlet) || (projectile.ai[0] == 2f && OffHandGauntlet)))
-				{
-					rectangle.Y = rectangle.Height;
+			if (anchor.ModProjectile is GuardianGauntletAnchor gauntlet) {	
+				int projType = ModContent.ProjectileType<ThoriumYewGauntletProjectile>();
+				if (HookProjectile != null && HookProjectile.type == projType && HookProjectile.active && HookProjectile.owner == player.whoAmI && ((HookProjectile.ai[0] == 1f && !offHandGauntlet) || (HookProjectile.ai[0] == 2f && offHandGauntlet)))
+					gauntlet.GauntletAnimFrame = 1;
+				else {
+					gauntlet.GauntletAnimFrame = 0;
+					// HookProjectile = null;
 				}
-			}
-
-			drawRectangle = rectangle;
-			return texture;
+			}		
 		}
+
+
+		// public override Texture2D GetGauntletTexture(Player player, Projectile anchor, bool OffHandGauntlet, out Rectangle? drawRectangle)
+		// {
+		// 	Texture2D texture = ModContent.Request<Texture2D>(GauntletTexture).Value;
+		// 	Rectangle rectangle = texture.Bounds;
+		// 	rectangle.Height = rectangle.Height / 2;
+
+		// 	int projType = ModContent.ProjectileType<ThoriumYewGauntletProjectile>();
+		// 	foreach(Projectile projectile in Main.projectile)
+		// 	{
+		// 		if (projectile.type == projType && projectile.active && projectile.owner == player.whoAmI && ((projectile.ai[0] == 1f && !OffHandGauntlet) || (projectile.ai[0] == 2f && OffHandGauntlet)))
+		// 		{
+		// 			rectangle.Y = rectangle.Height;
+		// 		}
+		// 	}
+
+		// 	drawRectangle = rectangle;
+		// 	return texture;
+		// }
 
 		public override bool OnPunch(Player player, OrchidGuardian guardian, Projectile projectile, bool offHandGauntlet, bool fullyManuallyCharged, ref bool charged, ref int damage)
 		{
 			if (fullyManuallyCharged)
 			{
 				int projType = ModContent.ProjectileType<ThoriumYewGauntletProjectile>();
-				foreach (Projectile proj in Main.projectile)
-				{
-					if (proj.type == projType && proj.active && proj.owner == player.whoAmI && ((proj.ai[0] == 1f && !offHandGauntlet) || (proj.ai[0] == 2f && offHandGauntlet)))
-					{
-						proj.Kill();
-					}
+				if (HookProjectile != null && HookProjectile.type == projType && HookProjectile.active && HookProjectile.owner == player.whoAmI && ((HookProjectile.ai[0] == 1f && !offHandGauntlet) || (HookProjectile.ai[0] == 2f && offHandGauntlet))) {
+					HookProjectile.Kill();
+					HookProjectile = null;
 				}
 
-				Vector2 velocity = Vector2.UnitY.RotatedBy((Main.MouseWorld - player.MountedCenter).ToRotation() - MathHelper.PiOver2) * 15f;
+				Vector2 velocity = Vector2.UnitY.RotatedBy((Main.MouseWorld - player.MountedCenter).ToRotation() - MathHelper.PiOver2) * Item.shootSpeed;
 				Projectile newprojectile = Projectile.NewProjectileDirect(player.GetSource_ItemUse(Item), projectile.Center + velocity, velocity, projType, damage, 5f, player.whoAmI, offHandGauntlet ? 2f : 1f, -1f, projectile.whoAmI);
 				newprojectile.CritChance = (int)(player.GetCritChance<GuardianDamageClass>() + player.GetCritChance<GenericDamageClass>() + Item.crit);
+				HookProjectile = newprojectile;
 				return false;
 			}
 
@@ -84,20 +101,20 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 
 		public override bool PreDrawGauntlet(SpriteBatch spriteBatch, Projectile projectile, Player player, bool offHandGauntlet, ref Color lightColor)
 		{
-			Projectile hookProjectile = null;
-			int projType = ModContent.ProjectileType<ThoriumYewGauntletProjectile>();
-			foreach (Projectile proj in Main.projectile)
-			{
-				if (proj.type == projType && proj.active && proj.owner == player.whoAmI && ((proj.ai[0] == 1f && !offHandGauntlet) || (proj.ai[0] == 2f && offHandGauntlet)))
-				{
-					hookProjectile = proj;
-				}
-			}
+			// Projectile hookProjectile = null;
+			// foreach (Projectile proj in Main.projectile)
+			// {
+			// 	if (proj.type == projType && proj.active && proj.owner == player.whoAmI && ((proj.ai[0] == 1f && !offHandGauntlet) || (proj.ai[0] == 2f && offHandGauntlet)))
+			// 	{
+			// 		hookProjectile = proj;
+			// 	}
+			// }
 
-			if (hookProjectile != null)
+			int projType = ModContent.ProjectileType<ThoriumYewGauntletProjectile>();
+			if (HookProjectile != null && HookProjectile.type == projType && HookProjectile.active && HookProjectile.owner == player.whoAmI && ((HookProjectile.ai[0] == 1f && !offHandGauntlet) || (HookProjectile.ai[0] == 2f && offHandGauntlet)))
 			{ // Draw chain between hook and gauntlet
 				Texture2D chainTexture = ModContent.Request<Texture2D>(Texture + "_Chain", ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
-				Vector2 chainDirection = hookProjectile.Center - (projectile.Center + Vector2.UnitY * player.gfxOffY);
+				Vector2 chainDirection = HookProjectile.Center - (projectile.Center + Vector2.UnitY * player.gfxOffY);
 				Vector2 segment = Vector2.Normalize(chainDirection) * chainTexture.Height * 0.66f;
 
 				int nbSegments = 0;
@@ -154,11 +171,20 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 		public override void NetSend(BinaryWriter writer)
 		{
 			writer.Write(PullOnKill);
+			int index = (HookProjectile != null && HookProjectile.active && HookProjectile.owner == Main.myPlayer && HookProjectile.type == ModContent.ProjectileType<ThoriumYewGauntletProjectile>() ? HookProjectile.whoAmI : 255); 
+			writer.Write((byte)index);
 		}
 
 		public override void NetReceive(BinaryReader reader)
 		{
 			PullOnKill = reader.ReadBoolean();
+			var index = reader.Read();
+			if (index != -1 && index < Main.maxProjectiles) {
+				var proj = Main.projectile[index];
+				if (proj != null && proj.active && proj.owner == Main.myPlayer && proj.type == ModContent.ProjectileType<ThoriumYewGauntletProjectile>())
+					HookProjectile = proj;
+			}
+			
 		}
 
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
@@ -187,5 +213,6 @@ namespace OrchidMod.Content.Guardian.Weapons.Gauntlets
 
 			SafeModifyTooltips(tooltips);
 		}
+	
 	}
 }
