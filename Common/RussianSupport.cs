@@ -1,14 +1,15 @@
-﻿using Terraria.Localization;
-using Terraria.ModLoader;
-using System.Collections.Generic;
-using OrchidMod.Content.Guardian.Armors.Misc;
-using OrchidMod.Content.Guardian.Armors.Bamboo;
-using OrchidMod.Content.Guardian.Armors.Meteorite;
-using OrchidMod.Content.Guardian.Armors.OreHelms;
+﻿using OrchidMod.Content.Guardian.Armors.Bamboo;
 using OrchidMod.Content.Guardian.Armors.Empress;
 using OrchidMod.Content.Guardian.Armors.Horizon;
-using OrchidMod.Content.Shapeshifter.Armors.Harpy;
+using OrchidMod.Content.Guardian.Armors.Meteorite;
+using OrchidMod.Content.Guardian.Armors.Misc;
+using OrchidMod.Content.Guardian.Armors.OreHelms;
+using OrchidMod.Content.Guardian.Armors.Void;
 using OrchidMod.Content.Shapeshifter.Armors.Ashwood;
+using OrchidMod.Content.Shapeshifter.Armors.Harpy;
+using System.Collections.Generic;
+using Terraria.Localization;
+using Terraria.ModLoader;
 
 namespace OrchidMod
 {
@@ -44,6 +45,7 @@ namespace OrchidMod
 				"StaffRocketRed",
 				"StaffRocketYellow",
 				"SturdySlab",
+				"BadgeHoplite",
 				//Shapeshifter accessories
 				"HarnessYouxia",
 				"ShapeshifterEmblem",
@@ -83,6 +85,7 @@ namespace OrchidMod
 				"IceStandard",
 				"JungleWarhammer",
 				"PumpkingWarhammer",
+				"ThoriumConcentratedThoriumQuarterstaff",
 				//Shapeshifter weapons
 				"PredatorFossil",
 				"PredatorIceFox",
@@ -108,6 +111,7 @@ namespace OrchidMod
 				"ThoriumLeafShield",
 				"PlanteraStandard",
 				"CrimsonWarhammer",
+				"ThoriumGraniteKatar",
 				//Shapeshifter weapons
 				"PredatorHarpy",
 				"SageBee",
@@ -137,7 +141,9 @@ namespace OrchidMod
 				"ThoriumDarksteelGauntlet",
 				"ThoriumDeadwoodGauntlet",
 				"ThoriumYewGauntlet",
-				"TungstenGauntlet"
+				"TungstenGauntlet",
+				"IceGauntlet",
+				"ToyWarhammers"
 			});
 
 			var prefixes = new List<string[]>
@@ -231,6 +237,12 @@ namespace OrchidMod
 
 			tru.Call("AddArmorSetBonusPreview", ModContent.ItemType<ShapeshifterAshwoodHead>(), () =>
 				Language.GetTextValue("Mods.OrchidMod.Items.ShapeshifterAshwoodHead.SetBonus"));
+
+			tru.Call("AddArmorSetBonusPreview", ModContent.ItemType<ThoriumGuardianTitanHead>(), () =>
+				Language.GetTextValue("Mods.OrchidMod.Items.ThoriumGuardianTitanHead.SetBonus"));
+
+			tru.Call("AddArmorSetBonusPreview", ModContent.ItemType<ThoriumGuardianVoidHead>(), () =>
+				Language.GetTextValue("Mods.OrchidMod.Items.ThoriumGuardianVoidHead.SetBonus"));
 		}
 	}
 }

@@ -3239,7 +3239,7 @@ Items: {
 	}
 
 	ThoriumValadiumWarhammer: {
-		DisplayName: Thorium Valadium Warhammer
+		DisplayName: Valadium Warhammer
 		Tooltip:
 			'''
 			[c/FF0000:Test Item]
@@ -3325,20 +3325,8 @@ Items: {
 		SetBonus: Damage done increased by 18%
 	}
 
-	ThoriumGuardianVoidLegs: {
-		DisplayName: Void Sentinel Greaves
-		Tooltip:
-			'''
-			[c/FF0000:Test Item]
-			Regenerates slams over time
-			Increases maximum slams by 1
-			Increases movement speed by 20% and increases jump and fall speed
-			Enemies are significantly more likely to target you
-			'''
-	}
-
 	ThoriumGuardianVoidHead: {
-		DisplayName: Thorium Guardian Void Head
+		DisplayName: Void Sentinel Helmet
 		Tooltip:
 			'''
 			[c/FF0000:Test Item]
@@ -3363,6 +3351,18 @@ Items: {
 			Regenerates guards and slams over time
 			Increases maximum guards and slams by 1
 			15% increased melee speed and 6% increased opposing critical strike chance 
+			Enemies are significantly more likely to target you
+			'''
+	}
+
+	ThoriumGuardianVoidLegs: {
+		DisplayName: Void Sentinel Greaves
+		Tooltip:
+			'''
+			[c/FF0000:Test Item]
+			Regenerates slams over time
+			Increases maximum slams by 1
+			Increases movement speed by 20% and increases jump and fall speed
 			Enemies are significantly more likely to target you
 			'''
 	}

@@ -1,6 +1,4 @@
 using Microsoft.Xna.Framework;
-using OrchidMod.Common;
-using OrchidMod.Common.Attributes;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Localization;
@@ -11,7 +9,6 @@ using static Terraria.ModLoader.ModContent;
 
 namespace OrchidMod.Content.Alchemist.Misc
 {
-	[ClassTag(ClassTags.Alchemist)]
 	public class UIItem : ModItem
 	{
 		public override void SetDefaults()

@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using OrchidMod.Content.Alchemist.UI;
 using OrchidMod.Common;
-using OrchidMod.Common.Attributes;
 using OrchidMod.Common.UIs;
 using System.Collections.Generic;
 using Terraria;
@@ -12,7 +11,6 @@ using Terraria.ModLoader;
 
 namespace OrchidMod.Content.Alchemist.Misc
 {
-	[ClassTag(ClassTags.Alchemist)]
 	public class ReactionItem : ModItem
 	{
 		public override void SetDefaults()
