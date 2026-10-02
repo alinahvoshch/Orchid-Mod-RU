@@ -17,9 +17,7 @@ namespace OrchidMod
 	{
 		public override void PostSetupContent()
 		{
-			var orchid = Mod;
-
-			if (!ModLoader.TryGetMod("CalamityRuTranslate", out Mod tru))
+			if (!ModLoader.TryGetMod("CalamityRuTranslate", out Mod tru) || Language.ActiveCulture.Name != "ru-RU")
 				return;
 
 			//It would be better to add it directly to Orchid Mineshaft
@@ -33,7 +31,7 @@ namespace OrchidMod
 				});
 			}
 
-			tru.Call("AddFeminineItems", orchid, new[]
+			tru.Call("AddFeminineItems", Mod, new[]
 			{
 				//Guardian accessories
 				"BadgeBattlesPast",
@@ -95,7 +93,7 @@ namespace OrchidMod
 				"HorizonPickaxe"
 			});
 
-			tru.Call("AddNeuterItems", orchid, new[]
+			tru.Call("AddNeuterItems", Mod, new[]
 			{
 				//Guardian accessories
 				"GuideShield",
@@ -121,7 +119,7 @@ namespace OrchidMod
 				"WardenEater"
 			});
 
-			tru.Call("AddPluralItems", orchid, new[]
+			tru.Call("AddPluralItems", Mod, new[]
 			{
 				//Guardian accessories
 				"ParryingMailFeral",
@@ -153,7 +151,6 @@ namespace OrchidMod
 				new[] { "Обеспеченный", "Обеспеченная", "Обеспеченное", "Обеспеченные" },
 				new[] { "Блокирующий", "Блокирующая", "Блокирующее", "Блокирующие" },
                 //Guardian
-                new[] { "Непонятный", "Непонятная", "Непонятное", "Непонятные" },
 				new[] { "Хлипкий", "Хлипкая", "Хлипкое", "Хлипкие" },
 				new[] { "Хилый", "Хилая", "Хилое", "Хилые" },
 				new[] { "Ветхий", "Ветхая", "Ветхое", "Ветхие" },

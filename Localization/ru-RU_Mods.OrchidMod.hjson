@@ -2778,7 +2778,7 @@ Items: {
 
 	ThoriumViscountQuarterstaff: {
 		DisplayName: Нетопырь
-		Tooltip: Контратаки превращают вас в рой летучих мышей, игнорирующих 20 ед. защиты врага
+		Tooltip: Контратаки превращают вас в рой летучих мышей, игнорирующих 25 ед. защиты врага
 	}
 
 	ThoriumThoriumQuarterstaff: {
@@ -3207,8 +3207,8 @@ Items: {
 	}
 
 	HellstoneKatar: {
-		DisplayName: Поджигатель
-		Tooltip: Оставляет за вами огненный след при выполнении парирования
+		DisplayName: Огненный шлейф
+		Tooltip: Оставляет за вами след огня при выполнении парирования
 	}
 
 	ThoriumGraniteKatar: {
@@ -3224,7 +3224,7 @@ Items: {
 		DisplayName: Легионерская инсигния
 		Tooltip:
 			'''
-			Увеличивает скорость катара на 25% после выполнения им парирования
+			Увеличивает скорость катара на 25% после выполнения им успешного парирования
 			Эффект складывается до двух раз
 			'''
 	}
@@ -3369,8 +3369,12 @@ Items: {
 	}
 
 	HammerMagnet: {
-		// DisplayName: Hammer Magnet
-		// Tooltip: Allows most warhammers to bend toward the cursor when thrown
+		DisplayName: Магнит молотов
+		Tooltip:
+			'''
+			Большинство боевых молотов будут немного притягиваться к курсору в полёте
+			Увеличивает скорость полёта боевых молотов на 20%
+			'''
 	}
 
 	RemoteDetonator: {
@@ -3396,6 +3400,39 @@ Items: {
 		DisplayName: Пиолет викинга
 		Tooltip: Броски пронзают врагов
 	}
+
+	ThoriumPharaohQuarterstaff: {
+		// DisplayName: Shuwt
+		// Tooltip: Fully charge to release a burst of sand
+	}
+
+	VampireWarhammer: {
+		// DisplayName: Vampire Slayer
+		/* Tooltip:
+			'''
+			Blocking or fully charging throws a short-lived piercing cross that blocks
+			'Die, monster!'
+			''' */
+		// InstantChargeText: Die, monster!
+	}
+
+	ThoriumLifeQuartzCenser: {
+		DisplayName: Целебное кадило
+		// Tooltip: Spending a slam shields the lowest health nearby ally life by 5, up to 10
+	}
+
+	ConsolariaLepusEggNest: {
+		// DisplayName: Consolaria Lepus Egg Nest
+		// Tooltip: ""
+	}
+
+	DepthDiverHelmet.Tooltip: Увеличивает скорость восполнения очков обороны
+	DepthDiverChestplate.Tooltip:
+		'''
+		Увеличивает максимальный запас очков обороны на 2 ед.
+		Враги будут чаще выбирать вас в качестве цели
+		'''
+	DepthDiverGreaves.Tooltip: Увеличивает максимальный запас очков обороны на 2 ед.
 }
 
 NPCs: {
@@ -3550,7 +3587,7 @@ Prefixes: {
 	LoadedPrefix.DisplayName: Обеспеченный
 	BlockingPrefix.DisplayName: Блокирующий
 	# Guardian
-	HaidexPrefix.DisplayName: Непонятный
+	HaidexPrefix.DisplayName: Haidex
 	FlimsyPrefix.DisplayName: Хлипкий
 	FeeblePrefix.DisplayName: Хилый
 	FragilePrefix.DisplayName: Ветхий
@@ -3850,12 +3887,14 @@ Projectiles: {
 	// HellstoneKatarProjectile.DisplayName: Trailblaze
 	// ThoriumGraniteKatarProjectile.DisplayName: Ion Deluge
 	// ToyWarhammerProjectile.DisplayName: The Big Honker
-	// ThoriumVoidQuarterstaffProjectile.DisplayName: Thorium Void Quarterstaff Projectile
+	// ThoriumVoidQuarterstaffProjectile.DisplayName: Void
 	// ThoriumDemonBloodGauntletProjectile.DisplayName: Thorium Demon Blood Gauntlet Projectile
 	// ThoriumNagaQuarterstaffProjectile.DisplayName: Thorium Naga Quarterstaff Projectile
 	// ThoriumConcentratedThoriumQuarterstaffProjectile.DisplayName: Thorium Concentrated Thorium Quarterstaff Projectile
 	// ThoriumTerrariumWarhammerProjectile.DisplayName: Thorium Terrarium Warhammer Projectile
-	// GuardianDoubleHammerAnchor.DisplayName: Guardian Double Hammer Anchor
+	// GuardianDoubleHammerAnchor.DisplayName: Dual Warhammers
+	// ThoriumPharaohQuarterstaffProjectile.DisplayName: Pharaoh Sand
+	// ConsolariaLepusEggNestProjectile.DisplayName: Consolaria Lepus Egg Nest Projectile
 }
 
 Configs: {
@@ -3975,6 +4014,20 @@ Configs: {
 		GuardianUseFancyUI: {
 			Label: Причудливый интерфейс хранителя
 			Tooltip: Включает «причудливый» стиль текстур для элементов интерфейса хранителя
+		}
+
+		GuardianThoriumBoreanStriderColorUI: {
+			// Label: Frost Walker UI uses colored icon
+			// Tooltip: The Frost Walker's special 'snowflake charge' UI will use a colored icon (the Ice Gauntlet's crystal projectile) instead of a monochrome variant
+		}
+
+		SmartSmartCursor: {
+			// Label: Smart Smart Cursor
+			/* Tooltip:
+				'''
+				Smart Cursor automatically toggles off and on when holding a guardian weapon or shapeshifting.
+				No effect if Smart Cursor isn't set to 'Toggle'
+				''' */
 		}
 	}
 

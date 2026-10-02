@@ -3961,7 +3961,7 @@ Configs: {
 				'''
 				Triggers 'Shawl' accessory dashes when releasing the hook key instead of pressing it
 				(allowing to launch a hook without dashing)
-				''' 
+				'''
 		}
 
 		ShapeshifterScrollDelay: {
@@ -4186,5 +4186,3 @@ Conditions: {
 	EnableContentGambler: Gambler content is enabled
 	EnableContentShapeshifter: Shapeshifter content is enabled
 }
-
-RecipeGroups.Any: Mods.OrchidMod.RecipeGroups.Any
