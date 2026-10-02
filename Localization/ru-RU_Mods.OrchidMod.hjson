@@ -9,6 +9,7 @@ Tiles: {
 	ShamanBiomeChestTile.MapEntry: "{$Items.ShamanBiomeChest.DisplayName}"
 	GuardianBuffStationTile.MapEntry: "{$Items.GuardianBuffStation.DisplayName}"
 	VerveineQuarterstaffTile.MapEntry: Пердёжное растение
+	// VerveineAltQuarterstaffTile.MapEntry: Farting Mushroom
 }
 
 Buffs: {
@@ -3433,6 +3434,11 @@ Items: {
 		Враги будут чаще выбирать вас в качестве цели
 		'''
 	DepthDiverGreaves.Tooltip: Увеличивает максимальный запас очков обороны на 2 ед.
+
+	VerveineAltQuarterstaff: {
+		// DisplayName: Wormsbane
+		// Tooltip: Counterattacks release a cloud of ooze
+	}
 }
 
 NPCs: {
